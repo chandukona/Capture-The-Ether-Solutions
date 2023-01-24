@@ -1,0 +1,4103 @@
+{
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "settle",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "n",
+          "type": "uint8"
+        }
+      ],
+      "name": "lockInGuess",
+      "outputs": [],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "isComplete",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "constructor"
+    }
+  ],
+  "allSourcePaths": {
+    "0": "contracts/Predict-the-future.sol"
+  },
+  "ast": {
+    "absolutePath": "contracts/Predict-the-future.sol",
+    "exportedSymbols": {
+      "PredictTheFutureChallenge": [
+        119
+      ]
+    },
+    "id": 120,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".21"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 119,
+        "linearizedBaseContracts": [
+          119
+        ],
+        "name": "PredictTheFutureChallenge",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 3,
+            "name": "guesser",
+            "nodeType": "VariableDeclaration",
+            "scope": 119,
+            "src": "67:15:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 2,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "67:7:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 5,
+            "name": "guess",
+            "nodeType": "VariableDeclaration",
+            "scope": 119,
+            "src": "88:11:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint8",
+              "typeString": "uint8"
+            },
+            "typeName": {
+              "id": 4,
+              "name": "uint8",
+              "nodeType": "ElementaryTypeName",
+              "src": "88:5:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint8",
+                "typeString": "uint8"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 7,
+            "name": "settlementBlockNumber",
+            "nodeType": "VariableDeclaration",
+            "scope": 119,
+            "src": "105:29:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 6,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "105:7:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 17,
+              "nodeType": "Block",
+              "src": "193:46:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 14,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 11,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 309,
+                            "src": "211:3:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 12,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "value",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "211:9:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "hexValue": "31",
+                          "id": 13,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "224:7:0",
+                          "subdenomination": "ether",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_1000000000000000000_by_1",
+                            "typeString": "int_const 1000000000000000000"
+                          },
+                          "value": "1"
+                        },
+                        "src": "211:20:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 10,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        312,
+                        313
+                      ],
+                      "referencedDeclaration": 312,
+                      "src": "203:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 15,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "203:29:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 16,
+                  "nodeType": "ExpressionStatement",
+                  "src": "203:29:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 18,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "PredictTheFutureChallenge",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 8,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "175:2:0"
+            },
+            "payable": true,
+            "returnParameters": {
+              "id": 9,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "193:0:0"
+            },
+            "scope": 119,
+            "src": "141:98:0",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 30,
+              "nodeType": "Block",
+              "src": "294:50:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 28,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 24,
+                            "name": "this",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 322,
+                            "src": "319:4:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_PredictTheFutureChallenge_$119",
+                              "typeString": "contract PredictTheFutureChallenge"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_contract$_PredictTheFutureChallenge_$119",
+                              "typeString": "contract PredictTheFutureChallenge"
+                            }
+                          ],
+                          "id": 23,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "311:7:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_address_$",
+                            "typeString": "type(address)"
+                          },
+                          "typeName": "address"
+                        },
+                        "id": 25,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "311:13:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "id": 26,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "balance",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "311:21:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 27,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "336:1:0",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "311:26:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 22,
+                  "id": 29,
+                  "nodeType": "Return",
+                  "src": "304:33:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 31,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "isComplete",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 19,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "264:2:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 22,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 21,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 31,
+                  "src": "288:4:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 20,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "288:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "287:6:0"
+            },
+            "scope": 119,
+            "src": "245:99:0",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 65,
+              "nodeType": "Block",
+              "src": "395:177:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 39,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 37,
+                          "name": "guesser",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 3,
+                          "src": "413:7:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "hexValue": "30",
+                          "id": 38,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "424:1:0",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          },
+                          "value": "0"
+                        },
+                        "src": "413:12:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 36,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        312,
+                        313
+                      ],
+                      "referencedDeclaration": 312,
+                      "src": "405:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 40,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "405:21:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 41,
+                  "nodeType": "ExpressionStatement",
+                  "src": "405:21:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 46,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 43,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 309,
+                            "src": "444:3:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 44,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "value",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "444:9:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "hexValue": "31",
+                          "id": 45,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "457:7:0",
+                          "subdenomination": "ether",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_1000000000000000000_by_1",
+                            "typeString": "int_const 1000000000000000000"
+                          },
+                          "value": "1"
+                        },
+                        "src": "444:20:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 42,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        312,
+                        313
+                      ],
+                      "referencedDeclaration": 312,
+                      "src": "436:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 47,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "436:29:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 48,
+                  "nodeType": "ExpressionStatement",
+                  "src": "436:29:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 52,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 49,
+                      "name": "guesser",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3,
+                      "src": "476:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 50,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 309,
+                        "src": "486:3:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 51,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "486:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "476:20:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 53,
+                  "nodeType": "ExpressionStatement",
+                  "src": "476:20:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 56,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 54,
+                      "name": "guess",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 5,
+                      "src": "506:5:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 55,
+                      "name": "n",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 33,
+                      "src": "514:1:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "src": "506:9:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "id": 57,
+                  "nodeType": "ExpressionStatement",
+                  "src": "506:9:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 63,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 58,
+                      "name": "settlementBlockNumber",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7,
+                      "src": "525:21:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "commonType": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "id": 62,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 59,
+                          "name": "block",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 299,
+                          "src": "549:5:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_block",
+                            "typeString": "block"
+                          }
+                        },
+                        "id": 60,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "number",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "549:12:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": "+",
+                      "rightExpression": {
+                        "argumentTypes": null,
+                        "hexValue": "31",
+                        "id": 61,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "564:1:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_1_by_1",
+                          "typeString": "int_const 1"
+                        },
+                        "value": "1"
+                      },
+                      "src": "549:16:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "525:40:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 64,
+                  "nodeType": "ExpressionStatement",
+                  "src": "525:40:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 66,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "lockInGuess",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 34,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33,
+                  "name": "n",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 66,
+                  "src": "371:7:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 32,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "371:5:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "370:9:0"
+            },
+            "payable": true,
+            "returnParameters": {
+              "id": 35,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "395:0:0"
+            },
+            "scope": 119,
+            "src": "350:222:0",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 117,
+              "nodeType": "Block",
+              "src": "603:316:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 73,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 70,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 309,
+                            "src": "621:3:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 71,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "621:10:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "id": 72,
+                          "name": "guesser",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 3,
+                          "src": "635:7:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "src": "621:21:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 69,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        312,
+                        313
+                      ],
+                      "referencedDeclaration": 312,
+                      "src": "613:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 74,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "613:30:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 75,
+                  "nodeType": "ExpressionStatement",
+                  "src": "613:30:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 80,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 77,
+                            "name": "block",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 299,
+                            "src": "661:5:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_block",
+                              "typeString": "block"
+                            }
+                          },
+                          "id": 78,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "number",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "661:12:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": ">",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "id": 79,
+                          "name": "settlementBlockNumber",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 7,
+                          "src": "676:21:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "src": "661:36:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 76,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        312,
+                        313
+                      ],
+                      "referencedDeclaration": 312,
+                      "src": "653:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 81,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "653:45:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 82,
+                  "nodeType": "ExpressionStatement",
+                  "src": "653:45:0"
+                },
+                {
+                  "assignments": [
+                    84
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 84,
+                      "name": "answer",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 118,
+                      "src": "709:12:0",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      },
+                      "typeName": {
+                        "id": 83,
+                        "name": "uint8",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "709:5:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 99,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    },
+                    "id": 98,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "arguments": [
+                                {
+                                  "argumentTypes": null,
+                                  "commonType": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  },
+                                  "id": 92,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "leftExpression": {
+                                    "argumentTypes": null,
+                                    "expression": {
+                                      "argumentTypes": null,
+                                      "id": 89,
+                                      "name": "block",
+                                      "nodeType": "Identifier",
+                                      "overloadedDeclarations": [],
+                                      "referencedDeclaration": 299,
+                                      "src": "769:5:0",
+                                      "typeDescriptions": {
+                                        "typeIdentifier": "t_magic_block",
+                                        "typeString": "block"
+                                      }
+                                    },
+                                    "id": 90,
+                                    "isConstant": false,
+                                    "isLValue": false,
+                                    "isPure": false,
+                                    "lValueRequested": false,
+                                    "memberName": "number",
+                                    "nodeType": "MemberAccess",
+                                    "referencedDeclaration": null,
+                                    "src": "769:12:0",
+                                    "typeDescriptions": {
+                                      "typeIdentifier": "t_uint256",
+                                      "typeString": "uint256"
+                                    }
+                                  },
+                                  "nodeType": "BinaryOperation",
+                                  "operator": "-",
+                                  "rightExpression": {
+                                    "argumentTypes": null,
+                                    "hexValue": "31",
+                                    "id": 91,
+                                    "isConstant": false,
+                                    "isLValue": false,
+                                    "isPure": true,
+                                    "kind": "number",
+                                    "lValueRequested": false,
+                                    "nodeType": "Literal",
+                                    "src": "784:1:0",
+                                    "subdenomination": null,
+                                    "typeDescriptions": {
+                                      "typeIdentifier": "t_rational_1_by_1",
+                                      "typeString": "int_const 1"
+                                    },
+                                    "value": "1"
+                                  },
+                                  "src": "769:16:0",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  }
+                                }
+                              ],
+                              "expression": {
+                                "argumentTypes": [
+                                  {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  }
+                                ],
+                                "expression": {
+                                  "argumentTypes": null,
+                                  "id": 87,
+                                  "name": "block",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 299,
+                                  "src": "753:5:0",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_magic_block",
+                                    "typeString": "block"
+                                  }
+                                },
+                                "id": 88,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": false,
+                                "lValueRequested": false,
+                                "memberName": "blockhash",
+                                "nodeType": "MemberAccess",
+                                "referencedDeclaration": null,
+                                "src": "753:15:0",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_function_blockhash_view$_t_uint256_$returns$_t_bytes32_$",
+                                  "typeString": "function (uint256) view returns (bytes32)"
+                                }
+                              },
+                              "id": 93,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "kind": "functionCall",
+                              "lValueRequested": false,
+                              "names": [],
+                              "nodeType": "FunctionCall",
+                              "src": "753:33:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_bytes32",
+                                "typeString": "bytes32"
+                              }
+                            },
+                            {
+                              "argumentTypes": null,
+                              "id": 94,
+                              "name": "now",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 311,
+                              "src": "788:3:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_bytes32",
+                                "typeString": "bytes32"
+                              },
+                              {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            ],
+                            "id": 86,
+                            "name": "keccak256",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 303,
+                            "src": "743:9:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
+                              "typeString": "function () pure returns (bytes32)"
+                            }
+                          },
+                          "id": 95,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "743:49:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes32",
+                            "typeString": "bytes32"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_bytes32",
+                            "typeString": "bytes32"
+                          }
+                        ],
+                        "id": 85,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "ElementaryTypeNameExpression",
+                        "src": "724:5:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_uint8_$",
+                          "typeString": "type(uint8)"
+                        },
+                        "typeName": "uint8"
+                      },
+                      "id": 96,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "724:78:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "%",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "3130",
+                      "id": 97,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "805:2:0",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_10_by_1",
+                        "typeString": "int_const 10"
+                      },
+                      "value": "10"
+                    },
+                    "src": "724:83:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "709:98:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 102,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 100,
+                      "name": "guesser",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3,
+                      "src": "818:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 101,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "828:1:0",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "818:11:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 103,
+                  "nodeType": "ExpressionStatement",
+                  "src": "818:11:0"
+                },
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    },
+                    "id": 106,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 104,
+                      "name": "guess",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 5,
+                      "src": "843:5:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "id": 105,
+                      "name": "answer",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 84,
+                      "src": "852:6:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "src": "843:15:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 116,
+                  "nodeType": "IfStatement",
+                  "src": "839:74:0",
+                  "trueBody": {
+                    "id": 115,
+                    "nodeType": "Block",
+                    "src": "860:53:0",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "32",
+                              "id": 112,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "894:7:0",
+                              "subdenomination": "ether",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_2000000000000000000_by_1",
+                                "typeString": "int_const 2000000000000000000"
+                              },
+                              "value": "2"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_rational_2000000000000000000_by_1",
+                                "typeString": "int_const 2000000000000000000"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": null,
+                              "expression": {
+                                "argumentTypes": null,
+                                "id": 107,
+                                "name": "msg",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 309,
+                                "src": "874:3:0",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_magic_message",
+                                  "typeString": "msg"
+                                }
+                              },
+                              "id": 110,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberName": "sender",
+                              "nodeType": "MemberAccess",
+                              "referencedDeclaration": null,
+                              "src": "874:10:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            },
+                            "id": 111,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "transfer",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "874:19:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_transfer_nonpayable$_t_uint256_$returns$__$",
+                              "typeString": "function (uint256)"
+                            }
+                          },
+                          "id": 113,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "874:28:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 114,
+                        "nodeType": "ExpressionStatement",
+                        "src": "874:28:0"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 118,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "settle",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 67,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "593:2:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 68,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "603:0:0"
+            },
+            "scope": 119,
+            "src": "578:341:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 120,
+        "src": "26:895:0"
+      }
+    ],
+    "src": "0:922:0"
+  },
+  "bytecode": "6080604052670de0b6b3a7640000341461001857600080fd5b610249806100276000396000f3006080604052600436106100565763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166311da60b4811461005b5780632c0e005414610072578063b2fa1c9e14610080575b600080fd5b34801561006757600080fd5b506100706100a9565b005b61007060ff6004351661017a565b34801561008c57600080fd5b50610095610217565b604080519115158252519081900360200190f35b6000805473ffffffffffffffffffffffffffffffffffffffff1633146100ce57600080fd5b60015443116100dc57600080fd5b5060408051600019430140815242602082015281519081900390910190206000805473ffffffffffffffffffffffffffffffffffffffff191690819055600a60ff928316069182811674010000000000000000000000000000000000000000909204161415610177576040513390600090671bc16d674ec800009082818181858883f19350505050158015610175573d6000803e3d6000fd5b505b50565b60005473ffffffffffffffffffffffffffffffffffffffff161561019d57600080fd5b670de0b6b3a764000034146101b157600080fd5b6000805460ff909216740100000000000000000000000000000000000000000274ff00000000000000000000000000000000000000001973ffffffffffffffffffffffffffffffffffffffff199093163317929092169190911790554360019081019055565b303115905600a165627a7a72305820136b9ee499183aafa2d9a8bfefbc47ca33d9060ab663e7f3b0046dd022448f010029",
+  "bytecodeSha1": "a522da470ecbdbb4e41ae9948e60565475b67a35",
+  "compiler": {
+    "evm_version": "byzantium",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "version": "0.4.26+commit.4563c3fc"
+  },
+  "contractName": "PredictTheFutureChallenge",
+  "coverageMap": {
+    "branches": {
+      "0": {
+        "PredictTheFutureChallenge.lockInGuess": {
+          "13": [
+            413,
+            425,
+            true
+          ],
+          "14": [
+            444,
+            464,
+            true
+          ]
+        },
+        "PredictTheFutureChallenge.settle": {
+          "10": [
+            621,
+            642,
+            true
+          ],
+          "11": [
+            661,
+            697,
+            true
+          ],
+          "12": [
+            843,
+            858,
+            false
+          ]
+        }
+      }
+    },
+    "statements": {
+      "0": {
+        "PredictTheFutureChallenge.isComplete": {
+          "9": [
+            304,
+            337
+          ]
+        },
+        "PredictTheFutureChallenge.lockInGuess": {
+          "4": [
+            405,
+            426
+          ],
+          "5": [
+            436,
+            465
+          ],
+          "6": [
+            476,
+            496
+          ],
+          "7": [
+            506,
+            515
+          ],
+          "8": [
+            525,
+            565
+          ]
+        },
+        "PredictTheFutureChallenge.settle": {
+          "0": [
+            613,
+            643
+          ],
+          "1": [
+            653,
+            698
+          ],
+          "2": [
+            818,
+            829
+          ],
+          "3": [
+            874,
+            902
+          ]
+        }
+      }
+    }
+  },
+  "dependencies": [],
+  "deployedBytecode": "6080604052600436106100565763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166311da60b4811461005b5780632c0e005414610072578063b2fa1c9e14610080575b600080fd5b34801561006757600080fd5b506100706100a9565b005b61007060ff6004351661017a565b34801561008c57600080fd5b50610095610217565b604080519115158252519081900360200190f35b6000805473ffffffffffffffffffffffffffffffffffffffff1633146100ce57600080fd5b60015443116100dc57600080fd5b5060408051600019430140815242602082015281519081900390910190206000805473ffffffffffffffffffffffffffffffffffffffff191690819055600a60ff928316069182811674010000000000000000000000000000000000000000909204161415610177576040513390600090671bc16d674ec800009082818181858883f19350505050158015610175573d6000803e3d6000fd5b505b50565b60005473ffffffffffffffffffffffffffffffffffffffff161561019d57600080fd5b670de0b6b3a764000034146101b157600080fd5b6000805460ff909216740100000000000000000000000000000000000000000274ff00000000000000000000000000000000000000001973ffffffffffffffffffffffffffffffffffffffff199093163317929092169190911790554360019081019055565b303115905600a165627a7a72305820136b9ee499183aafa2d9a8bfefbc47ca33d9060ab663e7f3b0046dd022448f010029",
+  "deployedSourceMap": "26:895:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;578:341;;8:9:-1;5:2;;;30:1;27;20:12;5:2;578:341:0;;;;;;350:222;;;;;;;;245:99;;8:9:-1;5:2;;;30:1;27;20:12;5:2;245:99:0;;;;;;;;;;;;;;;;;;;;;;578:341;709:12;635:7;;;;621:10;:21;613:30;;;;;;676:21;;661:12;:36;653:45;;;;;;-1:-1:-1;743:49:0;;;-1:-1:-1;;769:12:0;:16;753:33;743:49;;788:3;743:49;;;;;;;;;;;;;;;-1:-1:-1;818:11:0;;-1:-1:-1;;818:11:0;;;;;805:2;724:83;;;;;;843:15;;;:5;;;;;:15;839:74;;;874:28;;:10;;:28;;894:7;;874:28;;;;894:7;874:10;:28;;;;;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;874:28:0;839:74;578:341;:::o;350:222::-;413:7;;;;:12;405:21;;;;;;457:7;444:9;:20;436:29;;;;;;476:7;:20;;506:9;;;;;;-1:-1:-1;;;;476:20:0;;;486:10;476:20;506:9;;;;;;;;;;549:12;476:20;549:16;;;525:40;;350:222::o;245:99::-;319:4;311:21;:26;245:99;:::o",
+  "language": "Solidity",
+  "natspec": {
+    "methods": {}
+  },
+  "offset": [
+    26,
+    921
+  ],
+  "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x4 CALLDATASIZE LT PUSH2 0x56 JUMPI PUSH4 0xFFFFFFFF PUSH29 0x100000000000000000000000000000000000000000000000000000000 PUSH1 0x0 CALLDATALOAD DIV AND PUSH4 0x11DA60B4 DUP2 EQ PUSH2 0x5B JUMPI DUP1 PUSH4 0x2C0E0054 EQ PUSH2 0x72 JUMPI DUP1 PUSH4 0xB2FA1C9E EQ PUSH2 0x80 JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST CALLVALUE DUP1 ISZERO PUSH2 0x67 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH2 0x70 PUSH2 0xA9 JUMP JUMPDEST STOP JUMPDEST PUSH2 0x70 PUSH1 0xFF PUSH1 0x4 CALLDATALOAD AND PUSH2 0x17A JUMP JUMPDEST CALLVALUE DUP1 ISZERO PUSH2 0x8C JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH2 0x95 PUSH2 0x217 JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD SWAP2 ISZERO ISZERO DUP3 MSTORE MLOAD SWAP1 DUP2 SWAP1 SUB PUSH1 0x20 ADD SWAP1 RETURN JUMPDEST PUSH1 0x0 DUP1 SLOAD PUSH20 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF AND CALLER EQ PUSH2 0xCE JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x1 SLOAD NUMBER GT PUSH2 0xDC JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x40 DUP1 MLOAD PUSH1 0x0 NOT NUMBER ADD BLOCKHASH DUP2 MSTORE TIMESTAMP PUSH1 0x20 DUP3 ADD MSTORE DUP2 MLOAD SWAP1 DUP2 SWAP1 SUB SWAP1 SWAP2 ADD SWAP1 KECCAK256 PUSH1 0x0 DUP1 SLOAD PUSH20 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF NOT AND SWAP1 DUP2 SWAP1 SSTORE PUSH1 0xA PUSH1 0xFF SWAP3 DUP4 AND MOD SWAP2 DUP3 DUP2 AND PUSH21 0x10000000000000000000000000000000000000000 SWAP1 SWAP3 DIV AND EQ ISZERO PUSH2 0x177 JUMPI PUSH1 0x40 MLOAD CALLER SWAP1 PUSH1 0x0 SWAP1 PUSH8 0x1BC16D674EC80000 SWAP1 DUP3 DUP2 DUP2 DUP2 DUP6 DUP9 DUP4 CALL SWAP4 POP POP POP POP ISZERO DUP1 ISZERO PUSH2 0x175 JUMPI RETURNDATASIZE PUSH1 0x0 DUP1 RETURNDATACOPY RETURNDATASIZE PUSH1 0x0 REVERT JUMPDEST POP JUMPDEST POP JUMP JUMPDEST PUSH1 0x0 SLOAD PUSH20 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF AND ISZERO PUSH2 0x19D JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH8 0xDE0B6B3A7640000 CALLVALUE EQ PUSH2 0x1B1 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x0 DUP1 SLOAD PUSH1 0xFF SWAP1 SWAP3 AND PUSH21 0x10000000000000000000000000000000000000000 MUL PUSH21 0xFF0000000000000000000000000000000000000000 NOT PUSH20 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF NOT SWAP1 SWAP4 AND CALLER OR SWAP3 SWAP1 SWAP3 AND SWAP2 SWAP1 SWAP2 OR SWAP1 SSTORE NUMBER PUSH1 0x1 SWAP1 DUP2 ADD SWAP1 SSTORE JUMP JUMPDEST ADDRESS BALANCE ISZERO SWAP1 JUMP STOP LOG1 PUSH6 0x627A7A723058 KECCAK256 SGT PUSH12 0x9EE499183AAFA2D9A8BFEFBC 0x47 0xca CALLER 0xd9 MOD EXP 0xb6 PUSH4 0xE7F3B004 PUSH14 0xD022448F01002900000000000000 ",
+  "pcMap": {
+    "0": {
+      "offset": [
+        26,
+        921
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x80"
+    },
+    "2": {
+      "fn": null,
+      "offset": [
+        26,
+        921
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "4": {
+      "fn": null,
+      "offset": [
+        26,
+        921
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "5": {
+      "fn": null,
+      "offset": [
+        26,
+        921
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "7": {
+      "fn": null,
+      "offset": [
+        26,
+        921
+      ],
+      "op": "CALLDATASIZE",
+      "path": "0"
+    },
+    "8": {
+      "fn": null,
+      "offset": [
+        26,
+        921
+      ],
+      "op": "LT",
+      "path": "0"
+    },
+    "9": {
+      "fn": null,
+      "offset": [
+        26,
+        921
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x56"
+    },
+    "12": {
+      "fn": null,
+      "offset": [
+        26,
+        921
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "13": {
+      "fn": null,
+      "offset": [
+        26,
+        921
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0xFFFFFFFF"
+    },
+    "18": {
+      "fn": null,
+      "offset": [
+        26,
+        921
+      ],
+      "op": "PUSH29",
+      "path": "0",
+      "value": "0x100000000000000000000000000000000000000000000000000000000"
+    },
+    "48": {
+      "fn": null,
+      "offset": [
+        26,
+        921
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "50": {
+      "fn": null,
+      "offset": [
+        26,
+        921
+      ],
+      "op": "CALLDATALOAD",
+      "path": "0"
+    },
+    "51": {
+      "fn": null,
+      "offset": [
+        26,
+        921
+      ],
+      "op": "DIV",
+      "path": "0"
+    },
+    "52": {
+      "fn": null,
+      "offset": [
+        26,
+        921
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "53": {
+      "fn": null,
+      "offset": [
+        26,
+        921
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x11DA60B4"
+    },
+    "58": {
+      "fn": null,
+      "offset": [
+        26,
+        921
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "59": {
+      "fn": null,
+      "offset": [
+        26,
+        921
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "60": {
+      "fn": null,
+      "offset": [
+        26,
+        921
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x5B"
+    },
+    "63": {
+      "fn": null,
+      "offset": [
+        26,
+        921
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "64": {
+      "fn": null,
+      "offset": [
+        26,
+        921
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "65": {
+      "fn": null,
+      "offset": [
+        26,
+        921
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x2C0E0054"
+    },
+    "70": {
+      "fn": null,
+      "offset": [
+        26,
+        921
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "71": {
+      "fn": null,
+      "offset": [
+        26,
+        921
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x72"
+    },
+    "74": {
+      "fn": null,
+      "offset": [
+        26,
+        921
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "75": {
+      "fn": null,
+      "offset": [
+        26,
+        921
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "76": {
+      "fn": null,
+      "offset": [
+        26,
+        921
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0xB2FA1C9E"
+    },
+    "81": {
+      "fn": null,
+      "offset": [
+        26,
+        921
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "82": {
+      "fn": null,
+      "offset": [
+        26,
+        921
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x80"
+    },
+    "85": {
+      "fn": null,
+      "offset": [
+        26,
+        921
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "86": {
+      "fn": null,
+      "offset": [
+        26,
+        921
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "87": {
+      "fn": null,
+      "offset": [
+        26,
+        921
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "89": {
+      "fn": null,
+      "offset": [
+        26,
+        921
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "90": {
+      "first_revert": true,
+      "fn": null,
+      "offset": [
+        26,
+        921
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "91": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        578,
+        919
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "92": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        578,
+        919
+      ],
+      "op": "CALLVALUE",
+      "path": "0"
+    },
+    "93": {
+      "op": "DUP1"
+    },
+    "94": {
+      "op": "ISZERO"
+    },
+    "95": {
+      "op": "PUSH2",
+      "value": "0x67"
+    },
+    "98": {
+      "op": "JUMPI"
+    },
+    "99": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "101": {
+      "op": "DUP1"
+    },
+    "102": {
+      "dev": "Cannot send ether to nonpayable function",
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        578,
+        919
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "103": {
+      "op": "JUMPDEST"
+    },
+    "104": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        578,
+        919
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "105": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        578,
+        919
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x70"
+    },
+    "108": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        578,
+        919
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xA9"
+    },
+    "111": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        578,
+        919
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "112": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        578,
+        919
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "113": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        578,
+        919
+      ],
+      "op": "STOP",
+      "path": "0"
+    },
+    "114": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        350,
+        572
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "115": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        350,
+        572
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x70"
+    },
+    "118": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        350,
+        572
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xFF"
+    },
+    "120": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        350,
+        572
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "122": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        350,
+        572
+      ],
+      "op": "CALLDATALOAD",
+      "path": "0"
+    },
+    "123": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        350,
+        572
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "124": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        350,
+        572
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x17A"
+    },
+    "127": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        350,
+        572
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "128": {
+      "fn": "PredictTheFutureChallenge.isComplete",
+      "offset": [
+        245,
+        344
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "129": {
+      "fn": "PredictTheFutureChallenge.isComplete",
+      "offset": [
+        245,
+        344
+      ],
+      "op": "CALLVALUE",
+      "path": "0"
+    },
+    "130": {
+      "op": "DUP1"
+    },
+    "131": {
+      "op": "ISZERO"
+    },
+    "132": {
+      "op": "PUSH2",
+      "value": "0x8C"
+    },
+    "135": {
+      "op": "JUMPI"
+    },
+    "136": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "138": {
+      "op": "DUP1"
+    },
+    "139": {
+      "dev": "Cannot send ether to nonpayable function",
+      "fn": "PredictTheFutureChallenge.isComplete",
+      "offset": [
+        245,
+        344
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "140": {
+      "op": "JUMPDEST"
+    },
+    "141": {
+      "fn": "PredictTheFutureChallenge.isComplete",
+      "offset": [
+        245,
+        344
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "142": {
+      "fn": "PredictTheFutureChallenge.isComplete",
+      "offset": [
+        245,
+        344
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x95"
+    },
+    "145": {
+      "fn": "PredictTheFutureChallenge.isComplete",
+      "offset": [
+        245,
+        344
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x217"
+    },
+    "148": {
+      "fn": "PredictTheFutureChallenge.isComplete",
+      "offset": [
+        245,
+        344
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "149": {
+      "fn": "PredictTheFutureChallenge.isComplete",
+      "offset": [
+        245,
+        344
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "150": {
+      "fn": "PredictTheFutureChallenge.isComplete",
+      "offset": [
+        245,
+        344
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "152": {
+      "fn": "PredictTheFutureChallenge.isComplete",
+      "offset": [
+        245,
+        344
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "153": {
+      "fn": "PredictTheFutureChallenge.isComplete",
+      "offset": [
+        245,
+        344
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "154": {
+      "fn": "PredictTheFutureChallenge.isComplete",
+      "offset": [
+        245,
+        344
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "155": {
+      "fn": "PredictTheFutureChallenge.isComplete",
+      "offset": [
+        245,
+        344
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "156": {
+      "fn": "PredictTheFutureChallenge.isComplete",
+      "offset": [
+        245,
+        344
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "157": {
+      "fn": "PredictTheFutureChallenge.isComplete",
+      "offset": [
+        245,
+        344
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "158": {
+      "fn": "PredictTheFutureChallenge.isComplete",
+      "offset": [
+        245,
+        344
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "159": {
+      "fn": "PredictTheFutureChallenge.isComplete",
+      "offset": [
+        245,
+        344
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "160": {
+      "fn": "PredictTheFutureChallenge.isComplete",
+      "offset": [
+        245,
+        344
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "161": {
+      "fn": "PredictTheFutureChallenge.isComplete",
+      "offset": [
+        245,
+        344
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "162": {
+      "fn": "PredictTheFutureChallenge.isComplete",
+      "offset": [
+        245,
+        344
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "163": {
+      "fn": "PredictTheFutureChallenge.isComplete",
+      "offset": [
+        245,
+        344
+      ],
+      "op": "SUB",
+      "path": "0"
+    },
+    "164": {
+      "fn": "PredictTheFutureChallenge.isComplete",
+      "offset": [
+        245,
+        344
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "166": {
+      "fn": "PredictTheFutureChallenge.isComplete",
+      "offset": [
+        245,
+        344
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "167": {
+      "fn": "PredictTheFutureChallenge.isComplete",
+      "offset": [
+        245,
+        344
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "168": {
+      "fn": "PredictTheFutureChallenge.isComplete",
+      "offset": [
+        245,
+        344
+      ],
+      "op": "RETURN",
+      "path": "0"
+    },
+    "169": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        578,
+        919
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "170": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        709,
+        721
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "172": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        635,
+        642
+      ],
+      "op": "DUP1",
+      "path": "0",
+      "statement": 0
+    },
+    "173": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        635,
+        642
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "174": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        635,
+        642
+      ],
+      "op": "PUSH20",
+      "path": "0",
+      "value": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+    },
+    "195": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        635,
+        642
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "196": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        621,
+        631
+      ],
+      "op": "CALLER",
+      "path": "0"
+    },
+    "197": {
+      "branch": 10,
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        621,
+        642
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "198": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        613,
+        643
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xCE"
+    },
+    "201": {
+      "branch": 10,
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        613,
+        643
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "202": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        613,
+        643
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "204": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        613,
+        643
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "205": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        613,
+        643
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "206": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        613,
+        643
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "207": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        676,
+        697
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 1,
+      "value": "0x1"
+    },
+    "209": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        676,
+        697
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "210": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        661,
+        673
+      ],
+      "op": "NUMBER",
+      "path": "0"
+    },
+    "211": {
+      "branch": 11,
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        661,
+        697
+      ],
+      "op": "GT",
+      "path": "0"
+    },
+    "212": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        653,
+        698
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xDC"
+    },
+    "215": {
+      "branch": 11,
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        653,
+        698
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "216": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        653,
+        698
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "218": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        653,
+        698
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "219": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        653,
+        698
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "220": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        653,
+        698
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "221": {
+      "op": "POP"
+    },
+    "222": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        743,
+        792
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "224": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        743,
+        792
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "225": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        743,
+        792
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "226": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "228": {
+      "op": "NOT"
+    },
+    "229": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        769,
+        781
+      ],
+      "op": "NUMBER",
+      "path": "0"
+    },
+    "230": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        769,
+        785
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "231": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        753,
+        786
+      ],
+      "op": "BLOCKHASH",
+      "path": "0"
+    },
+    "232": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        743,
+        792
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "233": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        743,
+        792
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "234": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        788,
+        791
+      ],
+      "op": "TIMESTAMP",
+      "path": "0"
+    },
+    "235": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        743,
+        792
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "237": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        743,
+        792
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "238": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        743,
+        792
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "239": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        743,
+        792
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "240": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        743,
+        792
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "241": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        743,
+        792
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "242": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        743,
+        792
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "243": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        743,
+        792
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "244": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        743,
+        792
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "245": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        743,
+        792
+      ],
+      "op": "SUB",
+      "path": "0"
+    },
+    "246": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        743,
+        792
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "247": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        743,
+        792
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "248": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        743,
+        792
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "249": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        743,
+        792
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "250": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        743,
+        792
+      ],
+      "op": "KECCAK256",
+      "path": "0"
+    },
+    "251": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "253": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        818,
+        829
+      ],
+      "op": "DUP1",
+      "path": "0",
+      "statement": 2
+    },
+    "254": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        818,
+        829
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "255": {
+      "op": "PUSH20",
+      "value": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+    },
+    "276": {
+      "op": "NOT"
+    },
+    "277": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        818,
+        829
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "278": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        818,
+        829
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "279": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        818,
+        829
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "280": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        818,
+        829
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "281": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        818,
+        829
+      ],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "282": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        805,
+        807
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xA"
+    },
+    "284": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        724,
+        807
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xFF"
+    },
+    "286": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        724,
+        807
+      ],
+      "op": "SWAP3",
+      "path": "0"
+    },
+    "287": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        724,
+        807
+      ],
+      "op": "DUP4",
+      "path": "0"
+    },
+    "288": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        724,
+        807
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "289": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        724,
+        807
+      ],
+      "op": "MOD",
+      "path": "0"
+    },
+    "290": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        724,
+        807
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "291": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        843,
+        858
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "292": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        843,
+        858
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "293": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        843,
+        858
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "294": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        843,
+        848
+      ],
+      "op": "PUSH21",
+      "path": "0",
+      "value": "0x10000000000000000000000000000000000000000"
+    },
+    "316": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        843,
+        848
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "317": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        843,
+        848
+      ],
+      "op": "SWAP3",
+      "path": "0"
+    },
+    "318": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        843,
+        848
+      ],
+      "op": "DIV",
+      "path": "0"
+    },
+    "319": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        843,
+        848
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "320": {
+      "branch": 12,
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        843,
+        858
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "321": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        839,
+        913
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "322": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        839,
+        913
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x177"
+    },
+    "325": {
+      "branch": 12,
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        839,
+        913
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "326": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        874,
+        902
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 3,
+      "value": "0x40"
+    },
+    "328": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        874,
+        902
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "329": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        874,
+        884
+      ],
+      "op": "CALLER",
+      "path": "0"
+    },
+    "330": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        874,
+        884
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "331": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        874,
+        902
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "333": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        874,
+        902
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "334": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        894,
+        901
+      ],
+      "op": "PUSH8",
+      "path": "0",
+      "value": "0x1BC16D674EC80000"
+    },
+    "343": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        894,
+        901
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "344": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        874,
+        902
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "345": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        874,
+        902
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "346": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        874,
+        902
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "347": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        874,
+        902
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "348": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        894,
+        901
+      ],
+      "op": "DUP6",
+      "path": "0"
+    },
+    "349": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        874,
+        884
+      ],
+      "op": "DUP9",
+      "path": "0"
+    },
+    "350": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        874,
+        902
+      ],
+      "op": "DUP4",
+      "path": "0"
+    },
+    "351": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        874,
+        902
+      ],
+      "op": "CALL",
+      "path": "0"
+    },
+    "352": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        874,
+        902
+      ],
+      "op": "SWAP4",
+      "path": "0"
+    },
+    "353": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        874,
+        902
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "354": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        874,
+        902
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "355": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        874,
+        902
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "356": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        874,
+        902
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "357": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        874,
+        902
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "358": {
+      "op": "DUP1"
+    },
+    "359": {
+      "op": "ISZERO"
+    },
+    "360": {
+      "op": "PUSH2",
+      "value": "0x175"
+    },
+    "363": {
+      "op": "JUMPI"
+    },
+    "364": {
+      "op": "RETURNDATASIZE"
+    },
+    "365": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "367": {
+      "op": "DUP1"
+    },
+    "368": {
+      "op": "RETURNDATACOPY"
+    },
+    "369": {
+      "op": "RETURNDATASIZE"
+    },
+    "370": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "372": {
+      "op": "REVERT"
+    },
+    "373": {
+      "op": "JUMPDEST"
+    },
+    "374": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        874,
+        902
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "375": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        839,
+        913
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "376": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "offset": [
+        578,
+        919
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "377": {
+      "fn": "PredictTheFutureChallenge.settle",
+      "jump": "o",
+      "offset": [
+        578,
+        919
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "378": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        350,
+        572
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "379": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        413,
+        420
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 4,
+      "value": "0x0"
+    },
+    "381": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        413,
+        420
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "382": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        413,
+        420
+      ],
+      "op": "PUSH20",
+      "path": "0",
+      "value": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+    },
+    "403": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        413,
+        420
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "404": {
+      "branch": 13,
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        413,
+        425
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "405": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        405,
+        426
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x19D"
+    },
+    "408": {
+      "branch": 13,
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        405,
+        426
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "409": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        405,
+        426
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "411": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        405,
+        426
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "412": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        405,
+        426
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "413": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        405,
+        426
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "414": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        457,
+        464
+      ],
+      "op": "PUSH8",
+      "path": "0",
+      "statement": 5,
+      "value": "0xDE0B6B3A7640000"
+    },
+    "423": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        444,
+        453
+      ],
+      "op": "CALLVALUE",
+      "path": "0"
+    },
+    "424": {
+      "branch": 14,
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        444,
+        464
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "425": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        436,
+        465
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x1B1"
+    },
+    "428": {
+      "branch": 14,
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        436,
+        465
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "429": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        436,
+        465
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "431": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        436,
+        465
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "432": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        436,
+        465
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "433": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        436,
+        465
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "434": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        476,
+        483
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 6,
+      "value": "0x0"
+    },
+    "436": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        476,
+        496
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "437": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        476,
+        496
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "438": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        506,
+        515
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 7,
+      "value": "0xFF"
+    },
+    "440": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        506,
+        515
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "441": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        506,
+        515
+      ],
+      "op": "SWAP3",
+      "path": "0"
+    },
+    "442": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        506,
+        515
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "443": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        506,
+        515
+      ],
+      "op": "PUSH21",
+      "path": "0",
+      "value": "0x10000000000000000000000000000000000000000"
+    },
+    "465": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        506,
+        515
+      ],
+      "op": "MUL",
+      "path": "0"
+    },
+    "466": {
+      "op": "PUSH21",
+      "value": "0xFF0000000000000000000000000000000000000000"
+    },
+    "488": {
+      "op": "NOT"
+    },
+    "489": {
+      "op": "PUSH20",
+      "value": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+    },
+    "510": {
+      "op": "NOT"
+    },
+    "511": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        476,
+        496
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "512": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        476,
+        496
+      ],
+      "op": "SWAP4",
+      "path": "0"
+    },
+    "513": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        476,
+        496
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "514": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        486,
+        496
+      ],
+      "op": "CALLER",
+      "path": "0"
+    },
+    "515": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        476,
+        496
+      ],
+      "op": "OR",
+      "path": "0"
+    },
+    "516": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        506,
+        515
+      ],
+      "op": "SWAP3",
+      "path": "0"
+    },
+    "517": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        506,
+        515
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "518": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        506,
+        515
+      ],
+      "op": "SWAP3",
+      "path": "0"
+    },
+    "519": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        506,
+        515
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "520": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        506,
+        515
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "521": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        506,
+        515
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "522": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        506,
+        515
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "523": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        506,
+        515
+      ],
+      "op": "OR",
+      "path": "0"
+    },
+    "524": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        506,
+        515
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "525": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        506,
+        515
+      ],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "526": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        549,
+        561
+      ],
+      "op": "NUMBER",
+      "path": "0",
+      "statement": 8
+    },
+    "527": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        476,
+        496
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x1"
+    },
+    "529": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        549,
+        565
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "530": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        549,
+        565
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "531": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        549,
+        565
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "532": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        525,
+        565
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "533": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "offset": [
+        525,
+        565
+      ],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "534": {
+      "fn": "PredictTheFutureChallenge.lockInGuess",
+      "jump": "o",
+      "offset": [
+        350,
+        572
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "535": {
+      "fn": "PredictTheFutureChallenge.isComplete",
+      "offset": [
+        245,
+        344
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "536": {
+      "fn": "PredictTheFutureChallenge.isComplete",
+      "offset": [
+        319,
+        323
+      ],
+      "op": "ADDRESS",
+      "path": "0",
+      "statement": 9
+    },
+    "537": {
+      "fn": "PredictTheFutureChallenge.isComplete",
+      "offset": [
+        311,
+        332
+      ],
+      "op": "BALANCE",
+      "path": "0"
+    },
+    "538": {
+      "fn": "PredictTheFutureChallenge.isComplete",
+      "offset": [
+        311,
+        337
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "539": {
+      "fn": "PredictTheFutureChallenge.isComplete",
+      "offset": [
+        245,
+        344
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "540": {
+      "fn": "PredictTheFutureChallenge.isComplete",
+      "jump": "o",
+      "offset": [
+        245,
+        344
+      ],
+      "op": "JUMP",
+      "path": "0"
+    }
+  },
+  "sha1": "92e410c357cf96164f32959088388f408c332eb9",
+  "source": "pragma solidity ^0.4.21;\n\ncontract PredictTheFutureChallenge {\n    address guesser;\n    uint8 guess;\n    uint256 settlementBlockNumber;\n\n    function PredictTheFutureChallenge() public payable {\n        require(msg.value == 1 ether);\n    }\n\n    function isComplete() public view returns (bool) {\n        return address(this).balance == 0;\n    }\n\n    function lockInGuess(uint8 n) public payable {\n        require(guesser == 0);\n        require(msg.value == 1 ether);\n\n        guesser = msg.sender;\n        guess = n;\n        settlementBlockNumber = block.number + 1;\n    }\n\n    function settle() public {\n        require(msg.sender == guesser);\n        require(block.number > settlementBlockNumber);\n\n        uint8 answer = uint8(\n            keccak256(block.blockhash(block.number - 1), now)\n        ) % 10;\n\n        guesser = 0;\n        if (guess == answer) {\n            msg.sender.transfer(2 ether);\n        }\n    }\n}\n",
+  "sourceMap": "26:895:0:-;;;224:7;211:9;:20;203:29;;;;;;26:895;;;;;;",
+  "sourcePath": "contracts/Predict-the-future.sol",
+  "type": "contract"
+}

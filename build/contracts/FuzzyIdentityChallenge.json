@@ -1,0 +1,3740 @@
+{
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "authenticate",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "isComplete",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "allSourcePaths": {
+    "0": "contracts/Fuzzy-identity.sol"
+  },
+  "ast": {
+    "absolutePath": "contracts/Fuzzy-identity.sol",
+    "exportedSymbols": {
+      "FuzzyIdentityChallenge": [
+        103
+      ],
+      "IName": [
+        7
+      ]
+    },
+    "id": 104,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".21"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 7,
+        "linearizedBaseContracts": [
+          7
+        ],
+        "name": "IName",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 6,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "name",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "61:2:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 5,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6,
+                  "src": "87:7:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 3,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "87:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "86:9:0"
+            },
+            "scope": 7,
+            "src": "48:48:0",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 104,
+        "src": "26:72:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 103,
+        "linearizedBaseContracts": [
+          103
+        ],
+        "name": "FuzzyIdentityChallenge",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 9,
+            "name": "isComplete",
+            "nodeType": "VariableDeclaration",
+            "scope": 103,
+            "src": "138:22:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 8,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "138:4:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 30,
+              "nodeType": "Block",
+              "src": "198:113:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 14,
+                              "name": "msg",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 118,
+                              "src": "224:3:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_magic_message",
+                                "typeString": "msg"
+                              }
+                            },
+                            "id": 15,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "sender",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "224:10:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          ],
+                          "id": 13,
+                          "name": "isSmarx",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 49,
+                          "src": "216:7:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_view$_t_address_$returns$_t_bool_$",
+                            "typeString": "function (address) view returns (bool)"
+                          }
+                        },
+                        "id": 16,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "216:19:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 12,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        121,
+                        122
+                      ],
+                      "referencedDeclaration": 121,
+                      "src": "208:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 17,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "208:28:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 18,
+                  "nodeType": "ExpressionStatement",
+                  "src": "208:28:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 21,
+                              "name": "msg",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 118,
+                              "src": "264:3:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_magic_message",
+                                "typeString": "msg"
+                              }
+                            },
+                            "id": 22,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "sender",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "264:10:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          ],
+                          "id": 20,
+                          "name": "isBadCode",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 102,
+                          "src": "254:9:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_pure$_t_address_$returns$_t_bool_$",
+                            "typeString": "function (address) pure returns (bool)"
+                          }
+                        },
+                        "id": 23,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "254:21:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 19,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        121,
+                        122
+                      ],
+                      "referencedDeclaration": 121,
+                      "src": "246:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 24,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "246:30:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 25,
+                  "nodeType": "ExpressionStatement",
+                  "src": "246:30:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 28,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 26,
+                      "name": "isComplete",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 9,
+                      "src": "287:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "74727565",
+                      "id": 27,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "300:4:0",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "287:17:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 29,
+                  "nodeType": "ExpressionStatement",
+                  "src": "287:17:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 31,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "authenticate",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "188:2:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 11,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "198:0:0"
+            },
+            "scope": 103,
+            "src": "167:144:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 48,
+              "nodeType": "Block",
+              "src": "377:62:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    },
+                    "id": 46,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "arguments": [],
+                      "expression": {
+                        "argumentTypes": [],
+                        "expression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 39,
+                              "name": "addr",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 33,
+                              "src": "400:4:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            ],
+                            "id": 38,
+                            "name": "IName",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 7,
+                            "src": "394:5:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_contract$_IName_$7_$",
+                              "typeString": "type(contract IName)"
+                            }
+                          },
+                          "id": 40,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "394:11:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_IName_$7",
+                            "typeString": "contract IName"
+                          }
+                        },
+                        "id": 41,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "name",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 6,
+                        "src": "394:16:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_external_view$__$returns$_t_bytes32_$",
+                          "typeString": "function () view external returns (bytes32)"
+                        }
+                      },
+                      "id": 42,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "394:18:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "hexValue": "736d617278",
+                          "id": 44,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "string",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "424:7:0",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_stringliteral_eba20de5d57b82f55d882c87a90fd52b291b20435a02aa482c1b16da62d71feb",
+                            "typeString": "literal_string \"smarx\""
+                          },
+                          "value": "smarx"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_stringliteral_eba20de5d57b82f55d882c87a90fd52b291b20435a02aa482c1b16da62d71feb",
+                            "typeString": "literal_string \"smarx\""
+                          }
+                        ],
+                        "id": 43,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "ElementaryTypeNameExpression",
+                        "src": "416:7:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_bytes32_$",
+                          "typeString": "type(bytes32)"
+                        },
+                        "typeName": "bytes32"
+                      },
+                      "id": 45,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "416:16:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "src": "394:38:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 37,
+                  "id": 47,
+                  "nodeType": "Return",
+                  "src": "387:45:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 49,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "isSmarx",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 34,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33,
+                  "name": "addr",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 49,
+                  "src": "334:12:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 32,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "334:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "333:14:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 37,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 36,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 49,
+                  "src": "371:4:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 35,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "371:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "370:6:0"
+            },
+            "scope": 103,
+            "src": "317:122:0",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 101,
+              "nodeType": "Block",
+              "src": "508:387:0",
+              "statements": [
+                {
+                  "assignments": [
+                    57
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 57,
+                      "name": "addr",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 102,
+                      "src": "518:12:0",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes20",
+                        "typeString": "bytes20"
+                      },
+                      "typeName": {
+                        "id": 56,
+                        "name": "bytes20",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "518:7:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes20",
+                          "typeString": "bytes20"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 61,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 59,
+                        "name": "_addr",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 51,
+                        "src": "541:5:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 58,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "ElementaryTypeNameExpression",
+                      "src": "533:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_bytes20_$",
+                        "typeString": "type(bytes20)"
+                      },
+                      "typeName": "bytes20"
+                    },
+                    "id": 60,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "533:14:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes20",
+                      "typeString": "bytes20"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "518:29:0"
+                },
+                {
+                  "assignments": [
+                    63
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 63,
+                      "name": "id",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 102,
+                      "src": "557:10:0",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes20",
+                        "typeString": "bytes20"
+                      },
+                      "typeName": {
+                        "id": 62,
+                        "name": "bytes20",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "557:7:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes20",
+                          "typeString": "bytes20"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 65,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "hexValue": "000000000000000000000000000000000badc0de",
+                    "id": 64,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "string",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "570:45:0",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_stringliteral_e46b4390c003cb7a2c15e6c092940ad8f28753e9ae9a76d0aaea58718e962ae0",
+                      "typeString": "literal_string (contains invalid UTF-8 sequence at position 17)"
+                    },
+                    "value": null
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "557:58:0"
+                },
+                {
+                  "assignments": [
+                    67
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 67,
+                      "name": "mask",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 102,
+                      "src": "625:12:0",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes20",
+                        "typeString": "bytes20"
+                      },
+                      "typeName": {
+                        "id": 66,
+                        "name": "bytes20",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "625:7:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes20",
+                          "typeString": "bytes20"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 69,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "hexValue": "000000000000000000000000000000000fffffff",
+                    "id": 68,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "string",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "640:45:0",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_stringliteral_04be31e00e47e621a6f132c63a563fa1b96fc809d569bf050c86d8cff4f8101f",
+                      "typeString": "literal_string (contains invalid UTF-8 sequence at position 17)"
+                    },
+                    "value": null
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "625:60:0"
+                },
+                {
+                  "body": {
+                    "id": 97,
+                    "nodeType": "Block",
+                    "src": "729:137:0",
+                    "statements": [
+                      {
+                        "condition": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_bytes20",
+                            "typeString": "bytes20"
+                          },
+                          "id": 84,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftExpression": {
+                            "argumentTypes": null,
+                            "commonType": {
+                              "typeIdentifier": "t_bytes20",
+                              "typeString": "bytes20"
+                            },
+                            "id": 82,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "leftExpression": {
+                              "argumentTypes": null,
+                              "id": 80,
+                              "name": "addr",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 57,
+                              "src": "747:4:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_bytes20",
+                                "typeString": "bytes20"
+                              }
+                            },
+                            "nodeType": "BinaryOperation",
+                            "operator": "&",
+                            "rightExpression": {
+                              "argumentTypes": null,
+                              "id": 81,
+                              "name": "mask",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 67,
+                              "src": "754:4:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_bytes20",
+                                "typeString": "bytes20"
+                              }
+                            },
+                            "src": "747:11:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bytes20",
+                              "typeString": "bytes20"
+                            }
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": "==",
+                          "rightExpression": {
+                            "argumentTypes": null,
+                            "id": 83,
+                            "name": "id",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 63,
+                            "src": "762:2:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bytes20",
+                              "typeString": "bytes20"
+                            }
+                          },
+                          "src": "747:17:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "falseBody": null,
+                        "id": 88,
+                        "nodeType": "IfStatement",
+                        "src": "743:67:0",
+                        "trueBody": {
+                          "id": 87,
+                          "nodeType": "Block",
+                          "src": "766:44:0",
+                          "statements": [
+                            {
+                              "expression": {
+                                "argumentTypes": null,
+                                "hexValue": "74727565",
+                                "id": 85,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": true,
+                                "kind": "bool",
+                                "lValueRequested": false,
+                                "nodeType": "Literal",
+                                "src": "791:4:0",
+                                "subdenomination": null,
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                },
+                                "value": "true"
+                              },
+                              "functionReturnParameters": 55,
+                              "id": 86,
+                              "nodeType": "Return",
+                              "src": "784:11:0"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 91,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftHandSide": {
+                            "argumentTypes": null,
+                            "id": 89,
+                            "name": "mask",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 67,
+                            "src": "823:4:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bytes20",
+                              "typeString": "bytes20"
+                            }
+                          },
+                          "nodeType": "Assignment",
+                          "operator": "<<=",
+                          "rightHandSide": {
+                            "argumentTypes": null,
+                            "hexValue": "34",
+                            "id": 90,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "number",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "832:1:0",
+                            "subdenomination": null,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_rational_4_by_1",
+                              "typeString": "int_const 4"
+                            },
+                            "value": "4"
+                          },
+                          "src": "823:10:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes20",
+                            "typeString": "bytes20"
+                          }
+                        },
+                        "id": 92,
+                        "nodeType": "ExpressionStatement",
+                        "src": "823:10:0"
+                      },
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 95,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftHandSide": {
+                            "argumentTypes": null,
+                            "id": 93,
+                            "name": "id",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 63,
+                            "src": "847:2:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bytes20",
+                              "typeString": "bytes20"
+                            }
+                          },
+                          "nodeType": "Assignment",
+                          "operator": "<<=",
+                          "rightHandSide": {
+                            "argumentTypes": null,
+                            "hexValue": "34",
+                            "id": 94,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "number",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "854:1:0",
+                            "subdenomination": null,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_rational_4_by_1",
+                              "typeString": "int_const 4"
+                            },
+                            "value": "4"
+                          },
+                          "src": "847:8:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes20",
+                            "typeString": "bytes20"
+                          }
+                        },
+                        "id": 96,
+                        "nodeType": "ExpressionStatement",
+                        "src": "847:8:0"
+                      }
+                    ]
+                  },
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 76,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 74,
+                      "name": "i",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 71,
+                      "src": "716:1:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "<",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "3334",
+                      "id": 75,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "720:2:0",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_34_by_1",
+                        "typeString": "int_const 34"
+                      },
+                      "value": "34"
+                    },
+                    "src": "716:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 98,
+                  "initializationExpression": {
+                    "assignments": [
+                      71
+                    ],
+                    "declarations": [
+                      {
+                        "constant": false,
+                        "id": 71,
+                        "name": "i",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 102,
+                        "src": "701:9:0",
+                        "stateVariable": false,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "typeName": {
+                          "id": 70,
+                          "name": "uint256",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "701:7:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "value": null,
+                        "visibility": "internal"
+                      }
+                    ],
+                    "id": 73,
+                    "initialValue": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 72,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "713:1:0",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "nodeType": "VariableDeclarationStatement",
+                    "src": "701:13:0"
+                  },
+                  "loopExpression": {
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 78,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "UnaryOperation",
+                      "operator": "++",
+                      "prefix": false,
+                      "src": "724:3:0",
+                      "subExpression": {
+                        "argumentTypes": null,
+                        "id": 77,
+                        "name": "i",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 71,
+                        "src": "724:1:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 79,
+                    "nodeType": "ExpressionStatement",
+                    "src": "724:3:0"
+                  },
+                  "nodeType": "ForStatement",
+                  "src": "696:170:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "66616c7365",
+                    "id": 99,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "883:5:0",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "false"
+                  },
+                  "functionReturnParameters": 55,
+                  "id": 100,
+                  "nodeType": "Return",
+                  "src": "876:12:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 102,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "isBadCode",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 52,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51,
+                  "name": "_addr",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 102,
+                  "src": "464:13:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 50,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "464:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "463:15:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 55,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 54,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 102,
+                  "src": "502:4:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 53,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "502:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "501:6:0"
+            },
+            "scope": 103,
+            "src": "445:450:0",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 104,
+        "src": "100:797:0"
+      }
+    ],
+    "src": "0:898:0"
+  },
+  "bytecode": "608060405234801561001057600080fd5b5061025e806100206000396000f30060806040526004361061004b5763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663380c7a678114610050578063b2fa1c9e14610067575b600080fd5b34801561005c57600080fd5b50610065610090565b005b34801561007357600080fd5b5061007c6100c7565b604080519115158252519081900360200190f35b610099336100d0565b15156100a457600080fd5b6100ad3361018e565b15156100b857600080fd5b6000805460ff19166001179055565b60005460ff1681565b60007f736d617278000000000000000000000000000000000000000000000000000000600019168273ffffffffffffffffffffffffffffffffffffffff166306fdde036040518163ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401602060405180830381600087803b15801561015b57600080fd5b505af115801561016f573d6000803e3d6000fd5b505050506040513d602081101561018557600080fd5b50511492915050565b60006c0100000000000000000000000082026f0badc0de0000000000000000000000006f0fffffff000000000000000000000000835b602281101561022457826bffffffffffffffffffffffff19168285166bffffffffffffffffffffffff191614156101fe5760019450610229565b60106bffffffffffffffffffffffff1993841681029392909216909102906001016101c4565b600094505b505050509190505600a165627a7a72305820a3052aba3adde93561b4ccd9217fba077d778eeda564d9f78a14a4436b7814060029",
+  "bytecodeSha1": "786efd3411b7a24814c2419fc3685fd175a880e9",
+  "compiler": {
+    "evm_version": "byzantium",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "version": "0.4.26+commit.4563c3fc"
+  },
+  "contractName": "FuzzyIdentityChallenge",
+  "coverageMap": {
+    "branches": {
+      "0": {
+        "FuzzyIdentityChallenge.authenticate": {
+          "9": [
+            216,
+            235,
+            true
+          ],
+          "10": [
+            254,
+            275,
+            true
+          ]
+        },
+        "FuzzyIdentityChallenge.isBadCode": {
+          "11": [
+            747,
+            764,
+            false
+          ]
+        }
+      }
+    },
+    "statements": {
+      "0": {
+        "FuzzyIdentityChallenge.authenticate": {
+          "0": [
+            208,
+            236
+          ],
+          "1": [
+            246,
+            276
+          ],
+          "2": [
+            287,
+            304
+          ]
+        },
+        "FuzzyIdentityChallenge.isBadCode": {
+          "4": [
+            784,
+            795
+          ],
+          "5": [
+            823,
+            833
+          ],
+          "6": [
+            847,
+            855
+          ],
+          "7": [
+            724,
+            727
+          ],
+          "8": [
+            876,
+            888
+          ]
+        },
+        "FuzzyIdentityChallenge.isSmarx": {
+          "3": [
+            387,
+            432
+          ]
+        }
+      }
+    }
+  },
+  "dependencies": [
+    "IName"
+  ],
+  "deployedBytecode": "60806040526004361061004b5763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663380c7a678114610050578063b2fa1c9e14610067575b600080fd5b34801561005c57600080fd5b50610065610090565b005b34801561007357600080fd5b5061007c6100c7565b604080519115158252519081900360200190f35b610099336100d0565b15156100a457600080fd5b6100ad3361018e565b15156100b857600080fd5b6000805460ff19166001179055565b60005460ff1681565b60007f736d617278000000000000000000000000000000000000000000000000000000600019168273ffffffffffffffffffffffffffffffffffffffff166306fdde036040518163ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401602060405180830381600087803b15801561015b57600080fd5b505af115801561016f573d6000803e3d6000fd5b505050506040513d602081101561018557600080fd5b50511492915050565b60006c0100000000000000000000000082026f0badc0de0000000000000000000000006f0fffffff000000000000000000000000835b602281101561022457826bffffffffffffffffffffffff19168285166bffffffffffffffffffffffff191614156101fe5760019450610229565b60106bffffffffffffffffffffffff1993841681029392909216909102906001016101c4565b600094505b505050509190505600a165627a7a72305820a3052aba3adde93561b4ccd9217fba077d778eeda564d9f78a14a4436b7814060029",
+  "deployedSourceMap": "100:797:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;167:144;;8:9:-1;5:2;;;30:1;27;20:12;5:2;167:144:0;;;;;;138:22;;8:9:-1;5:2;;;30:1;27;20:12;5:2;138:22:0;;;;;;;;;;;;;;;;;;;;;;167:144;216:19;224:10;216:7;:19::i;:::-;208:28;;;;;;;;254:21;264:10;254:9;:21::i;:::-;246:30;;;;;;;;287:10;:17;;-1:-1:-1;;287:17:0;300:4;287:17;;;167:144::o;138:22::-;;;;;;:::o;317:122::-;371:4;416:16;394:38;;;400:4;394:16;;;:18;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;394:18:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;394:18:0;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;394:18:0;:38;;317:122;-1:-1:-1;;317:122:0:o;445:450::-;502:4;533:14;;;557:58;625:60;502:4;696:170;720:2;716:1;:6;696:170;;;762:2;747:17;;;754:4;747;:11;:17;;;;743:67;;;791:4;784:11;;;;743:67;823:10;-1:-1:-1;;847:8:0;;;;;;823:10;;;;;;;;724:3;;696:170;;;883:5;876:12;;445:450;;;;;;;;:::o",
+  "language": "Solidity",
+  "natspec": {
+    "methods": {}
+  },
+  "offset": [
+    100,
+    897
+  ],
+  "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x4 CALLDATASIZE LT PUSH2 0x4B JUMPI PUSH4 0xFFFFFFFF PUSH29 0x100000000000000000000000000000000000000000000000000000000 PUSH1 0x0 CALLDATALOAD DIV AND PUSH4 0x380C7A67 DUP2 EQ PUSH2 0x50 JUMPI DUP1 PUSH4 0xB2FA1C9E EQ PUSH2 0x67 JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST CALLVALUE DUP1 ISZERO PUSH2 0x5C JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH2 0x65 PUSH2 0x90 JUMP JUMPDEST STOP JUMPDEST CALLVALUE DUP1 ISZERO PUSH2 0x73 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH2 0x7C PUSH2 0xC7 JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD SWAP2 ISZERO ISZERO DUP3 MSTORE MLOAD SWAP1 DUP2 SWAP1 SUB PUSH1 0x20 ADD SWAP1 RETURN JUMPDEST PUSH2 0x99 CALLER PUSH2 0xD0 JUMP JUMPDEST ISZERO ISZERO PUSH2 0xA4 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH2 0xAD CALLER PUSH2 0x18E JUMP JUMPDEST ISZERO ISZERO PUSH2 0xB8 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x0 DUP1 SLOAD PUSH1 0xFF NOT AND PUSH1 0x1 OR SWAP1 SSTORE JUMP JUMPDEST PUSH1 0x0 SLOAD PUSH1 0xFF AND DUP2 JUMP JUMPDEST PUSH1 0x0 PUSH32 0x736D617278000000000000000000000000000000000000000000000000000000 PUSH1 0x0 NOT AND DUP3 PUSH20 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF AND PUSH4 0x6FDDE03 PUSH1 0x40 MLOAD DUP2 PUSH4 0xFFFFFFFF AND PUSH29 0x100000000000000000000000000000000000000000000000000000000 MUL DUP2 MSTORE PUSH1 0x4 ADD PUSH1 0x20 PUSH1 0x40 MLOAD DUP1 DUP4 SUB DUP2 PUSH1 0x0 DUP8 DUP1 EXTCODESIZE ISZERO DUP1 ISZERO PUSH2 0x15B JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP GAS CALL ISZERO DUP1 ISZERO PUSH2 0x16F JUMPI RETURNDATASIZE PUSH1 0x0 DUP1 RETURNDATACOPY RETURNDATASIZE PUSH1 0x0 REVERT JUMPDEST POP POP POP POP PUSH1 0x40 MLOAD RETURNDATASIZE PUSH1 0x20 DUP2 LT ISZERO PUSH2 0x185 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP MLOAD EQ SWAP3 SWAP2 POP POP JUMP JUMPDEST PUSH1 0x0 PUSH13 0x1000000000000000000000000 DUP3 MUL PUSH16 0xBADC0DE000000000000000000000000 PUSH16 0xFFFFFFF000000000000000000000000 DUP4 JUMPDEST PUSH1 0x22 DUP2 LT ISZERO PUSH2 0x224 JUMPI DUP3 PUSH12 0xFFFFFFFFFFFFFFFFFFFFFFFF NOT AND DUP3 DUP6 AND PUSH12 0xFFFFFFFFFFFFFFFFFFFFFFFF NOT AND EQ ISZERO PUSH2 0x1FE JUMPI PUSH1 0x1 SWAP5 POP PUSH2 0x229 JUMP JUMPDEST PUSH1 0x10 PUSH12 0xFFFFFFFFFFFFFFFFFFFFFFFF NOT SWAP4 DUP5 AND DUP2 MUL SWAP4 SWAP3 SWAP1 SWAP3 AND SWAP1 SWAP2 MUL SWAP1 PUSH1 0x1 ADD PUSH2 0x1C4 JUMP JUMPDEST PUSH1 0x0 SWAP5 POP JUMPDEST POP POP POP POP SWAP2 SWAP1 POP JUMP STOP LOG1 PUSH6 0x627A7A723058 KECCAK256 LOG3 SDIV 0x2a 0xba GASPRICE 0xdd 0xe9 CALLDATALOAD PUSH2 0xB4CC 0xd9 0x21 PUSH32 0xBA077D778EEDA564D9F78A14A4436B7814060029000000000000000000000000 ",
+  "pcMap": {
+    "0": {
+      "offset": [
+        100,
+        897
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x80"
+    },
+    "2": {
+      "fn": null,
+      "offset": [
+        100,
+        897
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "4": {
+      "fn": null,
+      "offset": [
+        100,
+        897
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "5": {
+      "fn": null,
+      "offset": [
+        100,
+        897
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "7": {
+      "fn": null,
+      "offset": [
+        100,
+        897
+      ],
+      "op": "CALLDATASIZE",
+      "path": "0"
+    },
+    "8": {
+      "fn": null,
+      "offset": [
+        100,
+        897
+      ],
+      "op": "LT",
+      "path": "0"
+    },
+    "9": {
+      "fn": null,
+      "offset": [
+        100,
+        897
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x4B"
+    },
+    "12": {
+      "fn": null,
+      "offset": [
+        100,
+        897
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "13": {
+      "fn": null,
+      "offset": [
+        100,
+        897
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0xFFFFFFFF"
+    },
+    "18": {
+      "fn": null,
+      "offset": [
+        100,
+        897
+      ],
+      "op": "PUSH29",
+      "path": "0",
+      "value": "0x100000000000000000000000000000000000000000000000000000000"
+    },
+    "48": {
+      "fn": null,
+      "offset": [
+        100,
+        897
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "50": {
+      "fn": null,
+      "offset": [
+        100,
+        897
+      ],
+      "op": "CALLDATALOAD",
+      "path": "0"
+    },
+    "51": {
+      "fn": null,
+      "offset": [
+        100,
+        897
+      ],
+      "op": "DIV",
+      "path": "0"
+    },
+    "52": {
+      "fn": null,
+      "offset": [
+        100,
+        897
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "53": {
+      "fn": null,
+      "offset": [
+        100,
+        897
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x380C7A67"
+    },
+    "58": {
+      "fn": null,
+      "offset": [
+        100,
+        897
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "59": {
+      "fn": null,
+      "offset": [
+        100,
+        897
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "60": {
+      "fn": null,
+      "offset": [
+        100,
+        897
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x50"
+    },
+    "63": {
+      "fn": null,
+      "offset": [
+        100,
+        897
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "64": {
+      "fn": null,
+      "offset": [
+        100,
+        897
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "65": {
+      "fn": null,
+      "offset": [
+        100,
+        897
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0xB2FA1C9E"
+    },
+    "70": {
+      "fn": null,
+      "offset": [
+        100,
+        897
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "71": {
+      "fn": null,
+      "offset": [
+        100,
+        897
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x67"
+    },
+    "74": {
+      "fn": null,
+      "offset": [
+        100,
+        897
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "75": {
+      "fn": null,
+      "offset": [
+        100,
+        897
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "76": {
+      "fn": null,
+      "offset": [
+        100,
+        897
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "78": {
+      "fn": null,
+      "offset": [
+        100,
+        897
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "79": {
+      "first_revert": true,
+      "fn": null,
+      "offset": [
+        100,
+        897
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "80": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        167,
+        311
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "81": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        167,
+        311
+      ],
+      "op": "CALLVALUE",
+      "path": "0"
+    },
+    "82": {
+      "op": "DUP1"
+    },
+    "83": {
+      "op": "ISZERO"
+    },
+    "84": {
+      "op": "PUSH2",
+      "value": "0x5C"
+    },
+    "87": {
+      "op": "JUMPI"
+    },
+    "88": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "90": {
+      "op": "DUP1"
+    },
+    "91": {
+      "dev": "Cannot send ether to nonpayable function",
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        167,
+        311
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "92": {
+      "op": "JUMPDEST"
+    },
+    "93": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        167,
+        311
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "94": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        167,
+        311
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x65"
+    },
+    "97": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        167,
+        311
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x90"
+    },
+    "100": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        167,
+        311
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "101": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        167,
+        311
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "102": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        167,
+        311
+      ],
+      "op": "STOP",
+      "path": "0"
+    },
+    "103": {
+      "offset": [
+        138,
+        160
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "104": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        138,
+        160
+      ],
+      "op": "CALLVALUE",
+      "path": "0"
+    },
+    "105": {
+      "op": "DUP1"
+    },
+    "106": {
+      "op": "ISZERO"
+    },
+    "107": {
+      "op": "PUSH2",
+      "value": "0x73"
+    },
+    "110": {
+      "op": "JUMPI"
+    },
+    "111": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "113": {
+      "op": "DUP1"
+    },
+    "114": {
+      "dev": "Cannot send ether to nonpayable function",
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        138,
+        160
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "115": {
+      "op": "JUMPDEST"
+    },
+    "116": {
+      "offset": [
+        138,
+        160
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "117": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        138,
+        160
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x7C"
+    },
+    "120": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        138,
+        160
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xC7"
+    },
+    "123": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        138,
+        160
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "124": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        138,
+        160
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "125": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        138,
+        160
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "127": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        138,
+        160
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "128": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        138,
+        160
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "129": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        138,
+        160
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "130": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        138,
+        160
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "131": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        138,
+        160
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "132": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        138,
+        160
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "133": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        138,
+        160
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "134": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        138,
+        160
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "135": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        138,
+        160
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "136": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        138,
+        160
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "137": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        138,
+        160
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "138": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        138,
+        160
+      ],
+      "op": "SUB",
+      "path": "0"
+    },
+    "139": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        138,
+        160
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "141": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        138,
+        160
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "142": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        138,
+        160
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "143": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        138,
+        160
+      ],
+      "op": "RETURN",
+      "path": "0"
+    },
+    "144": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        167,
+        311
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "145": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        216,
+        235
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "statement": 0,
+      "value": "0x99"
+    },
+    "148": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        224,
+        234
+      ],
+      "op": "CALLER",
+      "path": "0"
+    },
+    "149": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        216,
+        223
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xD0"
+    },
+    "152": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "jump": "i",
+      "offset": [
+        216,
+        235
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "153": {
+      "branch": 9,
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        216,
+        235
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "154": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        208,
+        236
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "155": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        208,
+        236
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "156": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        208,
+        236
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xA4"
+    },
+    "159": {
+      "branch": 9,
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        208,
+        236
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "160": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        208,
+        236
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "162": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        208,
+        236
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "163": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        208,
+        236
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "164": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        208,
+        236
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "165": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        254,
+        275
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "statement": 1,
+      "value": "0xAD"
+    },
+    "168": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        264,
+        274
+      ],
+      "op": "CALLER",
+      "path": "0"
+    },
+    "169": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        254,
+        263
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x18E"
+    },
+    "172": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "jump": "i",
+      "offset": [
+        254,
+        275
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "173": {
+      "branch": 10,
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        254,
+        275
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "174": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        246,
+        276
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "175": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        246,
+        276
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "176": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        246,
+        276
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xB8"
+    },
+    "179": {
+      "branch": 10,
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        246,
+        276
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "180": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        246,
+        276
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "182": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        246,
+        276
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "183": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        246,
+        276
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "184": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        246,
+        276
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "185": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        287,
+        297
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 2,
+      "value": "0x0"
+    },
+    "187": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        287,
+        304
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "188": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        287,
+        304
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "189": {
+      "op": "PUSH1",
+      "value": "0xFF"
+    },
+    "191": {
+      "op": "NOT"
+    },
+    "192": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        287,
+        304
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "193": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        300,
+        304
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x1"
+    },
+    "195": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        287,
+        304
+      ],
+      "op": "OR",
+      "path": "0"
+    },
+    "196": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        287,
+        304
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "197": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        287,
+        304
+      ],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "198": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "jump": "o",
+      "offset": [
+        167,
+        311
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "199": {
+      "offset": [
+        138,
+        160
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "200": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        138,
+        160
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "202": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        138,
+        160
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "203": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        138,
+        160
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xFF"
+    },
+    "205": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        138,
+        160
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "206": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "offset": [
+        138,
+        160
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "207": {
+      "fn": "FuzzyIdentityChallenge.authenticate",
+      "jump": "o",
+      "offset": [
+        138,
+        160
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "208": {
+      "fn": "FuzzyIdentityChallenge.isSmarx",
+      "offset": [
+        317,
+        439
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "209": {
+      "fn": "FuzzyIdentityChallenge.isSmarx",
+      "offset": [
+        371,
+        375
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "211": {
+      "fn": "FuzzyIdentityChallenge.isSmarx",
+      "offset": [
+        416,
+        432
+      ],
+      "op": "PUSH32",
+      "path": "0",
+      "statement": 3,
+      "value": "0x736D617278000000000000000000000000000000000000000000000000000000"
+    },
+    "244": {
+      "fn": "FuzzyIdentityChallenge.isSmarx",
+      "offset": [
+        394,
+        432
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "246": {
+      "fn": "FuzzyIdentityChallenge.isSmarx",
+      "offset": [
+        394,
+        432
+      ],
+      "op": "NOT",
+      "path": "0"
+    },
+    "247": {
+      "fn": "FuzzyIdentityChallenge.isSmarx",
+      "offset": [
+        394,
+        432
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "248": {
+      "fn": "FuzzyIdentityChallenge.isSmarx",
+      "offset": [
+        400,
+        404
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "249": {
+      "fn": "FuzzyIdentityChallenge.isSmarx",
+      "offset": [
+        394,
+        410
+      ],
+      "op": "PUSH20",
+      "path": "0",
+      "value": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+    },
+    "270": {
+      "fn": "FuzzyIdentityChallenge.isSmarx",
+      "offset": [
+        394,
+        410
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "271": {
+      "fn": "FuzzyIdentityChallenge.isSmarx",
+      "offset": [
+        394,
+        410
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x6FDDE03"
+    },
+    "276": {
+      "fn": "FuzzyIdentityChallenge.isSmarx",
+      "offset": [
+        394,
+        412
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "278": {
+      "fn": "FuzzyIdentityChallenge.isSmarx",
+      "offset": [
+        394,
+        412
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "279": {
+      "fn": "FuzzyIdentityChallenge.isSmarx",
+      "offset": [
+        394,
+        412
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "280": {
+      "fn": "FuzzyIdentityChallenge.isSmarx",
+      "offset": [
+        394,
+        412
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0xFFFFFFFF"
+    },
+    "285": {
+      "fn": "FuzzyIdentityChallenge.isSmarx",
+      "offset": [
+        394,
+        412
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "286": {
+      "fn": "FuzzyIdentityChallenge.isSmarx",
+      "offset": [
+        394,
+        412
+      ],
+      "op": "PUSH29",
+      "path": "0",
+      "value": "0x100000000000000000000000000000000000000000000000000000000"
+    },
+    "316": {
+      "fn": "FuzzyIdentityChallenge.isSmarx",
+      "offset": [
+        394,
+        412
+      ],
+      "op": "MUL",
+      "path": "0"
+    },
+    "317": {
+      "fn": "FuzzyIdentityChallenge.isSmarx",
+      "offset": [
+        394,
+        412
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "318": {
+      "fn": "FuzzyIdentityChallenge.isSmarx",
+      "offset": [
+        394,
+        412
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "319": {
+      "fn": "FuzzyIdentityChallenge.isSmarx",
+      "offset": [
+        394,
+        412
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "321": {
+      "fn": "FuzzyIdentityChallenge.isSmarx",
+      "offset": [
+        394,
+        412
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "322": {
+      "fn": "FuzzyIdentityChallenge.isSmarx",
+      "offset": [
+        394,
+        412
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "324": {
+      "fn": "FuzzyIdentityChallenge.isSmarx",
+      "offset": [
+        394,
+        412
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "326": {
+      "fn": "FuzzyIdentityChallenge.isSmarx",
+      "offset": [
+        394,
+        412
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "327": {
+      "fn": "FuzzyIdentityChallenge.isSmarx",
+      "offset": [
+        394,
+        412
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "328": {
+      "fn": "FuzzyIdentityChallenge.isSmarx",
+      "offset": [
+        394,
+        412
+      ],
+      "op": "DUP4",
+      "path": "0"
+    },
+    "329": {
+      "fn": "FuzzyIdentityChallenge.isSmarx",
+      "offset": [
+        394,
+        412
+      ],
+      "op": "SUB",
+      "path": "0"
+    },
+    "330": {
+      "fn": "FuzzyIdentityChallenge.isSmarx",
+      "offset": [
+        394,
+        412
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "331": {
+      "fn": "FuzzyIdentityChallenge.isSmarx",
+      "offset": [
+        394,
+        412
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "333": {
+      "fn": "FuzzyIdentityChallenge.isSmarx",
+      "offset": [
+        394,
+        412
+      ],
+      "op": "DUP8",
+      "path": "0"
+    },
+    "334": {
+      "fn": "FuzzyIdentityChallenge.isSmarx",
+      "offset": [
+        394,
+        412
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "335": {
+      "fn": "FuzzyIdentityChallenge.isSmarx",
+      "offset": [
+        394,
+        412
+      ],
+      "op": "EXTCODESIZE",
+      "path": "0"
+    },
+    "336": {
+      "fn": "FuzzyIdentityChallenge.isSmarx",
+      "offset": [
+        394,
+        412
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "337": {
+      "op": "DUP1"
+    },
+    "338": {
+      "op": "ISZERO"
+    },
+    "339": {
+      "op": "PUSH2",
+      "value": "0x15B"
+    },
+    "342": {
+      "op": "JUMPI"
+    },
+    "343": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "345": {
+      "op": "DUP1"
+    },
+    "346": {
+      "op": "REVERT"
+    },
+    "347": {
+      "op": "JUMPDEST"
+    },
+    "348": {
+      "fn": "FuzzyIdentityChallenge.isSmarx",
+      "offset": [
+        394,
+        412
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "349": {
+      "fn": "FuzzyIdentityChallenge.isSmarx",
+      "offset": [
+        394,
+        412
+      ],
+      "op": "GAS",
+      "path": "0"
+    },
+    "350": {
+      "fn": "FuzzyIdentityChallenge.isSmarx",
+      "offset": [
+        394,
+        412
+      ],
+      "op": "CALL",
+      "path": "0"
+    },
+    "351": {
+      "fn": "FuzzyIdentityChallenge.isSmarx",
+      "offset": [
+        394,
+        412
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "352": {
+      "op": "DUP1"
+    },
+    "353": {
+      "op": "ISZERO"
+    },
+    "354": {
+      "op": "PUSH2",
+      "value": "0x16F"
+    },
+    "357": {
+      "op": "JUMPI"
+    },
+    "358": {
+      "op": "RETURNDATASIZE"
+    },
+    "359": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "361": {
+      "op": "DUP1"
+    },
+    "362": {
+      "op": "RETURNDATACOPY"
+    },
+    "363": {
+      "op": "RETURNDATASIZE"
+    },
+    "364": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "366": {
+      "op": "REVERT"
+    },
+    "367": {
+      "op": "JUMPDEST"
+    },
+    "368": {
+      "fn": "FuzzyIdentityChallenge.isSmarx",
+      "offset": [
+        394,
+        412
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "369": {
+      "fn": "FuzzyIdentityChallenge.isSmarx",
+      "offset": [
+        394,
+        412
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "370": {
+      "fn": "FuzzyIdentityChallenge.isSmarx",
+      "offset": [
+        394,
+        412
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "371": {
+      "fn": "FuzzyIdentityChallenge.isSmarx",
+      "offset": [
+        394,
+        412
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "372": {
+      "fn": "FuzzyIdentityChallenge.isSmarx",
+      "offset": [
+        394,
+        412
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "374": {
+      "fn": "FuzzyIdentityChallenge.isSmarx",
+      "offset": [
+        394,
+        412
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "375": {
+      "fn": "FuzzyIdentityChallenge.isSmarx",
+      "offset": [
+        394,
+        412
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "0"
+    },
+    "376": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "378": {
+      "op": "DUP2"
+    },
+    "379": {
+      "op": "LT"
+    },
+    "380": {
+      "op": "ISZERO"
+    },
+    "381": {
+      "op": "PUSH2",
+      "value": "0x185"
+    },
+    "384": {
+      "op": "JUMPI"
+    },
+    "385": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "387": {
+      "op": "DUP1"
+    },
+    "388": {
+      "op": "REVERT"
+    },
+    "389": {
+      "op": "JUMPDEST"
+    },
+    "390": {
+      "op": "POP"
+    },
+    "391": {
+      "fn": "FuzzyIdentityChallenge.isSmarx",
+      "offset": [
+        394,
+        412
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "392": {
+      "fn": "FuzzyIdentityChallenge.isSmarx",
+      "offset": [
+        394,
+        432
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "393": {
+      "fn": "FuzzyIdentityChallenge.isSmarx",
+      "offset": [
+        394,
+        432
+      ],
+      "op": "SWAP3",
+      "path": "0"
+    },
+    "394": {
+      "fn": "FuzzyIdentityChallenge.isSmarx",
+      "offset": [
+        317,
+        439
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "395": {
+      "op": "POP"
+    },
+    "396": {
+      "op": "POP"
+    },
+    "397": {
+      "fn": "FuzzyIdentityChallenge.isSmarx",
+      "jump": "o",
+      "offset": [
+        317,
+        439
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "398": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        445,
+        895
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "399": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        502,
+        506
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "401": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        533,
+        547
+      ],
+      "op": "PUSH13",
+      "path": "0",
+      "value": "0x1000000000000000000000000"
+    },
+    "415": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        533,
+        547
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "416": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        533,
+        547
+      ],
+      "op": "MUL",
+      "path": "0"
+    },
+    "417": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        557,
+        615
+      ],
+      "op": "PUSH16",
+      "path": "0",
+      "value": "0xBADC0DE000000000000000000000000"
+    },
+    "434": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        625,
+        685
+      ],
+      "op": "PUSH16",
+      "path": "0",
+      "value": "0xFFFFFFF000000000000000000000000"
+    },
+    "451": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        502,
+        506
+      ],
+      "op": "DUP4",
+      "path": "0"
+    },
+    "452": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        696,
+        866
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "453": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        720,
+        722
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x22"
+    },
+    "455": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        716,
+        717
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "456": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        716,
+        722
+      ],
+      "op": "LT",
+      "path": "0"
+    },
+    "457": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        696,
+        866
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "458": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        696,
+        866
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x224"
+    },
+    "461": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        696,
+        866
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "462": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        762,
+        764
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "463": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        747,
+        764
+      ],
+      "op": "PUSH12",
+      "path": "0",
+      "value": "0xFFFFFFFFFFFFFFFFFFFFFFFF"
+    },
+    "476": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        747,
+        764
+      ],
+      "op": "NOT",
+      "path": "0"
+    },
+    "477": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        747,
+        764
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "478": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        754,
+        758
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "479": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        747,
+        751
+      ],
+      "op": "DUP6",
+      "path": "0"
+    },
+    "480": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        747,
+        758
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "481": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        747,
+        764
+      ],
+      "op": "PUSH12",
+      "path": "0",
+      "value": "0xFFFFFFFFFFFFFFFFFFFFFFFF"
+    },
+    "494": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        747,
+        764
+      ],
+      "op": "NOT",
+      "path": "0"
+    },
+    "495": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        747,
+        764
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "496": {
+      "branch": 11,
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        747,
+        764
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "497": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        743,
+        810
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "498": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        743,
+        810
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x1FE"
+    },
+    "501": {
+      "branch": 11,
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        743,
+        810
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "502": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        791,
+        795
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 4,
+      "value": "0x1"
+    },
+    "504": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        784,
+        795
+      ],
+      "op": "SWAP5",
+      "path": "0"
+    },
+    "505": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        784,
+        795
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "506": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        784,
+        795
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x229"
+    },
+    "509": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        784,
+        795
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "510": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        743,
+        810
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "511": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        823,
+        833
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 5,
+      "value": "0x10"
+    },
+    "513": {
+      "op": "PUSH12",
+      "value": "0xFFFFFFFFFFFFFFFFFFFFFFFF"
+    },
+    "526": {
+      "op": "NOT"
+    },
+    "527": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        847,
+        855
+      ],
+      "op": "SWAP4",
+      "path": "0",
+      "statement": 6
+    },
+    "528": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        847,
+        855
+      ],
+      "op": "DUP5",
+      "path": "0"
+    },
+    "529": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        847,
+        855
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "530": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        847,
+        855
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "531": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        847,
+        855
+      ],
+      "op": "MUL",
+      "path": "0"
+    },
+    "532": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        847,
+        855
+      ],
+      "op": "SWAP4",
+      "path": "0"
+    },
+    "533": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        823,
+        833
+      ],
+      "op": "SWAP3",
+      "path": "0"
+    },
+    "534": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        823,
+        833
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "535": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        823,
+        833
+      ],
+      "op": "SWAP3",
+      "path": "0"
+    },
+    "536": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        823,
+        833
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "537": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        823,
+        833
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "538": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        823,
+        833
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "539": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        823,
+        833
+      ],
+      "op": "MUL",
+      "path": "0"
+    },
+    "540": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        823,
+        833
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "541": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        724,
+        727
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 7,
+      "value": "0x1"
+    },
+    "543": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        724,
+        727
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "544": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        696,
+        866
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x1C4"
+    },
+    "547": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        696,
+        866
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "548": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        696,
+        866
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "549": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        883,
+        888
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 8,
+      "value": "0x0"
+    },
+    "551": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        876,
+        888
+      ],
+      "op": "SWAP5",
+      "path": "0"
+    },
+    "552": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        876,
+        888
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "553": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        445,
+        895
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "554": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        445,
+        895
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "555": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        445,
+        895
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "556": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        445,
+        895
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "557": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        445,
+        895
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "558": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        445,
+        895
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "559": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        445,
+        895
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "560": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "offset": [
+        445,
+        895
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "561": {
+      "fn": "FuzzyIdentityChallenge.isBadCode",
+      "jump": "o",
+      "offset": [
+        445,
+        895
+      ],
+      "op": "JUMP",
+      "path": "0"
+    }
+  },
+  "sha1": "838a92a0db9fdfd61d1178e83a13c34586778825",
+  "source": "pragma solidity ^0.4.21;\n\ninterface IName {\n    function name() external view returns (bytes32);\n}\n\ncontract FuzzyIdentityChallenge {\n    bool public isComplete;\n\n    function authenticate() public {\n        require(isSmarx(msg.sender));\n        require(isBadCode(msg.sender));\n\n        isComplete = true;\n    }\n\n    function isSmarx(address addr) internal view returns (bool) {\n        return IName(addr).name() == bytes32(\"smarx\");\n    }\n\n    function isBadCode(address _addr) internal pure returns (bool) {\n        bytes20 addr = bytes20(_addr);\n        bytes20 id = hex\"000000000000000000000000000000000badc0de\";\n        bytes20 mask = hex\"000000000000000000000000000000000fffffff\";\n\n        for (uint256 i = 0; i < 34; i++) {\n            if (addr & mask == id) {\n                return true;\n            }\n            mask <<= 4;\n            id <<= 4;\n        }\n\n        return false;\n    }\n}\n",
+  "sourceMap": "100:797:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;100:797:0;;;;;;;",
+  "sourcePath": "contracts/Fuzzy-identity.sol",
+  "type": "contract"
+}

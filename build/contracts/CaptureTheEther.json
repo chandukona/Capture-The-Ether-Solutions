@@ -1,0 +1,1741 @@
+{
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "nickname",
+          "type": "bytes32"
+        }
+      ],
+      "name": "setNickname",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "nicknameOf",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "allSourcePaths": {
+    "1": "contracts/Choose-a-nickname.sol"
+  },
+  "ast": {
+    "absolutePath": "contracts/Choose-a-nickname.sol",
+    "exportedSymbols": {
+      "CaptureTheEther": [
+        33
+      ],
+      "NicknameChallenge": [
+        71
+      ]
+    },
+    "id": 72,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 15,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".21"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 33,
+        "linearizedBaseContracts": [
+          33
+        ],
+        "name": "CaptureTheEther",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 19,
+            "name": "nicknameOf",
+            "nodeType": "VariableDeclaration",
+            "scope": 33,
+            "src": "107:45:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_bytes32_$",
+              "typeString": "mapping(address => bytes32)"
+            },
+            "typeName": {
+              "id": 18,
+              "keyType": {
+                "id": 16,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "115:7:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "107:27:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_bytes32_$",
+                "typeString": "mapping(address => bytes32)"
+              },
+              "valueType": {
+                "id": 17,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "126:7:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 31,
+              "nodeType": "Block",
+              "src": "205:50:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 29,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 24,
+                        "name": "nicknameOf",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 19,
+                        "src": "215:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_bytes32_$",
+                          "typeString": "mapping(address => bytes32)"
+                        }
+                      },
+                      "id": 27,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 25,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 211,
+                          "src": "226:3:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 26,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "226:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "215:22:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 28,
+                      "name": "nickname",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 21,
+                      "src": "240:8:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "src": "215:33:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "id": 30,
+                  "nodeType": "ExpressionStatement",
+                  "src": "215:33:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 32,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "setNickname",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 22,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 21,
+                  "name": "nickname",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32,
+                  "src": "180:16:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 20,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "180:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "179:18:1"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 23,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "205:0:1"
+            },
+            "scope": 33,
+            "src": "159:96:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 72,
+        "src": "76:181:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 71,
+        "linearizedBaseContracts": [
+          71
+        ],
+        "name": "NicknameChallenge",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 35,
+            "name": "cte",
+            "nodeType": "VariableDeclaration",
+            "scope": 71,
+            "src": "414:19:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_CaptureTheEther_$33",
+              "typeString": "contract CaptureTheEther"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 34,
+              "name": "CaptureTheEther",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 33,
+              "src": "414:15:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_CaptureTheEther_$33",
+                "typeString": "contract CaptureTheEther"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 37,
+            "name": "player",
+            "nodeType": "VariableDeclaration",
+            "scope": 71,
+            "src": "439:14:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 36,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "439:7:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 54,
+              "nodeType": "Block",
+              "src": "588:70:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 46,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 44,
+                      "name": "player",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 37,
+                      "src": "598:6:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 45,
+                      "name": "_player",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 39,
+                      "src": "607:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "598:16:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 47,
+                  "nodeType": "ExpressionStatement",
+                  "src": "598:16:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 52,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 48,
+                      "name": "cte",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 35,
+                      "src": "624:3:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_CaptureTheEther_$33",
+                        "typeString": "contract CaptureTheEther"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 50,
+                          "name": "_cte",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 41,
+                          "src": "646:4:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 49,
+                        "name": "CaptureTheEther",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 33,
+                        "src": "630:15:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_CaptureTheEther_$33_$",
+                          "typeString": "type(contract CaptureTheEther)"
+                        }
+                      },
+                      "id": 51,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "630:21:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_CaptureTheEther_$33",
+                        "typeString": "contract CaptureTheEther"
+                      }
+                    },
+                    "src": "624:27:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_CaptureTheEther_$33",
+                      "typeString": "contract CaptureTheEther"
+                    }
+                  },
+                  "id": 53,
+                  "nodeType": "ExpressionStatement",
+                  "src": "624:27:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 55,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "NicknameChallenge",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 42,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 39,
+                  "name": "_player",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 55,
+                  "src": "550:15:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 38,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "550:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 41,
+                  "name": "_cte",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 55,
+                  "src": "567:12:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 40,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "567:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "549:31:1"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 43,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "588:0:1"
+            },
+            "scope": 71,
+            "src": "523:135:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 69,
+              "nodeType": "Block",
+              "src": "764:54:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_bytes1",
+                      "typeString": "bytes1"
+                    },
+                    "id": 67,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 62,
+                            "name": "player",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 37,
+                            "src": "796:6:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 60,
+                            "name": "cte",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 35,
+                            "src": "781:3:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_CaptureTheEther_$33",
+                              "typeString": "contract CaptureTheEther"
+                            }
+                          },
+                          "id": 61,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "nicknameOf",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 19,
+                          "src": "781:14:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_bytes32_$",
+                            "typeString": "function (address) view external returns (bytes32)"
+                          }
+                        },
+                        "id": 63,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "781:22:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "id": 65,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "hexValue": "30",
+                        "id": 64,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "804:1:1",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_0_by_1",
+                          "typeString": "int_const 0"
+                        },
+                        "value": "0"
+                      },
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "781:25:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes1",
+                        "typeString": "bytes1"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "!=",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 66,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "810:1:1",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "781:30:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 59,
+                  "id": 68,
+                  "nodeType": "Return",
+                  "src": "774:37:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 70,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "isComplete",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 56,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "734:2:1"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 59,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 58,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 70,
+                  "src": "758:4:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 57,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "758:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "757:6:1"
+            },
+            "scope": 71,
+            "src": "715:103:1",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 72,
+        "src": "381:439:1"
+      }
+    ],
+    "src": "0:821:1"
+  },
+  "bytecode": "608060405234801561001057600080fd5b5060f18061001f6000396000f30060806040526004361060485763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416631ae8ab818114604d5780636790081c146064575b600080fd5b348015605857600080fd5b50606260043560a1565b005b348015606f57600080fd5b50608f73ffffffffffffffffffffffffffffffffffffffff6004351660b3565b60408051918252519081900360200190f35b33600090815260208190526040902055565b600060208190529081526040902054815600a165627a7a723058206c0afdba610fa51014a0cc1d8beef4e0fc860459e8a7b87d5be206e58eaa31810029",
+  "bytecodeSha1": "6f778d80d084973a507d1faf8dd85eeed7e3c6d5",
+  "compiler": {
+    "evm_version": "byzantium",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "version": "0.4.26+commit.4563c3fc"
+  },
+  "contractName": "CaptureTheEther",
+  "coverageMap": {
+    "branches": {
+      "1": {}
+    },
+    "statements": {
+      "1": {
+        "CaptureTheEther.setNickname": {
+          "0": [
+            215,
+            248
+          ]
+        }
+      }
+    }
+  },
+  "dependencies": [],
+  "deployedBytecode": "60806040526004361060485763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416631ae8ab818114604d5780636790081c146064575b600080fd5b348015605857600080fd5b50606260043560a1565b005b348015606f57600080fd5b50608f73ffffffffffffffffffffffffffffffffffffffff6004351660b3565b60408051918252519081900360200190f35b33600090815260208190526040902055565b600060208190529081526040902054815600a165627a7a723058206c0afdba610fa51014a0cc1d8beef4e0fc860459e8a7b87d5be206e58eaa31810029",
+  "deployedSourceMap": "76:181:1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;159:96;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;159:96:1;;;;;;;107:45;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;107:45:1;;;;;;;;;;;;;;;;;;;;;;;159:96;226:10;215;:22;;;;;;;;;;:33;159:96::o;107:45::-;;;;;;;;;;;;;;:::o",
+  "language": "Solidity",
+  "natspec": {
+    "methods": {}
+  },
+  "offset": [
+    76,
+    257
+  ],
+  "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x4 CALLDATASIZE LT PUSH1 0x48 JUMPI PUSH4 0xFFFFFFFF PUSH29 0x100000000000000000000000000000000000000000000000000000000 PUSH1 0x0 CALLDATALOAD DIV AND PUSH4 0x1AE8AB81 DUP2 EQ PUSH1 0x4D JUMPI DUP1 PUSH4 0x6790081C EQ PUSH1 0x64 JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST CALLVALUE DUP1 ISZERO PUSH1 0x58 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x62 PUSH1 0x4 CALLDATALOAD PUSH1 0xA1 JUMP JUMPDEST STOP JUMPDEST CALLVALUE DUP1 ISZERO PUSH1 0x6F JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x8F PUSH20 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF PUSH1 0x4 CALLDATALOAD AND PUSH1 0xB3 JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD SWAP2 DUP3 MSTORE MLOAD SWAP1 DUP2 SWAP1 SUB PUSH1 0x20 ADD SWAP1 RETURN JUMPDEST CALLER PUSH1 0x0 SWAP1 DUP2 MSTORE PUSH1 0x20 DUP2 SWAP1 MSTORE PUSH1 0x40 SWAP1 KECCAK256 SSTORE JUMP JUMPDEST PUSH1 0x0 PUSH1 0x20 DUP2 SWAP1 MSTORE SWAP1 DUP2 MSTORE PUSH1 0x40 SWAP1 KECCAK256 SLOAD DUP2 JUMP STOP LOG1 PUSH6 0x627A7A723058 KECCAK256 PUSH13 0xAFDBA610FA51014A0CC1D8BEE DELEGATECALL 0xe0 0xfc DUP7 DIV MSIZE 0xe8 0xa7 0xb8 PUSH30 0x5BE206E58EAA318100290000000000000000000000000000000000000000 ",
+  "pcMap": {
+    "0": {
+      "offset": [
+        76,
+        257
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0x80"
+    },
+    "2": {
+      "fn": null,
+      "offset": [
+        76,
+        257
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0x40"
+    },
+    "4": {
+      "fn": null,
+      "offset": [
+        76,
+        257
+      ],
+      "op": "MSTORE",
+      "path": "1"
+    },
+    "5": {
+      "fn": null,
+      "offset": [
+        76,
+        257
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0x4"
+    },
+    "7": {
+      "fn": null,
+      "offset": [
+        76,
+        257
+      ],
+      "op": "CALLDATASIZE",
+      "path": "1"
+    },
+    "8": {
+      "fn": null,
+      "offset": [
+        76,
+        257
+      ],
+      "op": "LT",
+      "path": "1"
+    },
+    "9": {
+      "fn": null,
+      "offset": [
+        76,
+        257
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0x48"
+    },
+    "11": {
+      "fn": null,
+      "offset": [
+        76,
+        257
+      ],
+      "op": "JUMPI",
+      "path": "1"
+    },
+    "12": {
+      "fn": null,
+      "offset": [
+        76,
+        257
+      ],
+      "op": "PUSH4",
+      "path": "1",
+      "value": "0xFFFFFFFF"
+    },
+    "17": {
+      "fn": null,
+      "offset": [
+        76,
+        257
+      ],
+      "op": "PUSH29",
+      "path": "1",
+      "value": "0x100000000000000000000000000000000000000000000000000000000"
+    },
+    "47": {
+      "fn": null,
+      "offset": [
+        76,
+        257
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0x0"
+    },
+    "49": {
+      "fn": null,
+      "offset": [
+        76,
+        257
+      ],
+      "op": "CALLDATALOAD",
+      "path": "1"
+    },
+    "50": {
+      "fn": null,
+      "offset": [
+        76,
+        257
+      ],
+      "op": "DIV",
+      "path": "1"
+    },
+    "51": {
+      "fn": null,
+      "offset": [
+        76,
+        257
+      ],
+      "op": "AND",
+      "path": "1"
+    },
+    "52": {
+      "fn": null,
+      "offset": [
+        76,
+        257
+      ],
+      "op": "PUSH4",
+      "path": "1",
+      "value": "0x1AE8AB81"
+    },
+    "57": {
+      "fn": null,
+      "offset": [
+        76,
+        257
+      ],
+      "op": "DUP2",
+      "path": "1"
+    },
+    "58": {
+      "fn": null,
+      "offset": [
+        76,
+        257
+      ],
+      "op": "EQ",
+      "path": "1"
+    },
+    "59": {
+      "fn": null,
+      "offset": [
+        76,
+        257
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0x4D"
+    },
+    "61": {
+      "fn": null,
+      "offset": [
+        76,
+        257
+      ],
+      "op": "JUMPI",
+      "path": "1"
+    },
+    "62": {
+      "fn": null,
+      "offset": [
+        76,
+        257
+      ],
+      "op": "DUP1",
+      "path": "1"
+    },
+    "63": {
+      "fn": null,
+      "offset": [
+        76,
+        257
+      ],
+      "op": "PUSH4",
+      "path": "1",
+      "value": "0x6790081C"
+    },
+    "68": {
+      "fn": null,
+      "offset": [
+        76,
+        257
+      ],
+      "op": "EQ",
+      "path": "1"
+    },
+    "69": {
+      "fn": null,
+      "offset": [
+        76,
+        257
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0x64"
+    },
+    "71": {
+      "fn": null,
+      "offset": [
+        76,
+        257
+      ],
+      "op": "JUMPI",
+      "path": "1"
+    },
+    "72": {
+      "fn": null,
+      "offset": [
+        76,
+        257
+      ],
+      "op": "JUMPDEST",
+      "path": "1"
+    },
+    "73": {
+      "fn": null,
+      "offset": [
+        76,
+        257
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0x0"
+    },
+    "75": {
+      "fn": null,
+      "offset": [
+        76,
+        257
+      ],
+      "op": "DUP1",
+      "path": "1"
+    },
+    "76": {
+      "first_revert": true,
+      "fn": null,
+      "offset": [
+        76,
+        257
+      ],
+      "op": "REVERT",
+      "path": "1"
+    },
+    "77": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        159,
+        255
+      ],
+      "op": "JUMPDEST",
+      "path": "1"
+    },
+    "78": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        159,
+        255
+      ],
+      "op": "CALLVALUE",
+      "path": "1"
+    },
+    "79": {
+      "op": "DUP1"
+    },
+    "80": {
+      "op": "ISZERO"
+    },
+    "81": {
+      "op": "PUSH1",
+      "value": "0x58"
+    },
+    "83": {
+      "op": "JUMPI"
+    },
+    "84": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "86": {
+      "op": "DUP1"
+    },
+    "87": {
+      "dev": "Cannot send ether to nonpayable function",
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        159,
+        255
+      ],
+      "op": "REVERT",
+      "path": "1"
+    },
+    "88": {
+      "op": "JUMPDEST"
+    },
+    "89": {
+      "op": "POP"
+    },
+    "90": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        159,
+        255
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0x62"
+    },
+    "92": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        159,
+        255
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0x4"
+    },
+    "94": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        159,
+        255
+      ],
+      "op": "CALLDATALOAD",
+      "path": "1"
+    },
+    "95": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        159,
+        255
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0xA1"
+    },
+    "97": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        159,
+        255
+      ],
+      "op": "JUMP",
+      "path": "1"
+    },
+    "98": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        159,
+        255
+      ],
+      "op": "JUMPDEST",
+      "path": "1"
+    },
+    "99": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        159,
+        255
+      ],
+      "op": "STOP",
+      "path": "1"
+    },
+    "100": {
+      "offset": [
+        107,
+        152
+      ],
+      "op": "JUMPDEST",
+      "path": "1"
+    },
+    "101": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        107,
+        152
+      ],
+      "op": "CALLVALUE",
+      "path": "1"
+    },
+    "102": {
+      "op": "DUP1"
+    },
+    "103": {
+      "op": "ISZERO"
+    },
+    "104": {
+      "op": "PUSH1",
+      "value": "0x6F"
+    },
+    "106": {
+      "op": "JUMPI"
+    },
+    "107": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "109": {
+      "op": "DUP1"
+    },
+    "110": {
+      "dev": "Cannot send ether to nonpayable function",
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        107,
+        152
+      ],
+      "op": "REVERT",
+      "path": "1"
+    },
+    "111": {
+      "op": "JUMPDEST"
+    },
+    "112": {
+      "op": "POP"
+    },
+    "113": {
+      "offset": [
+        107,
+        152
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0x8F"
+    },
+    "115": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        107,
+        152
+      ],
+      "op": "PUSH20",
+      "path": "1",
+      "value": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+    },
+    "136": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        107,
+        152
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0x4"
+    },
+    "138": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        107,
+        152
+      ],
+      "op": "CALLDATALOAD",
+      "path": "1"
+    },
+    "139": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        107,
+        152
+      ],
+      "op": "AND",
+      "path": "1"
+    },
+    "140": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        107,
+        152
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0xB3"
+    },
+    "142": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        107,
+        152
+      ],
+      "op": "JUMP",
+      "path": "1"
+    },
+    "143": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        107,
+        152
+      ],
+      "op": "JUMPDEST",
+      "path": "1"
+    },
+    "144": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        107,
+        152
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0x40"
+    },
+    "146": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        107,
+        152
+      ],
+      "op": "DUP1",
+      "path": "1"
+    },
+    "147": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        107,
+        152
+      ],
+      "op": "MLOAD",
+      "path": "1"
+    },
+    "148": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        107,
+        152
+      ],
+      "op": "SWAP2",
+      "path": "1"
+    },
+    "149": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        107,
+        152
+      ],
+      "op": "DUP3",
+      "path": "1"
+    },
+    "150": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        107,
+        152
+      ],
+      "op": "MSTORE",
+      "path": "1"
+    },
+    "151": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        107,
+        152
+      ],
+      "op": "MLOAD",
+      "path": "1"
+    },
+    "152": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        107,
+        152
+      ],
+      "op": "SWAP1",
+      "path": "1"
+    },
+    "153": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        107,
+        152
+      ],
+      "op": "DUP2",
+      "path": "1"
+    },
+    "154": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        107,
+        152
+      ],
+      "op": "SWAP1",
+      "path": "1"
+    },
+    "155": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        107,
+        152
+      ],
+      "op": "SUB",
+      "path": "1"
+    },
+    "156": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        107,
+        152
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0x20"
+    },
+    "158": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        107,
+        152
+      ],
+      "op": "ADD",
+      "path": "1"
+    },
+    "159": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        107,
+        152
+      ],
+      "op": "SWAP1",
+      "path": "1"
+    },
+    "160": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        107,
+        152
+      ],
+      "op": "RETURN",
+      "path": "1"
+    },
+    "161": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        159,
+        255
+      ],
+      "op": "JUMPDEST",
+      "path": "1"
+    },
+    "162": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        226,
+        236
+      ],
+      "op": "CALLER",
+      "path": "1",
+      "statement": 0
+    },
+    "163": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        215,
+        225
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0x0"
+    },
+    "165": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        215,
+        237
+      ],
+      "op": "SWAP1",
+      "path": "1"
+    },
+    "166": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        215,
+        237
+      ],
+      "op": "DUP2",
+      "path": "1"
+    },
+    "167": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        215,
+        237
+      ],
+      "op": "MSTORE",
+      "path": "1"
+    },
+    "168": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        215,
+        237
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0x20"
+    },
+    "170": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        215,
+        237
+      ],
+      "op": "DUP2",
+      "path": "1"
+    },
+    "171": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        215,
+        237
+      ],
+      "op": "SWAP1",
+      "path": "1"
+    },
+    "172": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        215,
+        237
+      ],
+      "op": "MSTORE",
+      "path": "1"
+    },
+    "173": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        215,
+        237
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0x40"
+    },
+    "175": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        215,
+        237
+      ],
+      "op": "SWAP1",
+      "path": "1"
+    },
+    "176": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        215,
+        237
+      ],
+      "op": "KECCAK256",
+      "path": "1"
+    },
+    "177": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        215,
+        248
+      ],
+      "op": "SSTORE",
+      "path": "1"
+    },
+    "178": {
+      "fn": "CaptureTheEther.setNickname",
+      "jump": "o",
+      "offset": [
+        159,
+        255
+      ],
+      "op": "JUMP",
+      "path": "1"
+    },
+    "179": {
+      "offset": [
+        107,
+        152
+      ],
+      "op": "JUMPDEST",
+      "path": "1"
+    },
+    "180": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        107,
+        152
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0x0"
+    },
+    "182": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        107,
+        152
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0x20"
+    },
+    "184": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        107,
+        152
+      ],
+      "op": "DUP2",
+      "path": "1"
+    },
+    "185": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        107,
+        152
+      ],
+      "op": "SWAP1",
+      "path": "1"
+    },
+    "186": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        107,
+        152
+      ],
+      "op": "MSTORE",
+      "path": "1"
+    },
+    "187": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        107,
+        152
+      ],
+      "op": "SWAP1",
+      "path": "1"
+    },
+    "188": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        107,
+        152
+      ],
+      "op": "DUP2",
+      "path": "1"
+    },
+    "189": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        107,
+        152
+      ],
+      "op": "MSTORE",
+      "path": "1"
+    },
+    "190": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        107,
+        152
+      ],
+      "op": "PUSH1",
+      "path": "1",
+      "value": "0x40"
+    },
+    "192": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        107,
+        152
+      ],
+      "op": "SWAP1",
+      "path": "1"
+    },
+    "193": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        107,
+        152
+      ],
+      "op": "KECCAK256",
+      "path": "1"
+    },
+    "194": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        107,
+        152
+      ],
+      "op": "SLOAD",
+      "path": "1"
+    },
+    "195": {
+      "fn": "CaptureTheEther.setNickname",
+      "offset": [
+        107,
+        152
+      ],
+      "op": "DUP2",
+      "path": "1"
+    },
+    "196": {
+      "fn": "CaptureTheEther.setNickname",
+      "jump": "o",
+      "offset": [
+        107,
+        152
+      ],
+      "op": "JUMP",
+      "path": "1"
+    }
+  },
+  "sha1": "d50b52e3333d5ce4887d1467916bbf9edffd10e0",
+  "source": "pragma solidity ^0.4.21;\n\n// Relevant part of the CaptureTheEther contract.\ncontract CaptureTheEther {\n    mapping(address => bytes32) public nicknameOf;\n\n    function setNickname(bytes32 nickname) public {\n        nicknameOf[msg.sender] = nickname;\n    }\n}\n\n// Challenge contract. You don't need to do anything with this; it just verifies\n// that you set a nickname for yourself.\ncontract NicknameChallenge {\n    CaptureTheEther cte;\n    address player;\n\n    // Your address gets passed in as a constructor parameter.\n    function NicknameChallenge(address _player, address _cte) public {\n        player = _player;\n        cte = CaptureTheEther(_cte);\n    }\n\n    // Check that the first character is not null.\n    function isComplete() public view returns (bool) {\n        return cte.nicknameOf(player)[0] != 0;\n    }\n}\n",
+  "sourceMap": "76:181:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;76:181:1;;;;;;;",
+  "sourcePath": "contracts/Choose-a-nickname.sol",
+  "type": "contract"
+}

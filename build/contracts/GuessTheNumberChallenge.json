@@ -1,0 +1,1985 @@
+{
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "n",
+          "type": "uint8"
+        }
+      ],
+      "name": "guess",
+      "outputs": [],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "isComplete",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "constructor"
+    }
+  ],
+  "allSourcePaths": {
+    "3": "contracts/Guess-the-number.sol"
+  },
+  "ast": {
+    "absolutePath": "contracts/Guess-the-number.sol",
+    "exportedSymbols": {
+      "GuessTheNumberChallenge": [
+        138
+      ]
+    },
+    "id": 139,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 84,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".21"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:3"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 138,
+        "linearizedBaseContracts": [
+          138
+        ],
+        "name": "GuessTheNumberChallenge",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 87,
+            "name": "answer",
+            "nodeType": "VariableDeclaration",
+            "scope": 138,
+            "src": "65:17:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint8",
+              "typeString": "uint8"
+            },
+            "typeName": {
+              "id": 85,
+              "name": "uint8",
+              "nodeType": "ElementaryTypeName",
+              "src": "65:5:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint8",
+                "typeString": "uint8"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "3432",
+              "id": 86,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "80:2:3",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_42_by_1",
+                "typeString": "int_const 42"
+              },
+              "value": "42"
+            },
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 97,
+              "nodeType": "Block",
+              "src": "139:46:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 94,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 91,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 211,
+                            "src": "157:3:3",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 92,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "value",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "157:9:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "hexValue": "31",
+                          "id": 93,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "170:7:3",
+                          "subdenomination": "ether",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_1000000000000000000_by_1",
+                            "typeString": "int_const 1000000000000000000"
+                          },
+                          "value": "1"
+                        },
+                        "src": "157:20:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 90,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        214,
+                        215
+                      ],
+                      "referencedDeclaration": 214,
+                      "src": "149:7:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 95,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "149:29:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 96,
+                  "nodeType": "ExpressionStatement",
+                  "src": "149:29:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 98,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "GuessTheNumberChallenge",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 88,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "121:2:3"
+            },
+            "payable": true,
+            "returnParameters": {
+              "id": 89,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "139:0:3"
+            },
+            "scope": 138,
+            "src": "89:96:3",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 110,
+              "nodeType": "Block",
+              "src": "240:50:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 108,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 104,
+                            "name": "this",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 232,
+                            "src": "265:4:3",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_GuessTheNumberChallenge_$138",
+                              "typeString": "contract GuessTheNumberChallenge"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_contract$_GuessTheNumberChallenge_$138",
+                              "typeString": "contract GuessTheNumberChallenge"
+                            }
+                          ],
+                          "id": 103,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "257:7:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_address_$",
+                            "typeString": "type(address)"
+                          },
+                          "typeName": "address"
+                        },
+                        "id": 105,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "257:13:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "id": 106,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "balance",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "257:21:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 107,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "282:1:3",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "257:26:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 102,
+                  "id": 109,
+                  "nodeType": "Return",
+                  "src": "250:33:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 111,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "isComplete",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 99,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "210:2:3"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 102,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 101,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 111,
+                  "src": "234:4:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 100,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "234:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "233:6:3"
+            },
+            "scope": 138,
+            "src": "191:99:3",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 136,
+              "nodeType": "Block",
+              "src": "335:126:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 120,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 117,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 211,
+                            "src": "353:3:3",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 118,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "value",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "353:9:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "hexValue": "31",
+                          "id": 119,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "366:7:3",
+                          "subdenomination": "ether",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_1000000000000000000_by_1",
+                            "typeString": "int_const 1000000000000000000"
+                          },
+                          "value": "1"
+                        },
+                        "src": "353:20:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 116,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        214,
+                        215
+                      ],
+                      "referencedDeclaration": 214,
+                      "src": "345:7:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 121,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "345:29:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 122,
+                  "nodeType": "ExpressionStatement",
+                  "src": "345:29:3"
+                },
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    },
+                    "id": 125,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 123,
+                      "name": "n",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 113,
+                      "src": "389:1:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "id": 124,
+                      "name": "answer",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 87,
+                      "src": "394:6:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "src": "389:11:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 135,
+                  "nodeType": "IfStatement",
+                  "src": "385:70:3",
+                  "trueBody": {
+                    "id": 134,
+                    "nodeType": "Block",
+                    "src": "402:53:3",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "32",
+                              "id": 131,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "436:7:3",
+                              "subdenomination": "ether",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_2000000000000000000_by_1",
+                                "typeString": "int_const 2000000000000000000"
+                              },
+                              "value": "2"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_rational_2000000000000000000_by_1",
+                                "typeString": "int_const 2000000000000000000"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": null,
+                              "expression": {
+                                "argumentTypes": null,
+                                "id": 126,
+                                "name": "msg",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 211,
+                                "src": "416:3:3",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_magic_message",
+                                  "typeString": "msg"
+                                }
+                              },
+                              "id": 129,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberName": "sender",
+                              "nodeType": "MemberAccess",
+                              "referencedDeclaration": null,
+                              "src": "416:10:3",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            },
+                            "id": 130,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "transfer",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "416:19:3",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_transfer_nonpayable$_t_uint256_$returns$__$",
+                              "typeString": "function (uint256)"
+                            }
+                          },
+                          "id": 132,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "416:28:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 133,
+                        "nodeType": "ExpressionStatement",
+                        "src": "416:28:3"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 137,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "guess",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 114,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 113,
+                  "name": "n",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 137,
+                  "src": "311:7:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 112,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "311:5:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "310:9:3"
+            },
+            "payable": true,
+            "returnParameters": {
+              "id": 115,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "335:0:3"
+            },
+            "scope": 138,
+            "src": "296:165:3",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 139,
+        "src": "26:437:3"
+      }
+    ],
+    "src": "0:464:3"
+  },
+  "bytecode": "60806040526000805460ff1916602a179055670de0b6b3a7640000341461002557600080fd5b610109806100346000396000f30060806040526004361060485763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416634ba4c16b8114604d578063b2fa1c9e14605b575b600080fd5b605960ff600435166081565b005b348015606657600080fd5b50606d60d7565b604080519115158252519081900360200190f35b670de0b6b3a76400003414609457600080fd5b60005460ff8281169116141560d4576040513390600090671bc16d674ec800009082818181858883f1935050505015801560d2573d6000803e3d6000fd5b505b50565b303115905600a165627a7a72305820001179b2dd7ff875009357ce501cd334e91415e7b3171895e2d03cfb51565f9a0029",
+  "bytecodeSha1": "8ace50c1964df27bd7f3c7b6cb7b96d62ff73c75",
+  "compiler": {
+    "evm_version": "byzantium",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "version": "0.4.26+commit.4563c3fc"
+  },
+  "contractName": "GuessTheNumberChallenge",
+  "coverageMap": {
+    "branches": {
+      "3": {
+        "GuessTheNumberChallenge.guess": {
+          "3": [
+            353,
+            373,
+            true
+          ],
+          "4": [
+            389,
+            400,
+            false
+          ]
+        }
+      }
+    },
+    "statements": {
+      "3": {
+        "GuessTheNumberChallenge.guess": {
+          "0": [
+            345,
+            374
+          ],
+          "1": [
+            416,
+            444
+          ]
+        },
+        "GuessTheNumberChallenge.isComplete": {
+          "2": [
+            250,
+            283
+          ]
+        }
+      }
+    }
+  },
+  "dependencies": [],
+  "deployedBytecode": "60806040526004361060485763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416634ba4c16b8114604d578063b2fa1c9e14605b575b600080fd5b605960ff600435166081565b005b348015606657600080fd5b50606d60d7565b604080519115158252519081900360200190f35b670de0b6b3a76400003414609457600080fd5b60005460ff8281169116141560d4576040513390600090671bc16d674ec800009082818181858883f1935050505015801560d2573d6000803e3d6000fd5b505b50565b303115905600a165627a7a72305820001179b2dd7ff875009357ce501cd334e91415e7b3171895e2d03cfb51565f9a0029",
+  "deployedSourceMap": "26:437:3:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;296:165;;;;;;;;;;191:99;;8:9:-1;5:2;;;30:1;27;20:12;5:2;191:99:3;;;;;;;;;;;;;;;;;;;;;;296:165;366:7;353:9;:20;345:29;;;;;;394:6;;;389:11;;;394:6;;389:11;385:70;;;416:28;;:10;;:28;;436:7;;416:28;;;;436:7;416:10;:28;;;;;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;416:28:3;385:70;296:165;:::o;191:99::-;265:4;257:21;:26;191:99;:::o",
+  "language": "Solidity",
+  "natspec": {
+    "methods": {}
+  },
+  "offset": [
+    26,
+    463
+  ],
+  "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x4 CALLDATASIZE LT PUSH1 0x48 JUMPI PUSH4 0xFFFFFFFF PUSH29 0x100000000000000000000000000000000000000000000000000000000 PUSH1 0x0 CALLDATALOAD DIV AND PUSH4 0x4BA4C16B DUP2 EQ PUSH1 0x4D JUMPI DUP1 PUSH4 0xB2FA1C9E EQ PUSH1 0x5B JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x59 PUSH1 0xFF PUSH1 0x4 CALLDATALOAD AND PUSH1 0x81 JUMP JUMPDEST STOP JUMPDEST CALLVALUE DUP1 ISZERO PUSH1 0x66 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x6D PUSH1 0xD7 JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD SWAP2 ISZERO ISZERO DUP3 MSTORE MLOAD SWAP1 DUP2 SWAP1 SUB PUSH1 0x20 ADD SWAP1 RETURN JUMPDEST PUSH8 0xDE0B6B3A7640000 CALLVALUE EQ PUSH1 0x94 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x0 SLOAD PUSH1 0xFF DUP3 DUP2 AND SWAP2 AND EQ ISZERO PUSH1 0xD4 JUMPI PUSH1 0x40 MLOAD CALLER SWAP1 PUSH1 0x0 SWAP1 PUSH8 0x1BC16D674EC80000 SWAP1 DUP3 DUP2 DUP2 DUP2 DUP6 DUP9 DUP4 CALL SWAP4 POP POP POP POP ISZERO DUP1 ISZERO PUSH1 0xD2 JUMPI RETURNDATASIZE PUSH1 0x0 DUP1 RETURNDATACOPY RETURNDATASIZE PUSH1 0x0 REVERT JUMPDEST POP JUMPDEST POP JUMP JUMPDEST ADDRESS BALANCE ISZERO SWAP1 JUMP STOP LOG1 PUSH6 0x627A7A723058 KECCAK256 STOP GT PUSH26 0xB2DD7FF875009357CE501CD334E91415E7B3171895E2D03CFB51 JUMP 0x5f SWAP11 STOP 0x29 ",
+  "pcMap": {
+    "0": {
+      "offset": [
+        26,
+        463
+      ],
+      "op": "PUSH1",
+      "path": "3",
+      "value": "0x80"
+    },
+    "2": {
+      "fn": null,
+      "offset": [
+        26,
+        463
+      ],
+      "op": "PUSH1",
+      "path": "3",
+      "value": "0x40"
+    },
+    "4": {
+      "fn": null,
+      "offset": [
+        26,
+        463
+      ],
+      "op": "MSTORE",
+      "path": "3"
+    },
+    "5": {
+      "fn": null,
+      "offset": [
+        26,
+        463
+      ],
+      "op": "PUSH1",
+      "path": "3",
+      "value": "0x4"
+    },
+    "7": {
+      "fn": null,
+      "offset": [
+        26,
+        463
+      ],
+      "op": "CALLDATASIZE",
+      "path": "3"
+    },
+    "8": {
+      "fn": null,
+      "offset": [
+        26,
+        463
+      ],
+      "op": "LT",
+      "path": "3"
+    },
+    "9": {
+      "fn": null,
+      "offset": [
+        26,
+        463
+      ],
+      "op": "PUSH1",
+      "path": "3",
+      "value": "0x48"
+    },
+    "11": {
+      "fn": null,
+      "offset": [
+        26,
+        463
+      ],
+      "op": "JUMPI",
+      "path": "3"
+    },
+    "12": {
+      "fn": null,
+      "offset": [
+        26,
+        463
+      ],
+      "op": "PUSH4",
+      "path": "3",
+      "value": "0xFFFFFFFF"
+    },
+    "17": {
+      "fn": null,
+      "offset": [
+        26,
+        463
+      ],
+      "op": "PUSH29",
+      "path": "3",
+      "value": "0x100000000000000000000000000000000000000000000000000000000"
+    },
+    "47": {
+      "fn": null,
+      "offset": [
+        26,
+        463
+      ],
+      "op": "PUSH1",
+      "path": "3",
+      "value": "0x0"
+    },
+    "49": {
+      "fn": null,
+      "offset": [
+        26,
+        463
+      ],
+      "op": "CALLDATALOAD",
+      "path": "3"
+    },
+    "50": {
+      "fn": null,
+      "offset": [
+        26,
+        463
+      ],
+      "op": "DIV",
+      "path": "3"
+    },
+    "51": {
+      "fn": null,
+      "offset": [
+        26,
+        463
+      ],
+      "op": "AND",
+      "path": "3"
+    },
+    "52": {
+      "fn": null,
+      "offset": [
+        26,
+        463
+      ],
+      "op": "PUSH4",
+      "path": "3",
+      "value": "0x4BA4C16B"
+    },
+    "57": {
+      "fn": null,
+      "offset": [
+        26,
+        463
+      ],
+      "op": "DUP2",
+      "path": "3"
+    },
+    "58": {
+      "fn": null,
+      "offset": [
+        26,
+        463
+      ],
+      "op": "EQ",
+      "path": "3"
+    },
+    "59": {
+      "fn": null,
+      "offset": [
+        26,
+        463
+      ],
+      "op": "PUSH1",
+      "path": "3",
+      "value": "0x4D"
+    },
+    "61": {
+      "fn": null,
+      "offset": [
+        26,
+        463
+      ],
+      "op": "JUMPI",
+      "path": "3"
+    },
+    "62": {
+      "fn": null,
+      "offset": [
+        26,
+        463
+      ],
+      "op": "DUP1",
+      "path": "3"
+    },
+    "63": {
+      "fn": null,
+      "offset": [
+        26,
+        463
+      ],
+      "op": "PUSH4",
+      "path": "3",
+      "value": "0xB2FA1C9E"
+    },
+    "68": {
+      "fn": null,
+      "offset": [
+        26,
+        463
+      ],
+      "op": "EQ",
+      "path": "3"
+    },
+    "69": {
+      "fn": null,
+      "offset": [
+        26,
+        463
+      ],
+      "op": "PUSH1",
+      "path": "3",
+      "value": "0x5B"
+    },
+    "71": {
+      "fn": null,
+      "offset": [
+        26,
+        463
+      ],
+      "op": "JUMPI",
+      "path": "3"
+    },
+    "72": {
+      "fn": null,
+      "offset": [
+        26,
+        463
+      ],
+      "op": "JUMPDEST",
+      "path": "3"
+    },
+    "73": {
+      "fn": null,
+      "offset": [
+        26,
+        463
+      ],
+      "op": "PUSH1",
+      "path": "3",
+      "value": "0x0"
+    },
+    "75": {
+      "fn": null,
+      "offset": [
+        26,
+        463
+      ],
+      "op": "DUP1",
+      "path": "3"
+    },
+    "76": {
+      "first_revert": true,
+      "fn": null,
+      "offset": [
+        26,
+        463
+      ],
+      "op": "REVERT",
+      "path": "3"
+    },
+    "77": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        296,
+        461
+      ],
+      "op": "JUMPDEST",
+      "path": "3"
+    },
+    "78": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        296,
+        461
+      ],
+      "op": "PUSH1",
+      "path": "3",
+      "value": "0x59"
+    },
+    "80": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        296,
+        461
+      ],
+      "op": "PUSH1",
+      "path": "3",
+      "value": "0xFF"
+    },
+    "82": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        296,
+        461
+      ],
+      "op": "PUSH1",
+      "path": "3",
+      "value": "0x4"
+    },
+    "84": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        296,
+        461
+      ],
+      "op": "CALLDATALOAD",
+      "path": "3"
+    },
+    "85": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        296,
+        461
+      ],
+      "op": "AND",
+      "path": "3"
+    },
+    "86": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        296,
+        461
+      ],
+      "op": "PUSH1",
+      "path": "3",
+      "value": "0x81"
+    },
+    "88": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        296,
+        461
+      ],
+      "op": "JUMP",
+      "path": "3"
+    },
+    "89": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        296,
+        461
+      ],
+      "op": "JUMPDEST",
+      "path": "3"
+    },
+    "90": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        296,
+        461
+      ],
+      "op": "STOP",
+      "path": "3"
+    },
+    "91": {
+      "fn": "GuessTheNumberChallenge.isComplete",
+      "offset": [
+        191,
+        290
+      ],
+      "op": "JUMPDEST",
+      "path": "3"
+    },
+    "92": {
+      "fn": "GuessTheNumberChallenge.isComplete",
+      "offset": [
+        191,
+        290
+      ],
+      "op": "CALLVALUE",
+      "path": "3"
+    },
+    "93": {
+      "op": "DUP1"
+    },
+    "94": {
+      "op": "ISZERO"
+    },
+    "95": {
+      "op": "PUSH1",
+      "value": "0x66"
+    },
+    "97": {
+      "op": "JUMPI"
+    },
+    "98": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "100": {
+      "op": "DUP1"
+    },
+    "101": {
+      "dev": "Cannot send ether to nonpayable function",
+      "fn": "GuessTheNumberChallenge.isComplete",
+      "offset": [
+        191,
+        290
+      ],
+      "op": "REVERT",
+      "path": "3"
+    },
+    "102": {
+      "op": "JUMPDEST"
+    },
+    "103": {
+      "fn": "GuessTheNumberChallenge.isComplete",
+      "offset": [
+        191,
+        290
+      ],
+      "op": "POP",
+      "path": "3"
+    },
+    "104": {
+      "fn": "GuessTheNumberChallenge.isComplete",
+      "offset": [
+        191,
+        290
+      ],
+      "op": "PUSH1",
+      "path": "3",
+      "value": "0x6D"
+    },
+    "106": {
+      "fn": "GuessTheNumberChallenge.isComplete",
+      "offset": [
+        191,
+        290
+      ],
+      "op": "PUSH1",
+      "path": "3",
+      "value": "0xD7"
+    },
+    "108": {
+      "fn": "GuessTheNumberChallenge.isComplete",
+      "offset": [
+        191,
+        290
+      ],
+      "op": "JUMP",
+      "path": "3"
+    },
+    "109": {
+      "fn": "GuessTheNumberChallenge.isComplete",
+      "offset": [
+        191,
+        290
+      ],
+      "op": "JUMPDEST",
+      "path": "3"
+    },
+    "110": {
+      "fn": "GuessTheNumberChallenge.isComplete",
+      "offset": [
+        191,
+        290
+      ],
+      "op": "PUSH1",
+      "path": "3",
+      "value": "0x40"
+    },
+    "112": {
+      "fn": "GuessTheNumberChallenge.isComplete",
+      "offset": [
+        191,
+        290
+      ],
+      "op": "DUP1",
+      "path": "3"
+    },
+    "113": {
+      "fn": "GuessTheNumberChallenge.isComplete",
+      "offset": [
+        191,
+        290
+      ],
+      "op": "MLOAD",
+      "path": "3"
+    },
+    "114": {
+      "fn": "GuessTheNumberChallenge.isComplete",
+      "offset": [
+        191,
+        290
+      ],
+      "op": "SWAP2",
+      "path": "3"
+    },
+    "115": {
+      "fn": "GuessTheNumberChallenge.isComplete",
+      "offset": [
+        191,
+        290
+      ],
+      "op": "ISZERO",
+      "path": "3"
+    },
+    "116": {
+      "fn": "GuessTheNumberChallenge.isComplete",
+      "offset": [
+        191,
+        290
+      ],
+      "op": "ISZERO",
+      "path": "3"
+    },
+    "117": {
+      "fn": "GuessTheNumberChallenge.isComplete",
+      "offset": [
+        191,
+        290
+      ],
+      "op": "DUP3",
+      "path": "3"
+    },
+    "118": {
+      "fn": "GuessTheNumberChallenge.isComplete",
+      "offset": [
+        191,
+        290
+      ],
+      "op": "MSTORE",
+      "path": "3"
+    },
+    "119": {
+      "fn": "GuessTheNumberChallenge.isComplete",
+      "offset": [
+        191,
+        290
+      ],
+      "op": "MLOAD",
+      "path": "3"
+    },
+    "120": {
+      "fn": "GuessTheNumberChallenge.isComplete",
+      "offset": [
+        191,
+        290
+      ],
+      "op": "SWAP1",
+      "path": "3"
+    },
+    "121": {
+      "fn": "GuessTheNumberChallenge.isComplete",
+      "offset": [
+        191,
+        290
+      ],
+      "op": "DUP2",
+      "path": "3"
+    },
+    "122": {
+      "fn": "GuessTheNumberChallenge.isComplete",
+      "offset": [
+        191,
+        290
+      ],
+      "op": "SWAP1",
+      "path": "3"
+    },
+    "123": {
+      "fn": "GuessTheNumberChallenge.isComplete",
+      "offset": [
+        191,
+        290
+      ],
+      "op": "SUB",
+      "path": "3"
+    },
+    "124": {
+      "fn": "GuessTheNumberChallenge.isComplete",
+      "offset": [
+        191,
+        290
+      ],
+      "op": "PUSH1",
+      "path": "3",
+      "value": "0x20"
+    },
+    "126": {
+      "fn": "GuessTheNumberChallenge.isComplete",
+      "offset": [
+        191,
+        290
+      ],
+      "op": "ADD",
+      "path": "3"
+    },
+    "127": {
+      "fn": "GuessTheNumberChallenge.isComplete",
+      "offset": [
+        191,
+        290
+      ],
+      "op": "SWAP1",
+      "path": "3"
+    },
+    "128": {
+      "fn": "GuessTheNumberChallenge.isComplete",
+      "offset": [
+        191,
+        290
+      ],
+      "op": "RETURN",
+      "path": "3"
+    },
+    "129": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        296,
+        461
+      ],
+      "op": "JUMPDEST",
+      "path": "3"
+    },
+    "130": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        366,
+        373
+      ],
+      "op": "PUSH8",
+      "path": "3",
+      "statement": 0,
+      "value": "0xDE0B6B3A7640000"
+    },
+    "139": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        353,
+        362
+      ],
+      "op": "CALLVALUE",
+      "path": "3"
+    },
+    "140": {
+      "branch": 3,
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        353,
+        373
+      ],
+      "op": "EQ",
+      "path": "3"
+    },
+    "141": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        345,
+        374
+      ],
+      "op": "PUSH1",
+      "path": "3",
+      "value": "0x94"
+    },
+    "143": {
+      "branch": 3,
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        345,
+        374
+      ],
+      "op": "JUMPI",
+      "path": "3"
+    },
+    "144": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        345,
+        374
+      ],
+      "op": "PUSH1",
+      "path": "3",
+      "value": "0x0"
+    },
+    "146": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        345,
+        374
+      ],
+      "op": "DUP1",
+      "path": "3"
+    },
+    "147": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        345,
+        374
+      ],
+      "op": "REVERT",
+      "path": "3"
+    },
+    "148": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        345,
+        374
+      ],
+      "op": "JUMPDEST",
+      "path": "3"
+    },
+    "149": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        394,
+        400
+      ],
+      "op": "PUSH1",
+      "path": "3",
+      "value": "0x0"
+    },
+    "151": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        394,
+        400
+      ],
+      "op": "SLOAD",
+      "path": "3"
+    },
+    "152": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        394,
+        400
+      ],
+      "op": "PUSH1",
+      "path": "3",
+      "value": "0xFF"
+    },
+    "154": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        389,
+        400
+      ],
+      "op": "DUP3",
+      "path": "3"
+    },
+    "155": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        389,
+        400
+      ],
+      "op": "DUP2",
+      "path": "3"
+    },
+    "156": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        389,
+        400
+      ],
+      "op": "AND",
+      "path": "3"
+    },
+    "157": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        394,
+        400
+      ],
+      "op": "SWAP2",
+      "path": "3"
+    },
+    "158": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        394,
+        400
+      ],
+      "op": "AND",
+      "path": "3"
+    },
+    "159": {
+      "branch": 4,
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        389,
+        400
+      ],
+      "op": "EQ",
+      "path": "3"
+    },
+    "160": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        385,
+        455
+      ],
+      "op": "ISZERO",
+      "path": "3"
+    },
+    "161": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        385,
+        455
+      ],
+      "op": "PUSH1",
+      "path": "3",
+      "value": "0xD4"
+    },
+    "163": {
+      "branch": 4,
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        385,
+        455
+      ],
+      "op": "JUMPI",
+      "path": "3"
+    },
+    "164": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        416,
+        444
+      ],
+      "op": "PUSH1",
+      "path": "3",
+      "statement": 1,
+      "value": "0x40"
+    },
+    "166": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        416,
+        444
+      ],
+      "op": "MLOAD",
+      "path": "3"
+    },
+    "167": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        416,
+        426
+      ],
+      "op": "CALLER",
+      "path": "3"
+    },
+    "168": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        416,
+        426
+      ],
+      "op": "SWAP1",
+      "path": "3"
+    },
+    "169": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        416,
+        444
+      ],
+      "op": "PUSH1",
+      "path": "3",
+      "value": "0x0"
+    },
+    "171": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        416,
+        444
+      ],
+      "op": "SWAP1",
+      "path": "3"
+    },
+    "172": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        436,
+        443
+      ],
+      "op": "PUSH8",
+      "path": "3",
+      "value": "0x1BC16D674EC80000"
+    },
+    "181": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        436,
+        443
+      ],
+      "op": "SWAP1",
+      "path": "3"
+    },
+    "182": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        416,
+        444
+      ],
+      "op": "DUP3",
+      "path": "3"
+    },
+    "183": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        416,
+        444
+      ],
+      "op": "DUP2",
+      "path": "3"
+    },
+    "184": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        416,
+        444
+      ],
+      "op": "DUP2",
+      "path": "3"
+    },
+    "185": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        416,
+        444
+      ],
+      "op": "DUP2",
+      "path": "3"
+    },
+    "186": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        436,
+        443
+      ],
+      "op": "DUP6",
+      "path": "3"
+    },
+    "187": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        416,
+        426
+      ],
+      "op": "DUP9",
+      "path": "3"
+    },
+    "188": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        416,
+        444
+      ],
+      "op": "DUP4",
+      "path": "3"
+    },
+    "189": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        416,
+        444
+      ],
+      "op": "CALL",
+      "path": "3"
+    },
+    "190": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        416,
+        444
+      ],
+      "op": "SWAP4",
+      "path": "3"
+    },
+    "191": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        416,
+        444
+      ],
+      "op": "POP",
+      "path": "3"
+    },
+    "192": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        416,
+        444
+      ],
+      "op": "POP",
+      "path": "3"
+    },
+    "193": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        416,
+        444
+      ],
+      "op": "POP",
+      "path": "3"
+    },
+    "194": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        416,
+        444
+      ],
+      "op": "POP",
+      "path": "3"
+    },
+    "195": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        416,
+        444
+      ],
+      "op": "ISZERO",
+      "path": "3"
+    },
+    "196": {
+      "op": "DUP1"
+    },
+    "197": {
+      "op": "ISZERO"
+    },
+    "198": {
+      "op": "PUSH1",
+      "value": "0xD2"
+    },
+    "200": {
+      "op": "JUMPI"
+    },
+    "201": {
+      "op": "RETURNDATASIZE"
+    },
+    "202": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "204": {
+      "op": "DUP1"
+    },
+    "205": {
+      "op": "RETURNDATACOPY"
+    },
+    "206": {
+      "op": "RETURNDATASIZE"
+    },
+    "207": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "209": {
+      "op": "REVERT"
+    },
+    "210": {
+      "op": "JUMPDEST"
+    },
+    "211": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        416,
+        444
+      ],
+      "op": "POP",
+      "path": "3"
+    },
+    "212": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        385,
+        455
+      ],
+      "op": "JUMPDEST",
+      "path": "3"
+    },
+    "213": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "offset": [
+        296,
+        461
+      ],
+      "op": "POP",
+      "path": "3"
+    },
+    "214": {
+      "fn": "GuessTheNumberChallenge.guess",
+      "jump": "o",
+      "offset": [
+        296,
+        461
+      ],
+      "op": "JUMP",
+      "path": "3"
+    },
+    "215": {
+      "fn": "GuessTheNumberChallenge.isComplete",
+      "offset": [
+        191,
+        290
+      ],
+      "op": "JUMPDEST",
+      "path": "3"
+    },
+    "216": {
+      "fn": "GuessTheNumberChallenge.isComplete",
+      "offset": [
+        265,
+        269
+      ],
+      "op": "ADDRESS",
+      "path": "3",
+      "statement": 2
+    },
+    "217": {
+      "fn": "GuessTheNumberChallenge.isComplete",
+      "offset": [
+        257,
+        278
+      ],
+      "op": "BALANCE",
+      "path": "3"
+    },
+    "218": {
+      "fn": "GuessTheNumberChallenge.isComplete",
+      "offset": [
+        257,
+        283
+      ],
+      "op": "ISZERO",
+      "path": "3"
+    },
+    "219": {
+      "fn": "GuessTheNumberChallenge.isComplete",
+      "offset": [
+        191,
+        290
+      ],
+      "op": "SWAP1",
+      "path": "3"
+    },
+    "220": {
+      "fn": "GuessTheNumberChallenge.isComplete",
+      "jump": "o",
+      "offset": [
+        191,
+        290
+      ],
+      "op": "JUMP",
+      "path": "3"
+    }
+  },
+  "sha1": "b063d726f34288efe6095fe8234539c14e34ac16",
+  "source": "pragma solidity ^0.4.21;\n\ncontract GuessTheNumberChallenge {\n    uint8 answer = 42;\n\n    function GuessTheNumberChallenge() public payable {\n        require(msg.value == 1 ether);\n    }\n\n    function isComplete() public view returns (bool) {\n        return address(this).balance == 0;\n    }\n\n    function guess(uint8 n) public payable {\n        require(msg.value == 1 ether);\n\n        if (n == answer) {\n            msg.sender.transfer(2 ether);\n        }\n    }\n}\n",
+  "sourceMap": "26:437:3:-;;;65:17;;;-1:-1:-1;;65:17:3;80:2;65:17;;;170:7;157:9;:20;149:29;;;;;;26:437;;;;;;",
+  "sourcePath": "contracts/Guess-the-number.sol",
+  "type": "contract"
+}

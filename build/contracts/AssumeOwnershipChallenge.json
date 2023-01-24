@@ -1,0 +1,1650 @@
+{
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "AssumeOwmershipChallenge",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "authenticate",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "isComplete",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "allSourcePaths": {
+    "0": "contracts/Assume-ownership.sol"
+  },
+  "ast": {
+    "absolutePath": "contracts/Assume-ownership.sol",
+    "exportedSymbols": {
+      "AssumeOwnershipChallenge": [
+        30
+      ]
+    },
+    "id": 31,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".21"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 30,
+        "linearizedBaseContracts": [
+          30
+        ],
+        "name": "AssumeOwnershipChallenge",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 3,
+            "name": "owner",
+            "nodeType": "VariableDeclaration",
+            "scope": 30,
+            "src": "66:13:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 2,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "66:7:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 5,
+            "name": "isComplete",
+            "nodeType": "VariableDeclaration",
+            "scope": 30,
+            "src": "85:22:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 4,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "85:4:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 13,
+              "nodeType": "Block",
+              "src": "157:35:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 11,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 8,
+                      "name": "owner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3,
+                      "src": "167:5:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 9,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 45,
+                        "src": "175:3:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 10,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "175:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "167:18:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 12,
+                  "nodeType": "ExpressionStatement",
+                  "src": "167:18:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 14,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "AssumeOwmershipChallenge",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "147:2:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 7,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "157:0:0"
+            },
+            "scope": 30,
+            "src": "114:78:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 28,
+              "nodeType": "Block",
+              "src": "229:73:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 21,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 18,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 45,
+                            "src": "247:3:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 19,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "247:10:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "id": 20,
+                          "name": "owner",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 3,
+                          "src": "261:5:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "src": "247:19:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 17,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        48,
+                        49
+                      ],
+                      "referencedDeclaration": 48,
+                      "src": "239:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 22,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "239:28:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 23,
+                  "nodeType": "ExpressionStatement",
+                  "src": "239:28:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 26,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 24,
+                      "name": "isComplete",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 5,
+                      "src": "278:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "74727565",
+                      "id": 25,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "291:4:0",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "278:17:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 27,
+                  "nodeType": "ExpressionStatement",
+                  "src": "278:17:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 29,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "authenticate",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 15,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "219:2:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 16,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "229:0:0"
+            },
+            "scope": 30,
+            "src": "198:104:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 31,
+        "src": "26:278:0"
+      }
+    ],
+    "src": "0:305:0"
+  },
+  "bytecode": "608060405234801561001057600080fd5b50610179806100206000396000f3006080604052600436106100565763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166321aa0615811461005b578063380c7a6714610072578063b2fa1c9e14610087575b600080fd5b34801561006757600080fd5b506100706100b0565b005b34801561007e57600080fd5b506100706100d1565b34801561009357600080fd5b5061009c61012c565b604080519115158252519081900360200190f35b6000805473ffffffffffffffffffffffffffffffffffffffff191633179055565b60005473ffffffffffffffffffffffffffffffffffffffff1633146100f557600080fd5b6000805474ff0000000000000000000000000000000000000000191674010000000000000000000000000000000000000000179055565b60005474010000000000000000000000000000000000000000900460ff16815600a165627a7a72305820f5e505ded2cba70a5f91ffbb8b139229b6534fff42b34b0cf9f891697cf139fa0029",
+  "bytecodeSha1": "88f225006c2c3e13b95b98b99b3e6a79a2226f16",
+  "compiler": {
+    "evm_version": "byzantium",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "version": "0.4.26+commit.4563c3fc"
+  },
+  "contractName": "AssumeOwnershipChallenge",
+  "coverageMap": {
+    "branches": {
+      "0": {
+        "AssumeOwnershipChallenge.authenticate": {
+          "3": [
+            247,
+            266,
+            true
+          ]
+        }
+      }
+    },
+    "statements": {
+      "0": {
+        "AssumeOwnershipChallenge.AssumeOwmershipChallenge": {
+          "0": [
+            167,
+            185
+          ]
+        },
+        "AssumeOwnershipChallenge.authenticate": {
+          "1": [
+            239,
+            267
+          ],
+          "2": [
+            278,
+            295
+          ]
+        }
+      }
+    }
+  },
+  "dependencies": [],
+  "deployedBytecode": "6080604052600436106100565763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166321aa0615811461005b578063380c7a6714610072578063b2fa1c9e14610087575b600080fd5b34801561006757600080fd5b506100706100b0565b005b34801561007e57600080fd5b506100706100d1565b34801561009357600080fd5b5061009c61012c565b604080519115158252519081900360200190f35b6000805473ffffffffffffffffffffffffffffffffffffffff191633179055565b60005473ffffffffffffffffffffffffffffffffffffffff1633146100f557600080fd5b6000805474ff0000000000000000000000000000000000000000191674010000000000000000000000000000000000000000179055565b60005474010000000000000000000000000000000000000000900460ff16815600a165627a7a72305820f5e505ded2cba70a5f91ffbb8b139229b6534fff42b34b0cf9f891697cf139fa0029",
+  "deployedSourceMap": "26:278:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;114:78;;8:9:-1;5:2;;;30:1;27;20:12;5:2;114:78:0;;;;;;198:104;;8:9:-1;5:2;;;30:1;27;20:12;5:2;198:104:0;;;;85:22;;8:9:-1;5:2;;;30:1;27;20:12;5:2;85:22:0;;;;;;;;;;;;;;;;;;;;;;114:78;167:5;:18;;-1:-1:-1;;167:18:0;175:10;167:18;;;114:78::o;198:104::-;261:5;;;;247:10;:19;239:28;;;;;;278:10;:17;;-1:-1:-1;;278:17:0;;;;;198:104::o;85:22::-;;;;;;;;;:::o",
+  "language": "Solidity",
+  "natspec": {
+    "methods": {}
+  },
+  "offset": [
+    26,
+    304
+  ],
+  "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x4 CALLDATASIZE LT PUSH2 0x56 JUMPI PUSH4 0xFFFFFFFF PUSH29 0x100000000000000000000000000000000000000000000000000000000 PUSH1 0x0 CALLDATALOAD DIV AND PUSH4 0x21AA0615 DUP2 EQ PUSH2 0x5B JUMPI DUP1 PUSH4 0x380C7A67 EQ PUSH2 0x72 JUMPI DUP1 PUSH4 0xB2FA1C9E EQ PUSH2 0x87 JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST CALLVALUE DUP1 ISZERO PUSH2 0x67 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH2 0x70 PUSH2 0xB0 JUMP JUMPDEST STOP JUMPDEST CALLVALUE DUP1 ISZERO PUSH2 0x7E JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH2 0x70 PUSH2 0xD1 JUMP JUMPDEST CALLVALUE DUP1 ISZERO PUSH2 0x93 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH2 0x9C PUSH2 0x12C JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD SWAP2 ISZERO ISZERO DUP3 MSTORE MLOAD SWAP1 DUP2 SWAP1 SUB PUSH1 0x20 ADD SWAP1 RETURN JUMPDEST PUSH1 0x0 DUP1 SLOAD PUSH20 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF NOT AND CALLER OR SWAP1 SSTORE JUMP JUMPDEST PUSH1 0x0 SLOAD PUSH20 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF AND CALLER EQ PUSH2 0xF5 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x0 DUP1 SLOAD PUSH21 0xFF0000000000000000000000000000000000000000 NOT AND PUSH21 0x10000000000000000000000000000000000000000 OR SWAP1 SSTORE JUMP JUMPDEST PUSH1 0x0 SLOAD PUSH21 0x10000000000000000000000000000000000000000 SWAP1 DIV PUSH1 0xFF AND DUP2 JUMP STOP LOG1 PUSH6 0x627A7A723058 KECCAK256 0xf5 0xe5 SDIV 0xde 0xd2 0xcb 0xa7 EXP 0x5f SWAP2 SELFDESTRUCT 0xbb DUP12 SGT SWAP3 0x29 0xb6 MSTORE8 0x4f SELFDESTRUCT TIMESTAMP 0xb3 0x4b 0xc 0xf9 0xf8 SWAP2 PUSH10 0x7CF139FA002900000000 ",
+  "pcMap": {
+    "0": {
+      "offset": [
+        26,
+        304
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x80"
+    },
+    "2": {
+      "fn": null,
+      "offset": [
+        26,
+        304
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "4": {
+      "fn": null,
+      "offset": [
+        26,
+        304
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "5": {
+      "fn": null,
+      "offset": [
+        26,
+        304
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "7": {
+      "fn": null,
+      "offset": [
+        26,
+        304
+      ],
+      "op": "CALLDATASIZE",
+      "path": "0"
+    },
+    "8": {
+      "fn": null,
+      "offset": [
+        26,
+        304
+      ],
+      "op": "LT",
+      "path": "0"
+    },
+    "9": {
+      "fn": null,
+      "offset": [
+        26,
+        304
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x56"
+    },
+    "12": {
+      "fn": null,
+      "offset": [
+        26,
+        304
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "13": {
+      "fn": null,
+      "offset": [
+        26,
+        304
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0xFFFFFFFF"
+    },
+    "18": {
+      "fn": null,
+      "offset": [
+        26,
+        304
+      ],
+      "op": "PUSH29",
+      "path": "0",
+      "value": "0x100000000000000000000000000000000000000000000000000000000"
+    },
+    "48": {
+      "fn": null,
+      "offset": [
+        26,
+        304
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "50": {
+      "fn": null,
+      "offset": [
+        26,
+        304
+      ],
+      "op": "CALLDATALOAD",
+      "path": "0"
+    },
+    "51": {
+      "fn": null,
+      "offset": [
+        26,
+        304
+      ],
+      "op": "DIV",
+      "path": "0"
+    },
+    "52": {
+      "fn": null,
+      "offset": [
+        26,
+        304
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "53": {
+      "fn": null,
+      "offset": [
+        26,
+        304
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x21AA0615"
+    },
+    "58": {
+      "fn": null,
+      "offset": [
+        26,
+        304
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "59": {
+      "fn": null,
+      "offset": [
+        26,
+        304
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "60": {
+      "fn": null,
+      "offset": [
+        26,
+        304
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x5B"
+    },
+    "63": {
+      "fn": null,
+      "offset": [
+        26,
+        304
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "64": {
+      "fn": null,
+      "offset": [
+        26,
+        304
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "65": {
+      "fn": null,
+      "offset": [
+        26,
+        304
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x380C7A67"
+    },
+    "70": {
+      "fn": null,
+      "offset": [
+        26,
+        304
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "71": {
+      "fn": null,
+      "offset": [
+        26,
+        304
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x72"
+    },
+    "74": {
+      "fn": null,
+      "offset": [
+        26,
+        304
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "75": {
+      "fn": null,
+      "offset": [
+        26,
+        304
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "76": {
+      "fn": null,
+      "offset": [
+        26,
+        304
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0xB2FA1C9E"
+    },
+    "81": {
+      "fn": null,
+      "offset": [
+        26,
+        304
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "82": {
+      "fn": null,
+      "offset": [
+        26,
+        304
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x87"
+    },
+    "85": {
+      "fn": null,
+      "offset": [
+        26,
+        304
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "86": {
+      "fn": null,
+      "offset": [
+        26,
+        304
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "87": {
+      "fn": null,
+      "offset": [
+        26,
+        304
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "89": {
+      "fn": null,
+      "offset": [
+        26,
+        304
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "90": {
+      "first_revert": true,
+      "fn": null,
+      "offset": [
+        26,
+        304
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "91": {
+      "fn": "AssumeOwnershipChallenge.AssumeOwmershipChallenge",
+      "offset": [
+        114,
+        192
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "92": {
+      "fn": "AssumeOwnershipChallenge.AssumeOwmershipChallenge",
+      "offset": [
+        114,
+        192
+      ],
+      "op": "CALLVALUE",
+      "path": "0"
+    },
+    "93": {
+      "op": "DUP1"
+    },
+    "94": {
+      "op": "ISZERO"
+    },
+    "95": {
+      "op": "PUSH2",
+      "value": "0x67"
+    },
+    "98": {
+      "op": "JUMPI"
+    },
+    "99": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "101": {
+      "op": "DUP1"
+    },
+    "102": {
+      "dev": "Cannot send ether to nonpayable function",
+      "fn": "AssumeOwnershipChallenge.AssumeOwmershipChallenge",
+      "offset": [
+        114,
+        192
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "103": {
+      "op": "JUMPDEST"
+    },
+    "104": {
+      "fn": "AssumeOwnershipChallenge.AssumeOwmershipChallenge",
+      "offset": [
+        114,
+        192
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "105": {
+      "fn": "AssumeOwnershipChallenge.AssumeOwmershipChallenge",
+      "offset": [
+        114,
+        192
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x70"
+    },
+    "108": {
+      "fn": "AssumeOwnershipChallenge.AssumeOwmershipChallenge",
+      "offset": [
+        114,
+        192
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xB0"
+    },
+    "111": {
+      "fn": "AssumeOwnershipChallenge.AssumeOwmershipChallenge",
+      "offset": [
+        114,
+        192
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "112": {
+      "fn": "AssumeOwnershipChallenge.AssumeOwmershipChallenge",
+      "offset": [
+        114,
+        192
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "113": {
+      "fn": "AssumeOwnershipChallenge.AssumeOwmershipChallenge",
+      "offset": [
+        114,
+        192
+      ],
+      "op": "STOP",
+      "path": "0"
+    },
+    "114": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        198,
+        302
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "115": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        198,
+        302
+      ],
+      "op": "CALLVALUE",
+      "path": "0"
+    },
+    "116": {
+      "op": "DUP1"
+    },
+    "117": {
+      "op": "ISZERO"
+    },
+    "118": {
+      "op": "PUSH2",
+      "value": "0x7E"
+    },
+    "121": {
+      "op": "JUMPI"
+    },
+    "122": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "124": {
+      "op": "DUP1"
+    },
+    "125": {
+      "dev": "Cannot send ether to nonpayable function",
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        198,
+        302
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "126": {
+      "op": "JUMPDEST"
+    },
+    "127": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        198,
+        302
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "128": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        198,
+        302
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x70"
+    },
+    "131": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        198,
+        302
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xD1"
+    },
+    "134": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        198,
+        302
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "135": {
+      "offset": [
+        85,
+        107
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "136": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        85,
+        107
+      ],
+      "op": "CALLVALUE",
+      "path": "0"
+    },
+    "137": {
+      "op": "DUP1"
+    },
+    "138": {
+      "op": "ISZERO"
+    },
+    "139": {
+      "op": "PUSH2",
+      "value": "0x93"
+    },
+    "142": {
+      "op": "JUMPI"
+    },
+    "143": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "145": {
+      "op": "DUP1"
+    },
+    "146": {
+      "dev": "Cannot send ether to nonpayable function",
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        85,
+        107
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "147": {
+      "op": "JUMPDEST"
+    },
+    "148": {
+      "offset": [
+        85,
+        107
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "149": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        85,
+        107
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x9C"
+    },
+    "152": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        85,
+        107
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x12C"
+    },
+    "155": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        85,
+        107
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "156": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        85,
+        107
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "157": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        85,
+        107
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "159": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        85,
+        107
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "160": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        85,
+        107
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "161": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        85,
+        107
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "162": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        85,
+        107
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "163": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        85,
+        107
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "164": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        85,
+        107
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "165": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        85,
+        107
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "166": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        85,
+        107
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "167": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        85,
+        107
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "168": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        85,
+        107
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "169": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        85,
+        107
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "170": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        85,
+        107
+      ],
+      "op": "SUB",
+      "path": "0"
+    },
+    "171": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        85,
+        107
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "173": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        85,
+        107
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "174": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        85,
+        107
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "175": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        85,
+        107
+      ],
+      "op": "RETURN",
+      "path": "0"
+    },
+    "176": {
+      "fn": "AssumeOwnershipChallenge.AssumeOwmershipChallenge",
+      "offset": [
+        114,
+        192
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "177": {
+      "fn": "AssumeOwnershipChallenge.AssumeOwmershipChallenge",
+      "offset": [
+        167,
+        172
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 0,
+      "value": "0x0"
+    },
+    "179": {
+      "fn": "AssumeOwnershipChallenge.AssumeOwmershipChallenge",
+      "offset": [
+        167,
+        185
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "180": {
+      "fn": "AssumeOwnershipChallenge.AssumeOwmershipChallenge",
+      "offset": [
+        167,
+        185
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "181": {
+      "op": "PUSH20",
+      "value": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+    },
+    "202": {
+      "op": "NOT"
+    },
+    "203": {
+      "fn": "AssumeOwnershipChallenge.AssumeOwmershipChallenge",
+      "offset": [
+        167,
+        185
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "204": {
+      "fn": "AssumeOwnershipChallenge.AssumeOwmershipChallenge",
+      "offset": [
+        175,
+        185
+      ],
+      "op": "CALLER",
+      "path": "0"
+    },
+    "205": {
+      "fn": "AssumeOwnershipChallenge.AssumeOwmershipChallenge",
+      "offset": [
+        167,
+        185
+      ],
+      "op": "OR",
+      "path": "0"
+    },
+    "206": {
+      "fn": "AssumeOwnershipChallenge.AssumeOwmershipChallenge",
+      "offset": [
+        167,
+        185
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "207": {
+      "fn": "AssumeOwnershipChallenge.AssumeOwmershipChallenge",
+      "offset": [
+        167,
+        185
+      ],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "208": {
+      "fn": "AssumeOwnershipChallenge.AssumeOwmershipChallenge",
+      "jump": "o",
+      "offset": [
+        114,
+        192
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "209": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        198,
+        302
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "210": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        261,
+        266
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 1,
+      "value": "0x0"
+    },
+    "212": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        261,
+        266
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "213": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        261,
+        266
+      ],
+      "op": "PUSH20",
+      "path": "0",
+      "value": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+    },
+    "234": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        261,
+        266
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "235": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        247,
+        257
+      ],
+      "op": "CALLER",
+      "path": "0"
+    },
+    "236": {
+      "branch": 3,
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        247,
+        266
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "237": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        239,
+        267
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xF5"
+    },
+    "240": {
+      "branch": 3,
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        239,
+        267
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "241": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        239,
+        267
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "243": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        239,
+        267
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "244": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        239,
+        267
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "245": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        239,
+        267
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "246": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        278,
+        288
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 2,
+      "value": "0x0"
+    },
+    "248": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        278,
+        295
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "249": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        278,
+        295
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "250": {
+      "op": "PUSH21",
+      "value": "0xFF0000000000000000000000000000000000000000"
+    },
+    "272": {
+      "op": "NOT"
+    },
+    "273": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        278,
+        295
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "274": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        278,
+        295
+      ],
+      "op": "PUSH21",
+      "path": "0",
+      "value": "0x10000000000000000000000000000000000000000"
+    },
+    "296": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        278,
+        295
+      ],
+      "op": "OR",
+      "path": "0"
+    },
+    "297": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        278,
+        295
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "298": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        278,
+        295
+      ],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "299": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "jump": "o",
+      "offset": [
+        198,
+        302
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "300": {
+      "offset": [
+        85,
+        107
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "301": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        85,
+        107
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "303": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        85,
+        107
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "304": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        85,
+        107
+      ],
+      "op": "PUSH21",
+      "path": "0",
+      "value": "0x10000000000000000000000000000000000000000"
+    },
+    "326": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        85,
+        107
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "327": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        85,
+        107
+      ],
+      "op": "DIV",
+      "path": "0"
+    },
+    "328": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        85,
+        107
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xFF"
+    },
+    "330": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        85,
+        107
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "331": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "offset": [
+        85,
+        107
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "332": {
+      "fn": "AssumeOwnershipChallenge.authenticate",
+      "jump": "o",
+      "offset": [
+        85,
+        107
+      ],
+      "op": "JUMP",
+      "path": "0"
+    }
+  },
+  "sha1": "c5a3daba8cef82f3ae8038caf13b1229052bdb21",
+  "source": "pragma solidity ^0.4.21;\n\ncontract AssumeOwnershipChallenge {\n    address owner;\n    bool public isComplete;\n\n    function AssumeOwmershipChallenge() public {\n        owner = msg.sender;\n    }\n\n    function authenticate() public {\n        require(msg.sender == owner);\n\n        isComplete = true;\n    }\n}\n",
+  "sourceMap": "26:278:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;26:278:0;;;;;;;",
+  "sourcePath": "contracts/Assume-ownership.sol",
+  "type": "contract"
+}

@@ -1,0 +1,1319 @@
+{
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "authenticate",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "isComplete",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "allSourcePaths": {
+    "0": "contracts/Account-takeover.sol"
+  },
+  "ast": {
+    "absolutePath": "contracts/Account-takeover.sol",
+    "exportedSymbols": {
+      "AccountTakeoverChallenge": [
+        22
+      ]
+    },
+    "id": 23,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".21"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 22,
+        "linearizedBaseContracts": [
+          22
+        ],
+        "name": "AccountTakeoverChallenge",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 4,
+            "name": "owner",
+            "nodeType": "VariableDeclaration",
+            "scope": 22,
+            "src": "66:58:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 2,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "66:7:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "307836423437373738316230653638303331313039663231383837653642356166454161454230303262",
+              "id": 3,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "82:42:0",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0x6B477781b0e68031109f21887e6B5afEAaEB002b"
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 6,
+            "name": "isComplete",
+            "nodeType": "VariableDeclaration",
+            "scope": 22,
+            "src": "130:22:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 5,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "130:4:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 20,
+              "nodeType": "Block",
+              "src": "190:73:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 13,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 10,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 37,
+                            "src": "208:3:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 11,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "208:10:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "id": 12,
+                          "name": "owner",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 4,
+                          "src": "222:5:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "src": "208:19:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 9,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        40,
+                        41
+                      ],
+                      "referencedDeclaration": 40,
+                      "src": "200:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 14,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "200:28:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 15,
+                  "nodeType": "ExpressionStatement",
+                  "src": "200:28:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 18,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 16,
+                      "name": "isComplete",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6,
+                      "src": "239:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "74727565",
+                      "id": 17,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "252:4:0",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "239:17:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 19,
+                  "nodeType": "ExpressionStatement",
+                  "src": "239:17:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 21,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "authenticate",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "180:2:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 8,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "190:0:0"
+            },
+            "scope": 22,
+            "src": "159:104:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 23,
+        "src": "26:239:0"
+      }
+    ],
+    "src": "0:266:0"
+  },
+  "bytecode": "608060405260008054600160a060020a031916736b477781b0e68031109f21887e6b5afeaaeb002b17905534801561003657600080fd5b50610138806100466000396000f30060806040526004361061004b5763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663380c7a678114610050578063b2fa1c9e14610067575b600080fd5b34801561005c57600080fd5b50610065610090565b005b34801561007357600080fd5b5061007c6100eb565b604080519115158252519081900360200190f35b60005473ffffffffffffffffffffffffffffffffffffffff1633146100b457600080fd5b6000805474ff0000000000000000000000000000000000000000191674010000000000000000000000000000000000000000179055565b60005474010000000000000000000000000000000000000000900460ff16815600a165627a7a72305820dfef2a3b53cc847b09714341fe9c8fc2dcf26eab6eb209f8653604f9ed723b6c0029",
+  "bytecodeSha1": "d7ab3c67b4d87bde2c643e5e3710223ba8d1b670",
+  "compiler": {
+    "evm_version": "byzantium",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "version": "0.4.26+commit.4563c3fc"
+  },
+  "contractName": "AccountTakeoverChallenge",
+  "coverageMap": {
+    "branches": {
+      "0": {
+        "AccountTakeoverChallenge.authenticate": {
+          "2": [
+            208,
+            227,
+            true
+          ]
+        }
+      }
+    },
+    "statements": {
+      "0": {
+        "AccountTakeoverChallenge.authenticate": {
+          "0": [
+            200,
+            228
+          ],
+          "1": [
+            239,
+            256
+          ]
+        }
+      }
+    }
+  },
+  "dependencies": [],
+  "deployedBytecode": "60806040526004361061004b5763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663380c7a678114610050578063b2fa1c9e14610067575b600080fd5b34801561005c57600080fd5b50610065610090565b005b34801561007357600080fd5b5061007c6100eb565b604080519115158252519081900360200190f35b60005473ffffffffffffffffffffffffffffffffffffffff1633146100b457600080fd5b6000805474ff0000000000000000000000000000000000000000191674010000000000000000000000000000000000000000179055565b60005474010000000000000000000000000000000000000000900460ff16815600a165627a7a72305820dfef2a3b53cc847b09714341fe9c8fc2dcf26eab6eb209f8653604f9ed723b6c0029",
+  "deployedSourceMap": "26:239:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;159:104;;8:9:-1;5:2;;;30:1;27;20:12;5:2;159:104:0;;;;;;130:22;;8:9:-1;5:2;;;30:1;27;20:12;5:2;130:22:0;;;;;;;;;;;;;;;;;;;;;;159:104;222:5;;;;208:10;:19;200:28;;;;;;239:10;:17;;-1:-1:-1;;239:17:0;;;;;159:104::o;130:22::-;;;;;;;;;:::o",
+  "language": "Solidity",
+  "natspec": {
+    "methods": {}
+  },
+  "offset": [
+    26,
+    265
+  ],
+  "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x4 CALLDATASIZE LT PUSH2 0x4B JUMPI PUSH4 0xFFFFFFFF PUSH29 0x100000000000000000000000000000000000000000000000000000000 PUSH1 0x0 CALLDATALOAD DIV AND PUSH4 0x380C7A67 DUP2 EQ PUSH2 0x50 JUMPI DUP1 PUSH4 0xB2FA1C9E EQ PUSH2 0x67 JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST CALLVALUE DUP1 ISZERO PUSH2 0x5C JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH2 0x65 PUSH2 0x90 JUMP JUMPDEST STOP JUMPDEST CALLVALUE DUP1 ISZERO PUSH2 0x73 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH2 0x7C PUSH2 0xEB JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD SWAP2 ISZERO ISZERO DUP3 MSTORE MLOAD SWAP1 DUP2 SWAP1 SUB PUSH1 0x20 ADD SWAP1 RETURN JUMPDEST PUSH1 0x0 SLOAD PUSH20 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF AND CALLER EQ PUSH2 0xB4 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x0 DUP1 SLOAD PUSH21 0xFF0000000000000000000000000000000000000000 NOT AND PUSH21 0x10000000000000000000000000000000000000000 OR SWAP1 SSTORE JUMP JUMPDEST PUSH1 0x0 SLOAD PUSH21 0x10000000000000000000000000000000000000000 SWAP1 DIV PUSH1 0xFF AND DUP2 JUMP STOP LOG1 PUSH6 0x627A7A723058 KECCAK256 0xdf 0xef 0x2a EXTCODESIZE MSTORE8 0xcc DUP5 PUSH28 0x9714341FE9C8FC2DCF26EAB6EB209F8653604F9ED723B6C00290000 ",
+  "pcMap": {
+    "0": {
+      "offset": [
+        26,
+        265
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x80"
+    },
+    "2": {
+      "fn": null,
+      "offset": [
+        26,
+        265
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "4": {
+      "fn": null,
+      "offset": [
+        26,
+        265
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "5": {
+      "fn": null,
+      "offset": [
+        26,
+        265
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "7": {
+      "fn": null,
+      "offset": [
+        26,
+        265
+      ],
+      "op": "CALLDATASIZE",
+      "path": "0"
+    },
+    "8": {
+      "fn": null,
+      "offset": [
+        26,
+        265
+      ],
+      "op": "LT",
+      "path": "0"
+    },
+    "9": {
+      "fn": null,
+      "offset": [
+        26,
+        265
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x4B"
+    },
+    "12": {
+      "fn": null,
+      "offset": [
+        26,
+        265
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "13": {
+      "fn": null,
+      "offset": [
+        26,
+        265
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0xFFFFFFFF"
+    },
+    "18": {
+      "fn": null,
+      "offset": [
+        26,
+        265
+      ],
+      "op": "PUSH29",
+      "path": "0",
+      "value": "0x100000000000000000000000000000000000000000000000000000000"
+    },
+    "48": {
+      "fn": null,
+      "offset": [
+        26,
+        265
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "50": {
+      "fn": null,
+      "offset": [
+        26,
+        265
+      ],
+      "op": "CALLDATALOAD",
+      "path": "0"
+    },
+    "51": {
+      "fn": null,
+      "offset": [
+        26,
+        265
+      ],
+      "op": "DIV",
+      "path": "0"
+    },
+    "52": {
+      "fn": null,
+      "offset": [
+        26,
+        265
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "53": {
+      "fn": null,
+      "offset": [
+        26,
+        265
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x380C7A67"
+    },
+    "58": {
+      "fn": null,
+      "offset": [
+        26,
+        265
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "59": {
+      "fn": null,
+      "offset": [
+        26,
+        265
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "60": {
+      "fn": null,
+      "offset": [
+        26,
+        265
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x50"
+    },
+    "63": {
+      "fn": null,
+      "offset": [
+        26,
+        265
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "64": {
+      "fn": null,
+      "offset": [
+        26,
+        265
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "65": {
+      "fn": null,
+      "offset": [
+        26,
+        265
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0xB2FA1C9E"
+    },
+    "70": {
+      "fn": null,
+      "offset": [
+        26,
+        265
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "71": {
+      "fn": null,
+      "offset": [
+        26,
+        265
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x67"
+    },
+    "74": {
+      "fn": null,
+      "offset": [
+        26,
+        265
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "75": {
+      "fn": null,
+      "offset": [
+        26,
+        265
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "76": {
+      "fn": null,
+      "offset": [
+        26,
+        265
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "78": {
+      "fn": null,
+      "offset": [
+        26,
+        265
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "79": {
+      "first_revert": true,
+      "fn": null,
+      "offset": [
+        26,
+        265
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "80": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        159,
+        263
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "81": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        159,
+        263
+      ],
+      "op": "CALLVALUE",
+      "path": "0"
+    },
+    "82": {
+      "op": "DUP1"
+    },
+    "83": {
+      "op": "ISZERO"
+    },
+    "84": {
+      "op": "PUSH2",
+      "value": "0x5C"
+    },
+    "87": {
+      "op": "JUMPI"
+    },
+    "88": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "90": {
+      "op": "DUP1"
+    },
+    "91": {
+      "dev": "Cannot send ether to nonpayable function",
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        159,
+        263
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "92": {
+      "op": "JUMPDEST"
+    },
+    "93": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        159,
+        263
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "94": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        159,
+        263
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x65"
+    },
+    "97": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        159,
+        263
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x90"
+    },
+    "100": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        159,
+        263
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "101": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        159,
+        263
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "102": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        159,
+        263
+      ],
+      "op": "STOP",
+      "path": "0"
+    },
+    "103": {
+      "offset": [
+        130,
+        152
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "104": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        130,
+        152
+      ],
+      "op": "CALLVALUE",
+      "path": "0"
+    },
+    "105": {
+      "op": "DUP1"
+    },
+    "106": {
+      "op": "ISZERO"
+    },
+    "107": {
+      "op": "PUSH2",
+      "value": "0x73"
+    },
+    "110": {
+      "op": "JUMPI"
+    },
+    "111": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "113": {
+      "op": "DUP1"
+    },
+    "114": {
+      "dev": "Cannot send ether to nonpayable function",
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        130,
+        152
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "115": {
+      "op": "JUMPDEST"
+    },
+    "116": {
+      "offset": [
+        130,
+        152
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "117": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        130,
+        152
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x7C"
+    },
+    "120": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        130,
+        152
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xEB"
+    },
+    "123": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        130,
+        152
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "124": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        130,
+        152
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "125": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        130,
+        152
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "127": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        130,
+        152
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "128": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        130,
+        152
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "129": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        130,
+        152
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "130": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        130,
+        152
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "131": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        130,
+        152
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "132": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        130,
+        152
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "133": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        130,
+        152
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "134": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        130,
+        152
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "135": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        130,
+        152
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "136": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        130,
+        152
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "137": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        130,
+        152
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "138": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        130,
+        152
+      ],
+      "op": "SUB",
+      "path": "0"
+    },
+    "139": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        130,
+        152
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "141": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        130,
+        152
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "142": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        130,
+        152
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "143": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        130,
+        152
+      ],
+      "op": "RETURN",
+      "path": "0"
+    },
+    "144": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        159,
+        263
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "145": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        222,
+        227
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 0,
+      "value": "0x0"
+    },
+    "147": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        222,
+        227
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "148": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        222,
+        227
+      ],
+      "op": "PUSH20",
+      "path": "0",
+      "value": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+    },
+    "169": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        222,
+        227
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "170": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        208,
+        218
+      ],
+      "op": "CALLER",
+      "path": "0"
+    },
+    "171": {
+      "branch": 2,
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        208,
+        227
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "172": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        200,
+        228
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xB4"
+    },
+    "175": {
+      "branch": 2,
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        200,
+        228
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "176": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        200,
+        228
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "178": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        200,
+        228
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "179": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        200,
+        228
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "180": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        200,
+        228
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "181": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        239,
+        249
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 1,
+      "value": "0x0"
+    },
+    "183": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        239,
+        256
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "184": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        239,
+        256
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "185": {
+      "op": "PUSH21",
+      "value": "0xFF0000000000000000000000000000000000000000"
+    },
+    "207": {
+      "op": "NOT"
+    },
+    "208": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        239,
+        256
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "209": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        239,
+        256
+      ],
+      "op": "PUSH21",
+      "path": "0",
+      "value": "0x10000000000000000000000000000000000000000"
+    },
+    "231": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        239,
+        256
+      ],
+      "op": "OR",
+      "path": "0"
+    },
+    "232": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        239,
+        256
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "233": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        239,
+        256
+      ],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "234": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "jump": "o",
+      "offset": [
+        159,
+        263
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "235": {
+      "offset": [
+        130,
+        152
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "236": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        130,
+        152
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "238": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        130,
+        152
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "239": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        130,
+        152
+      ],
+      "op": "PUSH21",
+      "path": "0",
+      "value": "0x10000000000000000000000000000000000000000"
+    },
+    "261": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        130,
+        152
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "262": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        130,
+        152
+      ],
+      "op": "DIV",
+      "path": "0"
+    },
+    "263": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        130,
+        152
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xFF"
+    },
+    "265": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        130,
+        152
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "266": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "offset": [
+        130,
+        152
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "267": {
+      "fn": "AccountTakeoverChallenge.authenticate",
+      "jump": "o",
+      "offset": [
+        130,
+        152
+      ],
+      "op": "JUMP",
+      "path": "0"
+    }
+  },
+  "sha1": "24688402c85265b061836a1e177b93e160dfb4c1",
+  "source": "pragma solidity ^0.4.21;\n\ncontract AccountTakeoverChallenge {\n    address owner = 0x6B477781b0e68031109f21887e6B5afEAaEB002b;\n    bool public isComplete;\n\n    function authenticate() public {\n        require(msg.sender == owner);\n\n        isComplete = true;\n    }\n}\n",
+  "sourceMap": "26:239:0:-;;;66:58;;;-1:-1:-1;;;;;;66:58:0;82:42;66:58;;;26:239;5:2:-1;;;;30:1;27;20:12;5:2;26:239:0;;;;;;;",
+  "sourcePath": "contracts/Account-takeover.sol",
+  "type": "contract"
+}

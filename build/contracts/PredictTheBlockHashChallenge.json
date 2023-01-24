@@ -1,0 +1,3459 @@
+{
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "settle",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "isComplete",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "hash",
+          "type": "bytes32"
+        }
+      ],
+      "name": "lockInGuess",
+      "outputs": [],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "constructor"
+    }
+  ],
+  "allSourcePaths": {
+    "0": "contracts/Predict-the-block-hash.sol"
+  },
+  "ast": {
+    "absolutePath": "contracts/Predict-the-block-hash.sol",
+    "exportedSymbols": {
+      "PredictTheBlockHashChallenge": [
+        109
+      ]
+    },
+    "id": 110,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".21"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 109,
+        "linearizedBaseContracts": [
+          109
+        ],
+        "name": "PredictTheBlockHashChallenge",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 3,
+            "name": "guesser",
+            "nodeType": "VariableDeclaration",
+            "scope": 109,
+            "src": "70:15:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 2,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "70:7:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 5,
+            "name": "guess",
+            "nodeType": "VariableDeclaration",
+            "scope": 109,
+            "src": "91:13:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 4,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "91:7:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 7,
+            "name": "settlementBlockNumber",
+            "nodeType": "VariableDeclaration",
+            "scope": 109,
+            "src": "110:29:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 6,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "110:7:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 17,
+              "nodeType": "Block",
+              "src": "201:46:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 14,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 11,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 209,
+                            "src": "219:3:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 12,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "value",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "219:9:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "hexValue": "31",
+                          "id": 13,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "232:7:0",
+                          "subdenomination": "ether",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_1000000000000000000_by_1",
+                            "typeString": "int_const 1000000000000000000"
+                          },
+                          "value": "1"
+                        },
+                        "src": "219:20:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 10,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        212,
+                        213
+                      ],
+                      "referencedDeclaration": 212,
+                      "src": "211:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 15,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "211:29:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 16,
+                  "nodeType": "ExpressionStatement",
+                  "src": "211:29:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 18,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "PredictTheBlockHashChallenge",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 8,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "183:2:0"
+            },
+            "payable": true,
+            "returnParameters": {
+              "id": 9,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "201:0:0"
+            },
+            "scope": 109,
+            "src": "146:101:0",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 30,
+              "nodeType": "Block",
+              "src": "302:50:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 28,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 24,
+                            "name": "this",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 222,
+                            "src": "327:4:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_PredictTheBlockHashChallenge_$109",
+                              "typeString": "contract PredictTheBlockHashChallenge"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_contract$_PredictTheBlockHashChallenge_$109",
+                              "typeString": "contract PredictTheBlockHashChallenge"
+                            }
+                          ],
+                          "id": 23,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "319:7:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_address_$",
+                            "typeString": "type(address)"
+                          },
+                          "typeName": "address"
+                        },
+                        "id": 25,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "319:13:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "id": 26,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "balance",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "319:21:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 27,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "344:1:0",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "319:26:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 22,
+                  "id": 29,
+                  "nodeType": "Return",
+                  "src": "312:33:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 31,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "isComplete",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 19,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "272:2:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 22,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 21,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 31,
+                  "src": "296:4:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 20,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "296:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "295:6:0"
+            },
+            "scope": 109,
+            "src": "253:99:0",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 65,
+              "nodeType": "Block",
+              "src": "408:180:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 39,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 37,
+                          "name": "guesser",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 3,
+                          "src": "426:7:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "hexValue": "30",
+                          "id": 38,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "437:1:0",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          },
+                          "value": "0"
+                        },
+                        "src": "426:12:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 36,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        212,
+                        213
+                      ],
+                      "referencedDeclaration": 212,
+                      "src": "418:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 40,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "418:21:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 41,
+                  "nodeType": "ExpressionStatement",
+                  "src": "418:21:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 46,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 43,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 209,
+                            "src": "457:3:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 44,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "value",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "457:9:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "hexValue": "31",
+                          "id": 45,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "470:7:0",
+                          "subdenomination": "ether",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_1000000000000000000_by_1",
+                            "typeString": "int_const 1000000000000000000"
+                          },
+                          "value": "1"
+                        },
+                        "src": "457:20:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 42,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        212,
+                        213
+                      ],
+                      "referencedDeclaration": 212,
+                      "src": "449:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 47,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "449:29:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 48,
+                  "nodeType": "ExpressionStatement",
+                  "src": "449:29:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 52,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 49,
+                      "name": "guesser",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3,
+                      "src": "489:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 50,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 209,
+                        "src": "499:3:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 51,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "499:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "489:20:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 53,
+                  "nodeType": "ExpressionStatement",
+                  "src": "489:20:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 56,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 54,
+                      "name": "guess",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 5,
+                      "src": "519:5:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 55,
+                      "name": "hash",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 33,
+                      "src": "527:4:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "src": "519:12:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "id": 57,
+                  "nodeType": "ExpressionStatement",
+                  "src": "519:12:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 63,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 58,
+                      "name": "settlementBlockNumber",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7,
+                      "src": "541:21:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "commonType": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "id": 62,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 59,
+                          "name": "block",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 199,
+                          "src": "565:5:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_block",
+                            "typeString": "block"
+                          }
+                        },
+                        "id": 60,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "number",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "565:12:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": "+",
+                      "rightExpression": {
+                        "argumentTypes": null,
+                        "hexValue": "31",
+                        "id": 61,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "580:1:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_1_by_1",
+                          "typeString": "int_const 1"
+                        },
+                        "value": "1"
+                      },
+                      "src": "565:16:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "541:40:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 64,
+                  "nodeType": "ExpressionStatement",
+                  "src": "541:40:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 66,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "lockInGuess",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 34,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33,
+                  "name": "hash",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 66,
+                  "src": "379:12:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 32,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "379:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "378:14:0"
+            },
+            "payable": true,
+            "returnParameters": {
+              "id": 35,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "408:0:0"
+            },
+            "scope": 109,
+            "src": "358:230:0",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 107,
+              "nodeType": "Block",
+              "src": "619:273:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 73,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 70,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 209,
+                            "src": "637:3:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 71,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "637:10:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "id": 72,
+                          "name": "guesser",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 3,
+                          "src": "651:7:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "src": "637:21:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 69,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        212,
+                        213
+                      ],
+                      "referencedDeclaration": 212,
+                      "src": "629:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 74,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "629:30:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 75,
+                  "nodeType": "ExpressionStatement",
+                  "src": "629:30:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 80,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 77,
+                            "name": "block",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 199,
+                            "src": "677:5:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_block",
+                              "typeString": "block"
+                            }
+                          },
+                          "id": 78,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "number",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "677:12:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": ">",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "id": 79,
+                          "name": "settlementBlockNumber",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 7,
+                          "src": "692:21:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "src": "677:36:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 76,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        212,
+                        213
+                      ],
+                      "referencedDeclaration": 212,
+                      "src": "669:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 81,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "669:45:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 82,
+                  "nodeType": "ExpressionStatement",
+                  "src": "669:45:0"
+                },
+                {
+                  "assignments": [
+                    84
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 84,
+                      "name": "answer",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 108,
+                      "src": "725:14:0",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      },
+                      "typeName": {
+                        "id": 83,
+                        "name": "bytes32",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "725:7:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 89,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 87,
+                        "name": "settlementBlockNumber",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 7,
+                        "src": "758:21:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 85,
+                        "name": "block",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 199,
+                        "src": "742:5:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_block",
+                          "typeString": "block"
+                        }
+                      },
+                      "id": 86,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "blockhash",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "742:15:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_blockhash_view$_t_uint256_$returns$_t_bytes32_$",
+                        "typeString": "function (uint256) view returns (bytes32)"
+                      }
+                    },
+                    "id": 88,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "742:38:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "725:55:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 92,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 90,
+                      "name": "guesser",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3,
+                      "src": "791:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 91,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "801:1:0",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "791:11:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 93,
+                  "nodeType": "ExpressionStatement",
+                  "src": "791:11:0"
+                },
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    },
+                    "id": 96,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 94,
+                      "name": "guess",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 5,
+                      "src": "816:5:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "id": 95,
+                      "name": "answer",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 84,
+                      "src": "825:6:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "src": "816:15:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 106,
+                  "nodeType": "IfStatement",
+                  "src": "812:74:0",
+                  "trueBody": {
+                    "id": 105,
+                    "nodeType": "Block",
+                    "src": "833:53:0",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "32",
+                              "id": 102,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "867:7:0",
+                              "subdenomination": "ether",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_2000000000000000000_by_1",
+                                "typeString": "int_const 2000000000000000000"
+                              },
+                              "value": "2"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_rational_2000000000000000000_by_1",
+                                "typeString": "int_const 2000000000000000000"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": null,
+                              "expression": {
+                                "argumentTypes": null,
+                                "id": 97,
+                                "name": "msg",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 209,
+                                "src": "847:3:0",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_magic_message",
+                                  "typeString": "msg"
+                                }
+                              },
+                              "id": 100,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberName": "sender",
+                              "nodeType": "MemberAccess",
+                              "referencedDeclaration": null,
+                              "src": "847:10:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            },
+                            "id": 101,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "transfer",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "847:19:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_transfer_nonpayable$_t_uint256_$returns$__$",
+                              "typeString": "function (uint256)"
+                            }
+                          },
+                          "id": 103,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "847:28:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 104,
+                        "nodeType": "ExpressionStatement",
+                        "src": "847:28:0"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 108,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "settle",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 67,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "609:2:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 68,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "619:0:0"
+            },
+            "scope": 109,
+            "src": "594:298:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 110,
+        "src": "26:868:0"
+      }
+    ],
+    "src": "0:895:0"
+  },
+  "bytecode": "6080604052670de0b6b3a7640000341461001857600080fd5b6101d0806100276000396000f3006080604052600436106100565763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166311da60b4811461005b578063b2fa1c9e14610072578063ed7f559c1461009b575b600080fd5b34801561006757600080fd5b506100706100a6565b005b34801561007e57600080fd5b5061008761013c565b604080519115158252519081900360200190f35b610070600435610142565b6000805473ffffffffffffffffffffffffffffffffffffffff1633146100cb57600080fd5b60025443116100d957600080fd5b506002546000805473ffffffffffffffffffffffffffffffffffffffff19169055600154904090811415610139576040513390600090671bc16d674ec800009082818181858883f19350505050158015610137573d6000803e3d6000fd5b505b50565b30311590565b60005473ffffffffffffffffffffffffffffffffffffffff161561016557600080fd5b670de0b6b3a7640000341461017957600080fd5b6000805473ffffffffffffffffffffffffffffffffffffffff191633179055600190815543016002555600a165627a7a7230582051453e1d38fb65347ba97efd06d8393eba421f60ad9e68241c034cbb2b2aad3d0029",
+  "bytecodeSha1": "0bc7527ef7bfae33f7be40e4a8fc1d3da40f3b08",
+  "compiler": {
+    "evm_version": "byzantium",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "version": "0.4.26+commit.4563c3fc"
+  },
+  "contractName": "PredictTheBlockHashChallenge",
+  "coverageMap": {
+    "branches": {
+      "0": {
+        "PredictTheBlockHashChallenge.lockInGuess": {
+          "13": [
+            426,
+            438,
+            true
+          ],
+          "14": [
+            457,
+            477,
+            true
+          ]
+        },
+        "PredictTheBlockHashChallenge.settle": {
+          "10": [
+            637,
+            658,
+            true
+          ],
+          "11": [
+            677,
+            713,
+            true
+          ],
+          "12": [
+            816,
+            831,
+            false
+          ]
+        }
+      }
+    },
+    "statements": {
+      "0": {
+        "PredictTheBlockHashChallenge.isComplete": {
+          "4": [
+            312,
+            345
+          ]
+        },
+        "PredictTheBlockHashChallenge.lockInGuess": {
+          "5": [
+            418,
+            439
+          ],
+          "6": [
+            449,
+            478
+          ],
+          "7": [
+            489,
+            509
+          ],
+          "8": [
+            519,
+            531
+          ],
+          "9": [
+            541,
+            581
+          ]
+        },
+        "PredictTheBlockHashChallenge.settle": {
+          "0": [
+            629,
+            659
+          ],
+          "1": [
+            669,
+            714
+          ],
+          "2": [
+            791,
+            802
+          ],
+          "3": [
+            847,
+            875
+          ]
+        }
+      }
+    }
+  },
+  "dependencies": [],
+  "deployedBytecode": "6080604052600436106100565763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166311da60b4811461005b578063b2fa1c9e14610072578063ed7f559c1461009b575b600080fd5b34801561006757600080fd5b506100706100a6565b005b34801561007e57600080fd5b5061008761013c565b604080519115158252519081900360200190f35b610070600435610142565b6000805473ffffffffffffffffffffffffffffffffffffffff1633146100cb57600080fd5b60025443116100d957600080fd5b506002546000805473ffffffffffffffffffffffffffffffffffffffff19169055600154904090811415610139576040513390600090671bc16d674ec800009082818181858883f19350505050158015610137573d6000803e3d6000fd5b505b50565b30311590565b60005473ffffffffffffffffffffffffffffffffffffffff161561016557600080fd5b670de0b6b3a7640000341461017957600080fd5b6000805473ffffffffffffffffffffffffffffffffffffffff191633179055600190815543016002555600a165627a7a7230582051453e1d38fb65347ba97efd06d8393eba421f60ad9e68241c034cbb2b2aad3d0029",
+  "deployedSourceMap": "26:868:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;594:298;;8:9:-1;5:2;;;30:1;27;20:12;5:2;594:298:0;;;;;;253:99;;8:9:-1;5:2;;;30:1;27;20:12;5:2;253:99:0;;;;;;;;;;;;;;;;;;;;;;358:230;;;;;;594:298;725:14;651:7;;;;637:10;:21;629:30;;;;;;692:21;;677:12;:36;669:45;;;;;;-1:-1:-1;758:21:0;;801:1;791:11;;-1:-1:-1;;791:11:0;;;;816:5;742:38;;;816:15;;812:74;;;847:28;;:10;;:28;;867:7;;847:28;;;;867:7;847:10;:28;;;;;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;847:28:0;812:74;594:298;:::o;253:99::-;327:4;319:21;:26;253:99;:::o;358:230::-;426:7;;;;:12;418:21;;;;;;470:7;457:9;:20;449:29;;;;;;489:7;:20;;-1:-1:-1;;489:20:0;499:10;489:20;;;;519:12;;;565;:16;541:21;:40;358:230::o",
+  "language": "Solidity",
+  "natspec": {
+    "methods": {}
+  },
+  "offset": [
+    26,
+    894
+  ],
+  "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x4 CALLDATASIZE LT PUSH2 0x56 JUMPI PUSH4 0xFFFFFFFF PUSH29 0x100000000000000000000000000000000000000000000000000000000 PUSH1 0x0 CALLDATALOAD DIV AND PUSH4 0x11DA60B4 DUP2 EQ PUSH2 0x5B JUMPI DUP1 PUSH4 0xB2FA1C9E EQ PUSH2 0x72 JUMPI DUP1 PUSH4 0xED7F559C EQ PUSH2 0x9B JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST CALLVALUE DUP1 ISZERO PUSH2 0x67 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH2 0x70 PUSH2 0xA6 JUMP JUMPDEST STOP JUMPDEST CALLVALUE DUP1 ISZERO PUSH2 0x7E JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH2 0x87 PUSH2 0x13C JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD SWAP2 ISZERO ISZERO DUP3 MSTORE MLOAD SWAP1 DUP2 SWAP1 SUB PUSH1 0x20 ADD SWAP1 RETURN JUMPDEST PUSH2 0x70 PUSH1 0x4 CALLDATALOAD PUSH2 0x142 JUMP JUMPDEST PUSH1 0x0 DUP1 SLOAD PUSH20 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF AND CALLER EQ PUSH2 0xCB JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x2 SLOAD NUMBER GT PUSH2 0xD9 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x2 SLOAD PUSH1 0x0 DUP1 SLOAD PUSH20 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF NOT AND SWAP1 SSTORE PUSH1 0x1 SLOAD SWAP1 BLOCKHASH SWAP1 DUP2 EQ ISZERO PUSH2 0x139 JUMPI PUSH1 0x40 MLOAD CALLER SWAP1 PUSH1 0x0 SWAP1 PUSH8 0x1BC16D674EC80000 SWAP1 DUP3 DUP2 DUP2 DUP2 DUP6 DUP9 DUP4 CALL SWAP4 POP POP POP POP ISZERO DUP1 ISZERO PUSH2 0x137 JUMPI RETURNDATASIZE PUSH1 0x0 DUP1 RETURNDATACOPY RETURNDATASIZE PUSH1 0x0 REVERT JUMPDEST POP JUMPDEST POP JUMP JUMPDEST ADDRESS BALANCE ISZERO SWAP1 JUMP JUMPDEST PUSH1 0x0 SLOAD PUSH20 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF AND ISZERO PUSH2 0x165 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH8 0xDE0B6B3A7640000 CALLVALUE EQ PUSH2 0x179 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x0 DUP1 SLOAD PUSH20 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF NOT AND CALLER OR SWAP1 SSTORE PUSH1 0x1 SWAP1 DUP2 SSTORE NUMBER ADD PUSH1 0x2 SSTORE JUMP STOP LOG1 PUSH6 0x627A7A723058 KECCAK256 MLOAD GASLIMIT RETURNDATACOPY SAR CODESIZE CREATE2 PUSH6 0x347BA97EFD06 0xd8 CODECOPY RETURNDATACOPY 0xba TIMESTAMP 0x1f PUSH1 0xAD SWAP15 PUSH9 0x241C034CBB2B2AAD3D STOP 0x29 ",
+  "pcMap": {
+    "0": {
+      "offset": [
+        26,
+        894
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x80"
+    },
+    "2": {
+      "fn": null,
+      "offset": [
+        26,
+        894
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "4": {
+      "fn": null,
+      "offset": [
+        26,
+        894
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "5": {
+      "fn": null,
+      "offset": [
+        26,
+        894
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "7": {
+      "fn": null,
+      "offset": [
+        26,
+        894
+      ],
+      "op": "CALLDATASIZE",
+      "path": "0"
+    },
+    "8": {
+      "fn": null,
+      "offset": [
+        26,
+        894
+      ],
+      "op": "LT",
+      "path": "0"
+    },
+    "9": {
+      "fn": null,
+      "offset": [
+        26,
+        894
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x56"
+    },
+    "12": {
+      "fn": null,
+      "offset": [
+        26,
+        894
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "13": {
+      "fn": null,
+      "offset": [
+        26,
+        894
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0xFFFFFFFF"
+    },
+    "18": {
+      "fn": null,
+      "offset": [
+        26,
+        894
+      ],
+      "op": "PUSH29",
+      "path": "0",
+      "value": "0x100000000000000000000000000000000000000000000000000000000"
+    },
+    "48": {
+      "fn": null,
+      "offset": [
+        26,
+        894
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "50": {
+      "fn": null,
+      "offset": [
+        26,
+        894
+      ],
+      "op": "CALLDATALOAD",
+      "path": "0"
+    },
+    "51": {
+      "fn": null,
+      "offset": [
+        26,
+        894
+      ],
+      "op": "DIV",
+      "path": "0"
+    },
+    "52": {
+      "fn": null,
+      "offset": [
+        26,
+        894
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "53": {
+      "fn": null,
+      "offset": [
+        26,
+        894
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x11DA60B4"
+    },
+    "58": {
+      "fn": null,
+      "offset": [
+        26,
+        894
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "59": {
+      "fn": null,
+      "offset": [
+        26,
+        894
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "60": {
+      "fn": null,
+      "offset": [
+        26,
+        894
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x5B"
+    },
+    "63": {
+      "fn": null,
+      "offset": [
+        26,
+        894
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "64": {
+      "fn": null,
+      "offset": [
+        26,
+        894
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "65": {
+      "fn": null,
+      "offset": [
+        26,
+        894
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0xB2FA1C9E"
+    },
+    "70": {
+      "fn": null,
+      "offset": [
+        26,
+        894
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "71": {
+      "fn": null,
+      "offset": [
+        26,
+        894
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x72"
+    },
+    "74": {
+      "fn": null,
+      "offset": [
+        26,
+        894
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "75": {
+      "fn": null,
+      "offset": [
+        26,
+        894
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "76": {
+      "fn": null,
+      "offset": [
+        26,
+        894
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0xED7F559C"
+    },
+    "81": {
+      "fn": null,
+      "offset": [
+        26,
+        894
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "82": {
+      "fn": null,
+      "offset": [
+        26,
+        894
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x9B"
+    },
+    "85": {
+      "fn": null,
+      "offset": [
+        26,
+        894
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "86": {
+      "fn": null,
+      "offset": [
+        26,
+        894
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "87": {
+      "fn": null,
+      "offset": [
+        26,
+        894
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "89": {
+      "fn": null,
+      "offset": [
+        26,
+        894
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "90": {
+      "first_revert": true,
+      "fn": null,
+      "offset": [
+        26,
+        894
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "91": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        594,
+        892
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "92": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        594,
+        892
+      ],
+      "op": "CALLVALUE",
+      "path": "0"
+    },
+    "93": {
+      "op": "DUP1"
+    },
+    "94": {
+      "op": "ISZERO"
+    },
+    "95": {
+      "op": "PUSH2",
+      "value": "0x67"
+    },
+    "98": {
+      "op": "JUMPI"
+    },
+    "99": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "101": {
+      "op": "DUP1"
+    },
+    "102": {
+      "dev": "Cannot send ether to nonpayable function",
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        594,
+        892
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "103": {
+      "op": "JUMPDEST"
+    },
+    "104": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        594,
+        892
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "105": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        594,
+        892
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x70"
+    },
+    "108": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        594,
+        892
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xA6"
+    },
+    "111": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        594,
+        892
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "112": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        594,
+        892
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "113": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        594,
+        892
+      ],
+      "op": "STOP",
+      "path": "0"
+    },
+    "114": {
+      "fn": "PredictTheBlockHashChallenge.isComplete",
+      "offset": [
+        253,
+        352
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "115": {
+      "fn": "PredictTheBlockHashChallenge.isComplete",
+      "offset": [
+        253,
+        352
+      ],
+      "op": "CALLVALUE",
+      "path": "0"
+    },
+    "116": {
+      "op": "DUP1"
+    },
+    "117": {
+      "op": "ISZERO"
+    },
+    "118": {
+      "op": "PUSH2",
+      "value": "0x7E"
+    },
+    "121": {
+      "op": "JUMPI"
+    },
+    "122": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "124": {
+      "op": "DUP1"
+    },
+    "125": {
+      "dev": "Cannot send ether to nonpayable function",
+      "fn": "PredictTheBlockHashChallenge.isComplete",
+      "offset": [
+        253,
+        352
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "126": {
+      "op": "JUMPDEST"
+    },
+    "127": {
+      "fn": "PredictTheBlockHashChallenge.isComplete",
+      "offset": [
+        253,
+        352
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "128": {
+      "fn": "PredictTheBlockHashChallenge.isComplete",
+      "offset": [
+        253,
+        352
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x87"
+    },
+    "131": {
+      "fn": "PredictTheBlockHashChallenge.isComplete",
+      "offset": [
+        253,
+        352
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x13C"
+    },
+    "134": {
+      "fn": "PredictTheBlockHashChallenge.isComplete",
+      "offset": [
+        253,
+        352
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "135": {
+      "fn": "PredictTheBlockHashChallenge.isComplete",
+      "offset": [
+        253,
+        352
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "136": {
+      "fn": "PredictTheBlockHashChallenge.isComplete",
+      "offset": [
+        253,
+        352
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "138": {
+      "fn": "PredictTheBlockHashChallenge.isComplete",
+      "offset": [
+        253,
+        352
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "139": {
+      "fn": "PredictTheBlockHashChallenge.isComplete",
+      "offset": [
+        253,
+        352
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "140": {
+      "fn": "PredictTheBlockHashChallenge.isComplete",
+      "offset": [
+        253,
+        352
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "141": {
+      "fn": "PredictTheBlockHashChallenge.isComplete",
+      "offset": [
+        253,
+        352
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "142": {
+      "fn": "PredictTheBlockHashChallenge.isComplete",
+      "offset": [
+        253,
+        352
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "143": {
+      "fn": "PredictTheBlockHashChallenge.isComplete",
+      "offset": [
+        253,
+        352
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "144": {
+      "fn": "PredictTheBlockHashChallenge.isComplete",
+      "offset": [
+        253,
+        352
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "145": {
+      "fn": "PredictTheBlockHashChallenge.isComplete",
+      "offset": [
+        253,
+        352
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "146": {
+      "fn": "PredictTheBlockHashChallenge.isComplete",
+      "offset": [
+        253,
+        352
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "147": {
+      "fn": "PredictTheBlockHashChallenge.isComplete",
+      "offset": [
+        253,
+        352
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "148": {
+      "fn": "PredictTheBlockHashChallenge.isComplete",
+      "offset": [
+        253,
+        352
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "149": {
+      "fn": "PredictTheBlockHashChallenge.isComplete",
+      "offset": [
+        253,
+        352
+      ],
+      "op": "SUB",
+      "path": "0"
+    },
+    "150": {
+      "fn": "PredictTheBlockHashChallenge.isComplete",
+      "offset": [
+        253,
+        352
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "152": {
+      "fn": "PredictTheBlockHashChallenge.isComplete",
+      "offset": [
+        253,
+        352
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "153": {
+      "fn": "PredictTheBlockHashChallenge.isComplete",
+      "offset": [
+        253,
+        352
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "154": {
+      "fn": "PredictTheBlockHashChallenge.isComplete",
+      "offset": [
+        253,
+        352
+      ],
+      "op": "RETURN",
+      "path": "0"
+    },
+    "155": {
+      "fn": "PredictTheBlockHashChallenge.lockInGuess",
+      "offset": [
+        358,
+        588
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "156": {
+      "fn": "PredictTheBlockHashChallenge.lockInGuess",
+      "offset": [
+        358,
+        588
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x70"
+    },
+    "159": {
+      "fn": "PredictTheBlockHashChallenge.lockInGuess",
+      "offset": [
+        358,
+        588
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "161": {
+      "fn": "PredictTheBlockHashChallenge.lockInGuess",
+      "offset": [
+        358,
+        588
+      ],
+      "op": "CALLDATALOAD",
+      "path": "0"
+    },
+    "162": {
+      "fn": "PredictTheBlockHashChallenge.lockInGuess",
+      "offset": [
+        358,
+        588
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x142"
+    },
+    "165": {
+      "fn": "PredictTheBlockHashChallenge.lockInGuess",
+      "offset": [
+        358,
+        588
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "166": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        594,
+        892
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "167": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        725,
+        739
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "169": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        651,
+        658
+      ],
+      "op": "DUP1",
+      "path": "0",
+      "statement": 0
+    },
+    "170": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        651,
+        658
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "171": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        651,
+        658
+      ],
+      "op": "PUSH20",
+      "path": "0",
+      "value": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+    },
+    "192": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        651,
+        658
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "193": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        637,
+        647
+      ],
+      "op": "CALLER",
+      "path": "0"
+    },
+    "194": {
+      "branch": 10,
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        637,
+        658
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "195": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        629,
+        659
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xCB"
+    },
+    "198": {
+      "branch": 10,
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        629,
+        659
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "199": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        629,
+        659
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "201": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        629,
+        659
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "202": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        629,
+        659
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "203": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        629,
+        659
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "204": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        692,
+        713
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 1,
+      "value": "0x2"
+    },
+    "206": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        692,
+        713
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "207": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        677,
+        689
+      ],
+      "op": "NUMBER",
+      "path": "0"
+    },
+    "208": {
+      "branch": 11,
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        677,
+        713
+      ],
+      "op": "GT",
+      "path": "0"
+    },
+    "209": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        669,
+        714
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xD9"
+    },
+    "212": {
+      "branch": 11,
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        669,
+        714
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "213": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        669,
+        714
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "215": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        669,
+        714
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "216": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        669,
+        714
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "217": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        669,
+        714
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "218": {
+      "op": "POP"
+    },
+    "219": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        758,
+        779
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x2"
+    },
+    "221": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        758,
+        779
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "222": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        801,
+        802
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 2,
+      "value": "0x0"
+    },
+    "224": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        791,
+        802
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "225": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        791,
+        802
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "226": {
+      "op": "PUSH20",
+      "value": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+    },
+    "247": {
+      "op": "NOT"
+    },
+    "248": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        791,
+        802
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "249": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        791,
+        802
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "250": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        791,
+        802
+      ],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "251": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        791,
+        802
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x1"
+    },
+    "253": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        816,
+        821
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "254": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        742,
+        780
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "255": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        742,
+        780
+      ],
+      "op": "BLOCKHASH",
+      "path": "0"
+    },
+    "256": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        742,
+        780
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "257": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        816,
+        831
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "258": {
+      "branch": 12,
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        816,
+        831
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "259": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        812,
+        886
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "260": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        812,
+        886
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x139"
+    },
+    "263": {
+      "branch": 12,
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        812,
+        886
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "264": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        847,
+        875
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 3,
+      "value": "0x40"
+    },
+    "266": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        847,
+        875
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "267": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        847,
+        857
+      ],
+      "op": "CALLER",
+      "path": "0"
+    },
+    "268": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        847,
+        857
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "269": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        847,
+        875
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "271": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        847,
+        875
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "272": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        867,
+        874
+      ],
+      "op": "PUSH8",
+      "path": "0",
+      "value": "0x1BC16D674EC80000"
+    },
+    "281": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        867,
+        874
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "282": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        847,
+        875
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "283": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        847,
+        875
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "284": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        847,
+        875
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "285": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        847,
+        875
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "286": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        867,
+        874
+      ],
+      "op": "DUP6",
+      "path": "0"
+    },
+    "287": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        847,
+        857
+      ],
+      "op": "DUP9",
+      "path": "0"
+    },
+    "288": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        847,
+        875
+      ],
+      "op": "DUP4",
+      "path": "0"
+    },
+    "289": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        847,
+        875
+      ],
+      "op": "CALL",
+      "path": "0"
+    },
+    "290": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        847,
+        875
+      ],
+      "op": "SWAP4",
+      "path": "0"
+    },
+    "291": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        847,
+        875
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "292": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        847,
+        875
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "293": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        847,
+        875
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "294": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        847,
+        875
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "295": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        847,
+        875
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "296": {
+      "op": "DUP1"
+    },
+    "297": {
+      "op": "ISZERO"
+    },
+    "298": {
+      "op": "PUSH2",
+      "value": "0x137"
+    },
+    "301": {
+      "op": "JUMPI"
+    },
+    "302": {
+      "op": "RETURNDATASIZE"
+    },
+    "303": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "305": {
+      "op": "DUP1"
+    },
+    "306": {
+      "op": "RETURNDATACOPY"
+    },
+    "307": {
+      "op": "RETURNDATASIZE"
+    },
+    "308": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "310": {
+      "op": "REVERT"
+    },
+    "311": {
+      "op": "JUMPDEST"
+    },
+    "312": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        847,
+        875
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "313": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        812,
+        886
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "314": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "offset": [
+        594,
+        892
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "315": {
+      "fn": "PredictTheBlockHashChallenge.settle",
+      "jump": "o",
+      "offset": [
+        594,
+        892
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "316": {
+      "fn": "PredictTheBlockHashChallenge.isComplete",
+      "offset": [
+        253,
+        352
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "317": {
+      "fn": "PredictTheBlockHashChallenge.isComplete",
+      "offset": [
+        327,
+        331
+      ],
+      "op": "ADDRESS",
+      "path": "0",
+      "statement": 4
+    },
+    "318": {
+      "fn": "PredictTheBlockHashChallenge.isComplete",
+      "offset": [
+        319,
+        340
+      ],
+      "op": "BALANCE",
+      "path": "0"
+    },
+    "319": {
+      "fn": "PredictTheBlockHashChallenge.isComplete",
+      "offset": [
+        319,
+        345
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "320": {
+      "fn": "PredictTheBlockHashChallenge.isComplete",
+      "offset": [
+        253,
+        352
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "321": {
+      "fn": "PredictTheBlockHashChallenge.isComplete",
+      "jump": "o",
+      "offset": [
+        253,
+        352
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "322": {
+      "fn": "PredictTheBlockHashChallenge.lockInGuess",
+      "offset": [
+        358,
+        588
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "323": {
+      "fn": "PredictTheBlockHashChallenge.lockInGuess",
+      "offset": [
+        426,
+        433
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 5,
+      "value": "0x0"
+    },
+    "325": {
+      "fn": "PredictTheBlockHashChallenge.lockInGuess",
+      "offset": [
+        426,
+        433
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "326": {
+      "fn": "PredictTheBlockHashChallenge.lockInGuess",
+      "offset": [
+        426,
+        433
+      ],
+      "op": "PUSH20",
+      "path": "0",
+      "value": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+    },
+    "347": {
+      "fn": "PredictTheBlockHashChallenge.lockInGuess",
+      "offset": [
+        426,
+        433
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "348": {
+      "branch": 13,
+      "fn": "PredictTheBlockHashChallenge.lockInGuess",
+      "offset": [
+        426,
+        438
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "349": {
+      "fn": "PredictTheBlockHashChallenge.lockInGuess",
+      "offset": [
+        418,
+        439
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x165"
+    },
+    "352": {
+      "branch": 13,
+      "fn": "PredictTheBlockHashChallenge.lockInGuess",
+      "offset": [
+        418,
+        439
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "353": {
+      "fn": "PredictTheBlockHashChallenge.lockInGuess",
+      "offset": [
+        418,
+        439
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "355": {
+      "fn": "PredictTheBlockHashChallenge.lockInGuess",
+      "offset": [
+        418,
+        439
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "356": {
+      "fn": "PredictTheBlockHashChallenge.lockInGuess",
+      "offset": [
+        418,
+        439
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "357": {
+      "fn": "PredictTheBlockHashChallenge.lockInGuess",
+      "offset": [
+        418,
+        439
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "358": {
+      "fn": "PredictTheBlockHashChallenge.lockInGuess",
+      "offset": [
+        470,
+        477
+      ],
+      "op": "PUSH8",
+      "path": "0",
+      "statement": 6,
+      "value": "0xDE0B6B3A7640000"
+    },
+    "367": {
+      "fn": "PredictTheBlockHashChallenge.lockInGuess",
+      "offset": [
+        457,
+        466
+      ],
+      "op": "CALLVALUE",
+      "path": "0"
+    },
+    "368": {
+      "branch": 14,
+      "fn": "PredictTheBlockHashChallenge.lockInGuess",
+      "offset": [
+        457,
+        477
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "369": {
+      "fn": "PredictTheBlockHashChallenge.lockInGuess",
+      "offset": [
+        449,
+        478
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x179"
+    },
+    "372": {
+      "branch": 14,
+      "fn": "PredictTheBlockHashChallenge.lockInGuess",
+      "offset": [
+        449,
+        478
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "373": {
+      "fn": "PredictTheBlockHashChallenge.lockInGuess",
+      "offset": [
+        449,
+        478
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "375": {
+      "fn": "PredictTheBlockHashChallenge.lockInGuess",
+      "offset": [
+        449,
+        478
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "376": {
+      "fn": "PredictTheBlockHashChallenge.lockInGuess",
+      "offset": [
+        449,
+        478
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "377": {
+      "fn": "PredictTheBlockHashChallenge.lockInGuess",
+      "offset": [
+        449,
+        478
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "378": {
+      "fn": "PredictTheBlockHashChallenge.lockInGuess",
+      "offset": [
+        489,
+        496
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 7,
+      "value": "0x0"
+    },
+    "380": {
+      "fn": "PredictTheBlockHashChallenge.lockInGuess",
+      "offset": [
+        489,
+        509
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "381": {
+      "fn": "PredictTheBlockHashChallenge.lockInGuess",
+      "offset": [
+        489,
+        509
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "382": {
+      "op": "PUSH20",
+      "value": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+    },
+    "403": {
+      "op": "NOT"
+    },
+    "404": {
+      "fn": "PredictTheBlockHashChallenge.lockInGuess",
+      "offset": [
+        489,
+        509
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "405": {
+      "fn": "PredictTheBlockHashChallenge.lockInGuess",
+      "offset": [
+        499,
+        509
+      ],
+      "op": "CALLER",
+      "path": "0"
+    },
+    "406": {
+      "fn": "PredictTheBlockHashChallenge.lockInGuess",
+      "offset": [
+        489,
+        509
+      ],
+      "op": "OR",
+      "path": "0"
+    },
+    "407": {
+      "fn": "PredictTheBlockHashChallenge.lockInGuess",
+      "offset": [
+        489,
+        509
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "408": {
+      "fn": "PredictTheBlockHashChallenge.lockInGuess",
+      "offset": [
+        489,
+        509
+      ],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "409": {
+      "fn": "PredictTheBlockHashChallenge.lockInGuess",
+      "offset": [
+        489,
+        509
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x1"
+    },
+    "411": {
+      "fn": "PredictTheBlockHashChallenge.lockInGuess",
+      "offset": [
+        519,
+        531
+      ],
+      "op": "SWAP1",
+      "path": "0",
+      "statement": 8
+    },
+    "412": {
+      "fn": "PredictTheBlockHashChallenge.lockInGuess",
+      "offset": [
+        519,
+        531
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "413": {
+      "fn": "PredictTheBlockHashChallenge.lockInGuess",
+      "offset": [
+        519,
+        531
+      ],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "414": {
+      "fn": "PredictTheBlockHashChallenge.lockInGuess",
+      "offset": [
+        565,
+        577
+      ],
+      "op": "NUMBER",
+      "path": "0",
+      "statement": 9
+    },
+    "415": {
+      "fn": "PredictTheBlockHashChallenge.lockInGuess",
+      "offset": [
+        565,
+        581
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "416": {
+      "fn": "PredictTheBlockHashChallenge.lockInGuess",
+      "offset": [
+        541,
+        562
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x2"
+    },
+    "418": {
+      "fn": "PredictTheBlockHashChallenge.lockInGuess",
+      "offset": [
+        541,
+        581
+      ],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "419": {
+      "fn": "PredictTheBlockHashChallenge.lockInGuess",
+      "jump": "o",
+      "offset": [
+        358,
+        588
+      ],
+      "op": "JUMP",
+      "path": "0"
+    }
+  },
+  "sha1": "0f9aef74dfaebbee4f8f4da5afde70d23ed5c803",
+  "source": "pragma solidity ^0.4.21;\n\ncontract PredictTheBlockHashChallenge {\n    address guesser;\n    bytes32 guess;\n    uint256 settlementBlockNumber;\n\n    function PredictTheBlockHashChallenge() public payable {\n        require(msg.value == 1 ether);\n    }\n\n    function isComplete() public view returns (bool) {\n        return address(this).balance == 0;\n    }\n\n    function lockInGuess(bytes32 hash) public payable {\n        require(guesser == 0);\n        require(msg.value == 1 ether);\n\n        guesser = msg.sender;\n        guess = hash;\n        settlementBlockNumber = block.number + 1;\n    }\n\n    function settle() public {\n        require(msg.sender == guesser);\n        require(block.number > settlementBlockNumber);\n\n        bytes32 answer = block.blockhash(settlementBlockNumber);\n\n        guesser = 0;\n        if (guess == answer) {\n            msg.sender.transfer(2 ether);\n        }\n    }\n}\n",
+  "sourceMap": "26:868:0:-;;;232:7;219:9;:20;211:29;;;;;;26:868;;;;;;",
+  "sourcePath": "contracts/Predict-the-block-hash.sol",
+  "type": "contract"
+}

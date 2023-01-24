@@ -1,0 +1,1033 @@
+{
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "callme",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "isComplete",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "allSourcePaths": {
+    "0": "contracts/Call-me.sol"
+  },
+  "ast": {
+    "absolutePath": "contracts/Call-me.sol",
+    "exportedSymbols": {
+      "CallMeChallenge": [
+        13
+      ]
+    },
+    "id": 14,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".21"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 13,
+        "linearizedBaseContracts": [
+          13
+        ],
+        "name": "CallMeChallenge",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 4,
+            "name": "isComplete",
+            "nodeType": "VariableDeclaration",
+            "scope": 13,
+            "src": "57:30:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 2,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "57:4:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "66616c7365",
+              "id": 3,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "bool",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "82:5:0",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              },
+              "value": "false"
+            },
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 11,
+              "nodeType": "Block",
+              "src": "119:34:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 9,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 7,
+                      "name": "isComplete",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4,
+                      "src": "129:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "74727565",
+                      "id": 8,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "142:4:0",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "129:17:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 10,
+                  "nodeType": "ExpressionStatement",
+                  "src": "129:17:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 12,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "callme",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "109:2:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 6,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "119:0:0"
+            },
+            "scope": 13,
+            "src": "94:59:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 14,
+        "src": "26:129:0"
+      }
+    ],
+    "src": "0:156:0"
+  },
+  "bytecode": "60806040526000805460ff1916905534801561001a57600080fd5b5060cb806100296000396000f30060806040526004361060485763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663a3c8e3938114604d578063b2fa1c9e146061575b600080fd5b348015605857600080fd5b50605f6087565b005b348015606c57600080fd5b5060736096565b604080519115158252519081900360200190f35b6000805460ff19166001179055565b60005460ff16815600a165627a7a723058206cd5a96c3658564d90ed33d1b24b5c096db78796d42d2d11b4efbf931af404830029",
+  "bytecodeSha1": "80bb8771f4b76dc0eefb406a10df3f878ff0d4d5",
+  "compiler": {
+    "evm_version": "byzantium",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "version": "0.4.26+commit.4563c3fc"
+  },
+  "contractName": "CallMeChallenge",
+  "coverageMap": {
+    "branches": {
+      "0": {}
+    },
+    "statements": {
+      "0": {
+        "CallMeChallenge.callme": {
+          "0": [
+            129,
+            146
+          ]
+        }
+      }
+    }
+  },
+  "dependencies": [],
+  "deployedBytecode": "60806040526004361060485763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663a3c8e3938114604d578063b2fa1c9e146061575b600080fd5b348015605857600080fd5b50605f6087565b005b348015606c57600080fd5b5060736096565b604080519115158252519081900360200190f35b6000805460ff19166001179055565b60005460ff16815600a165627a7a723058206cd5a96c3658564d90ed33d1b24b5c096db78796d42d2d11b4efbf931af404830029",
+  "deployedSourceMap": "26:129:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;94:59;;8:9:-1;5:2;;;30:1;27;20:12;5:2;94:59:0;;;;;;57:30;;8:9:-1;5:2;;;30:1;27;20:12;5:2;57:30:0;;;;;;;;;;;;;;;;;;;;;;94:59;129:10;:17;;-1:-1:-1;;129:17:0;142:4;129:17;;;94:59::o;57:30::-;;;;;;:::o",
+  "language": "Solidity",
+  "natspec": {
+    "methods": {}
+  },
+  "offset": [
+    26,
+    155
+  ],
+  "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x4 CALLDATASIZE LT PUSH1 0x48 JUMPI PUSH4 0xFFFFFFFF PUSH29 0x100000000000000000000000000000000000000000000000000000000 PUSH1 0x0 CALLDATALOAD DIV AND PUSH4 0xA3C8E393 DUP2 EQ PUSH1 0x4D JUMPI DUP1 PUSH4 0xB2FA1C9E EQ PUSH1 0x61 JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST CALLVALUE DUP1 ISZERO PUSH1 0x58 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x5F PUSH1 0x87 JUMP JUMPDEST STOP JUMPDEST CALLVALUE DUP1 ISZERO PUSH1 0x6C JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x73 PUSH1 0x96 JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD SWAP2 ISZERO ISZERO DUP3 MSTORE MLOAD SWAP1 DUP2 SWAP1 SUB PUSH1 0x20 ADD SWAP1 RETURN JUMPDEST PUSH1 0x0 DUP1 SLOAD PUSH1 0xFF NOT AND PUSH1 0x1 OR SWAP1 SSTORE JUMP JUMPDEST PUSH1 0x0 SLOAD PUSH1 0xFF AND DUP2 JUMP STOP LOG1 PUSH6 0x627A7A723058 KECCAK256 PUSH13 0xD5A96C3658564D90ED33D1B24B 0x5c MULMOD PUSH14 0xB78796D42D2D11B4EFBF931AF404 DUP4 STOP 0x29 ",
+  "pcMap": {
+    "0": {
+      "offset": [
+        26,
+        155
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x80"
+    },
+    "2": {
+      "fn": null,
+      "offset": [
+        26,
+        155
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "4": {
+      "fn": null,
+      "offset": [
+        26,
+        155
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "5": {
+      "fn": null,
+      "offset": [
+        26,
+        155
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "7": {
+      "fn": null,
+      "offset": [
+        26,
+        155
+      ],
+      "op": "CALLDATASIZE",
+      "path": "0"
+    },
+    "8": {
+      "fn": null,
+      "offset": [
+        26,
+        155
+      ],
+      "op": "LT",
+      "path": "0"
+    },
+    "9": {
+      "fn": null,
+      "offset": [
+        26,
+        155
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x48"
+    },
+    "11": {
+      "fn": null,
+      "offset": [
+        26,
+        155
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "12": {
+      "fn": null,
+      "offset": [
+        26,
+        155
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0xFFFFFFFF"
+    },
+    "17": {
+      "fn": null,
+      "offset": [
+        26,
+        155
+      ],
+      "op": "PUSH29",
+      "path": "0",
+      "value": "0x100000000000000000000000000000000000000000000000000000000"
+    },
+    "47": {
+      "fn": null,
+      "offset": [
+        26,
+        155
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "49": {
+      "fn": null,
+      "offset": [
+        26,
+        155
+      ],
+      "op": "CALLDATALOAD",
+      "path": "0"
+    },
+    "50": {
+      "fn": null,
+      "offset": [
+        26,
+        155
+      ],
+      "op": "DIV",
+      "path": "0"
+    },
+    "51": {
+      "fn": null,
+      "offset": [
+        26,
+        155
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "52": {
+      "fn": null,
+      "offset": [
+        26,
+        155
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0xA3C8E393"
+    },
+    "57": {
+      "fn": null,
+      "offset": [
+        26,
+        155
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "58": {
+      "fn": null,
+      "offset": [
+        26,
+        155
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "59": {
+      "fn": null,
+      "offset": [
+        26,
+        155
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4D"
+    },
+    "61": {
+      "fn": null,
+      "offset": [
+        26,
+        155
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "62": {
+      "fn": null,
+      "offset": [
+        26,
+        155
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "63": {
+      "fn": null,
+      "offset": [
+        26,
+        155
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0xB2FA1C9E"
+    },
+    "68": {
+      "fn": null,
+      "offset": [
+        26,
+        155
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "69": {
+      "fn": null,
+      "offset": [
+        26,
+        155
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x61"
+    },
+    "71": {
+      "fn": null,
+      "offset": [
+        26,
+        155
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "72": {
+      "fn": null,
+      "offset": [
+        26,
+        155
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "73": {
+      "fn": null,
+      "offset": [
+        26,
+        155
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "75": {
+      "fn": null,
+      "offset": [
+        26,
+        155
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "76": {
+      "first_revert": true,
+      "fn": null,
+      "offset": [
+        26,
+        155
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "77": {
+      "fn": "CallMeChallenge.callme",
+      "offset": [
+        94,
+        153
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "78": {
+      "fn": "CallMeChallenge.callme",
+      "offset": [
+        94,
+        153
+      ],
+      "op": "CALLVALUE",
+      "path": "0"
+    },
+    "79": {
+      "op": "DUP1"
+    },
+    "80": {
+      "op": "ISZERO"
+    },
+    "81": {
+      "op": "PUSH1",
+      "value": "0x58"
+    },
+    "83": {
+      "op": "JUMPI"
+    },
+    "84": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "86": {
+      "op": "DUP1"
+    },
+    "87": {
+      "dev": "Cannot send ether to nonpayable function",
+      "fn": "CallMeChallenge.callme",
+      "offset": [
+        94,
+        153
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "88": {
+      "op": "JUMPDEST"
+    },
+    "89": {
+      "fn": "CallMeChallenge.callme",
+      "offset": [
+        94,
+        153
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "90": {
+      "fn": "CallMeChallenge.callme",
+      "offset": [
+        94,
+        153
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x5F"
+    },
+    "92": {
+      "fn": "CallMeChallenge.callme",
+      "offset": [
+        94,
+        153
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x87"
+    },
+    "94": {
+      "fn": "CallMeChallenge.callme",
+      "offset": [
+        94,
+        153
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "95": {
+      "fn": "CallMeChallenge.callme",
+      "offset": [
+        94,
+        153
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "96": {
+      "fn": "CallMeChallenge.callme",
+      "offset": [
+        94,
+        153
+      ],
+      "op": "STOP",
+      "path": "0"
+    },
+    "97": {
+      "offset": [
+        57,
+        87
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "98": {
+      "fn": "CallMeChallenge.callme",
+      "offset": [
+        57,
+        87
+      ],
+      "op": "CALLVALUE",
+      "path": "0"
+    },
+    "99": {
+      "op": "DUP1"
+    },
+    "100": {
+      "op": "ISZERO"
+    },
+    "101": {
+      "op": "PUSH1",
+      "value": "0x6C"
+    },
+    "103": {
+      "op": "JUMPI"
+    },
+    "104": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "106": {
+      "op": "DUP1"
+    },
+    "107": {
+      "dev": "Cannot send ether to nonpayable function",
+      "fn": "CallMeChallenge.callme",
+      "offset": [
+        57,
+        87
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "108": {
+      "op": "JUMPDEST"
+    },
+    "109": {
+      "offset": [
+        57,
+        87
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "110": {
+      "fn": "CallMeChallenge.callme",
+      "offset": [
+        57,
+        87
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x73"
+    },
+    "112": {
+      "fn": "CallMeChallenge.callme",
+      "offset": [
+        57,
+        87
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x96"
+    },
+    "114": {
+      "fn": "CallMeChallenge.callme",
+      "offset": [
+        57,
+        87
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "115": {
+      "fn": "CallMeChallenge.callme",
+      "offset": [
+        57,
+        87
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "116": {
+      "fn": "CallMeChallenge.callme",
+      "offset": [
+        57,
+        87
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "118": {
+      "fn": "CallMeChallenge.callme",
+      "offset": [
+        57,
+        87
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "119": {
+      "fn": "CallMeChallenge.callme",
+      "offset": [
+        57,
+        87
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "120": {
+      "fn": "CallMeChallenge.callme",
+      "offset": [
+        57,
+        87
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "121": {
+      "fn": "CallMeChallenge.callme",
+      "offset": [
+        57,
+        87
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "122": {
+      "fn": "CallMeChallenge.callme",
+      "offset": [
+        57,
+        87
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "123": {
+      "fn": "CallMeChallenge.callme",
+      "offset": [
+        57,
+        87
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "124": {
+      "fn": "CallMeChallenge.callme",
+      "offset": [
+        57,
+        87
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "125": {
+      "fn": "CallMeChallenge.callme",
+      "offset": [
+        57,
+        87
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "126": {
+      "fn": "CallMeChallenge.callme",
+      "offset": [
+        57,
+        87
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "127": {
+      "fn": "CallMeChallenge.callme",
+      "offset": [
+        57,
+        87
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "128": {
+      "fn": "CallMeChallenge.callme",
+      "offset": [
+        57,
+        87
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "129": {
+      "fn": "CallMeChallenge.callme",
+      "offset": [
+        57,
+        87
+      ],
+      "op": "SUB",
+      "path": "0"
+    },
+    "130": {
+      "fn": "CallMeChallenge.callme",
+      "offset": [
+        57,
+        87
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "132": {
+      "fn": "CallMeChallenge.callme",
+      "offset": [
+        57,
+        87
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "133": {
+      "fn": "CallMeChallenge.callme",
+      "offset": [
+        57,
+        87
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "134": {
+      "fn": "CallMeChallenge.callme",
+      "offset": [
+        57,
+        87
+      ],
+      "op": "RETURN",
+      "path": "0"
+    },
+    "135": {
+      "fn": "CallMeChallenge.callme",
+      "offset": [
+        94,
+        153
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "136": {
+      "fn": "CallMeChallenge.callme",
+      "offset": [
+        129,
+        139
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 0,
+      "value": "0x0"
+    },
+    "138": {
+      "fn": "CallMeChallenge.callme",
+      "offset": [
+        129,
+        146
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "139": {
+      "fn": "CallMeChallenge.callme",
+      "offset": [
+        129,
+        146
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "140": {
+      "op": "PUSH1",
+      "value": "0xFF"
+    },
+    "142": {
+      "op": "NOT"
+    },
+    "143": {
+      "fn": "CallMeChallenge.callme",
+      "offset": [
+        129,
+        146
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "144": {
+      "fn": "CallMeChallenge.callme",
+      "offset": [
+        142,
+        146
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x1"
+    },
+    "146": {
+      "fn": "CallMeChallenge.callme",
+      "offset": [
+        129,
+        146
+      ],
+      "op": "OR",
+      "path": "0"
+    },
+    "147": {
+      "fn": "CallMeChallenge.callme",
+      "offset": [
+        129,
+        146
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "148": {
+      "fn": "CallMeChallenge.callme",
+      "offset": [
+        129,
+        146
+      ],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "149": {
+      "fn": "CallMeChallenge.callme",
+      "jump": "o",
+      "offset": [
+        94,
+        153
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "150": {
+      "offset": [
+        57,
+        87
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "151": {
+      "fn": "CallMeChallenge.callme",
+      "offset": [
+        57,
+        87
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "153": {
+      "fn": "CallMeChallenge.callme",
+      "offset": [
+        57,
+        87
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "154": {
+      "fn": "CallMeChallenge.callme",
+      "offset": [
+        57,
+        87
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xFF"
+    },
+    "156": {
+      "fn": "CallMeChallenge.callme",
+      "offset": [
+        57,
+        87
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "157": {
+      "fn": "CallMeChallenge.callme",
+      "offset": [
+        57,
+        87
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "158": {
+      "fn": "CallMeChallenge.callme",
+      "jump": "o",
+      "offset": [
+        57,
+        87
+      ],
+      "op": "JUMP",
+      "path": "0"
+    }
+  },
+  "sha1": "1e6316bcf8c525743e858d26d933e85fd0649c73",
+  "source": "pragma solidity ^0.4.21;\n\ncontract CallMeChallenge {\n    bool public isComplete = false;\n\n    function callme() public {\n        isComplete = true;\n    }\n}\n",
+  "sourceMap": "26:129:0:-;;;82:5;57:30;;-1:-1:-1;;57:30:0;;;26:129;5:2:-1;;;;30:1;27;20:12;5:2;26:129:0;;;;;;;",
+  "sourcePath": "contracts/Call-me.sol",
+  "type": "contract"
+}

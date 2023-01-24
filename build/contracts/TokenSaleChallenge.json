@@ -1,0 +1,3567 @@
+{
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "isComplete",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "numTokens",
+          "type": "uint256"
+        }
+      ],
+      "name": "buy",
+      "outputs": [],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "numTokens",
+          "type": "uint256"
+        }
+      ],
+      "name": "sell",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_player",
+          "type": "address"
+        }
+      ],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "constructor"
+    }
+  ],
+  "allSourcePaths": {
+    "2": "contracts/Token-sale.sol"
+  },
+  "ast": {
+    "absolutePath": "contracts/Token-sale.sol",
+    "exportedSymbols": {
+      "TokenSaleChallenge": [
+        294
+      ]
+    },
+    "id": 295,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 206,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".21"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:2"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 294,
+        "linearizedBaseContracts": [
+          294
+        ],
+        "name": "TokenSaleChallenge",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 210,
+            "name": "balanceOf",
+            "nodeType": "VariableDeclaration",
+            "scope": 294,
+            "src": "60:44:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+              "typeString": "mapping(address => uint256)"
+            },
+            "typeName": {
+              "id": 209,
+              "keyType": {
+                "id": 207,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "68:7:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "60:27:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                "typeString": "mapping(address => uint256)"
+              },
+              "valueType": {
+                "id": 208,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "79:7:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 213,
+            "name": "PRICE_PER_TOKEN",
+            "nodeType": "VariableDeclaration",
+            "scope": 294,
+            "src": "110:42:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 211,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "110:7:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "31",
+              "id": 212,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "145:7:2",
+              "subdenomination": "ether",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_1000000000000000000_by_1",
+                "typeString": "int_const 1000000000000000000"
+              },
+              "value": "1"
+            },
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 225,
+              "nodeType": "Block",
+              "src": "219:46:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 222,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 219,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 309,
+                            "src": "237:3:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 220,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "value",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "237:9:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "hexValue": "31",
+                          "id": 221,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "250:7:2",
+                          "subdenomination": "ether",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_1000000000000000000_by_1",
+                            "typeString": "int_const 1000000000000000000"
+                          },
+                          "value": "1"
+                        },
+                        "src": "237:20:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 218,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        312,
+                        313
+                      ],
+                      "referencedDeclaration": 312,
+                      "src": "229:7:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 223,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "229:29:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 224,
+                  "nodeType": "ExpressionStatement",
+                  "src": "229:29:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 226,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "TokenSaleChallenge",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 216,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 215,
+                  "name": "_player",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 226,
+                  "src": "187:15:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 214,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "187:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "186:17:2"
+            },
+            "payable": true,
+            "returnParameters": {
+              "id": 217,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "219:0:2"
+            },
+            "scope": 294,
+            "src": "159:106:2",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 238,
+              "nodeType": "Block",
+              "src": "320:55:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 236,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 232,
+                            "name": "this",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 328,
+                            "src": "345:4:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_TokenSaleChallenge_$294",
+                              "typeString": "contract TokenSaleChallenge"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_contract$_TokenSaleChallenge_$294",
+                              "typeString": "contract TokenSaleChallenge"
+                            }
+                          ],
+                          "id": 231,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "337:7:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_address_$",
+                            "typeString": "type(address)"
+                          },
+                          "typeName": "address"
+                        },
+                        "id": 233,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "337:13:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "id": 234,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "balance",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "337:21:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "<",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "31",
+                      "id": 235,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "361:7:2",
+                      "subdenomination": "ether",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_1000000000000000000_by_1",
+                        "typeString": "int_const 1000000000000000000"
+                      },
+                      "value": "1"
+                    },
+                    "src": "337:31:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 230,
+                  "id": 237,
+                  "nodeType": "Return",
+                  "src": "330:38:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 239,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "isComplete",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 227,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "290:2:2"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 230,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 229,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 239,
+                  "src": "314:4:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 228,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "314:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "313:6:2"
+            },
+            "scope": 294,
+            "src": "271:104:2",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 260,
+              "nodeType": "Block",
+              "src": "428:111:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 250,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 245,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 309,
+                            "src": "446:3:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 246,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "value",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "446:9:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          "id": 249,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftExpression": {
+                            "argumentTypes": null,
+                            "id": 247,
+                            "name": "numTokens",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 241,
+                            "src": "459:9:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": "*",
+                          "rightExpression": {
+                            "argumentTypes": null,
+                            "id": 248,
+                            "name": "PRICE_PER_TOKEN",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 213,
+                            "src": "471:15:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "src": "459:27:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "src": "446:40:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 244,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        312,
+                        313
+                      ],
+                      "referencedDeclaration": 312,
+                      "src": "438:7:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 251,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "438:49:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 252,
+                  "nodeType": "ExpressionStatement",
+                  "src": "438:49:2"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 258,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 253,
+                        "name": "balanceOf",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 210,
+                        "src": "498:9:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                          "typeString": "mapping(address => uint256)"
+                        }
+                      },
+                      "id": 256,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 254,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 309,
+                          "src": "508:3:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 255,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "508:10:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "498:21:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "+=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 257,
+                      "name": "numTokens",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 241,
+                      "src": "523:9:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "498:34:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 259,
+                  "nodeType": "ExpressionStatement",
+                  "src": "498:34:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 261,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "buy",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 242,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 241,
+                  "name": "numTokens",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 261,
+                  "src": "394:17:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 240,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "394:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "393:19:2"
+            },
+            "payable": true,
+            "returnParameters": {
+              "id": 243,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "428:0:2"
+            },
+            "scope": 294,
+            "src": "381:158:2",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 292,
+              "nodeType": "Block",
+              "src": "585:163:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 272,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "baseExpression": {
+                            "argumentTypes": null,
+                            "id": 267,
+                            "name": "balanceOf",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 210,
+                            "src": "603:9:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                              "typeString": "mapping(address => uint256)"
+                            }
+                          },
+                          "id": 270,
+                          "indexExpression": {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 268,
+                              "name": "msg",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 309,
+                              "src": "613:3:2",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_magic_message",
+                                "typeString": "msg"
+                              }
+                            },
+                            "id": 269,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "sender",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "613:10:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "603:21:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": ">=",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "id": 271,
+                          "name": "numTokens",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 263,
+                          "src": "628:9:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "src": "603:34:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 266,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        312,
+                        313
+                      ],
+                      "referencedDeclaration": 312,
+                      "src": "595:7:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 273,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "595:43:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 274,
+                  "nodeType": "ExpressionStatement",
+                  "src": "595:43:2"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 280,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 275,
+                        "name": "balanceOf",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 210,
+                        "src": "649:9:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                          "typeString": "mapping(address => uint256)"
+                        }
+                      },
+                      "id": 278,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 276,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 309,
+                          "src": "659:3:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 277,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "659:10:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "649:21:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "-=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 279,
+                      "name": "numTokens",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 263,
+                      "src": "674:9:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "649:34:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 281,
+                  "nodeType": "ExpressionStatement",
+                  "src": "649:34:2"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 289,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 287,
+                          "name": "numTokens",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 263,
+                          "src": "713:9:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "*",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "id": 288,
+                          "name": "PRICE_PER_TOKEN",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 213,
+                          "src": "725:15:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "src": "713:27:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 282,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 309,
+                          "src": "693:3:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 285,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "693:10:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "id": 286,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "transfer",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "693:19:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_transfer_nonpayable$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256)"
+                      }
+                    },
+                    "id": 290,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "693:48:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 291,
+                  "nodeType": "ExpressionStatement",
+                  "src": "693:48:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 293,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "sell",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 264,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 263,
+                  "name": "numTokens",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 293,
+                  "src": "559:17:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 262,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "559:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "558:19:2"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 265,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "585:0:2"
+            },
+            "scope": 294,
+            "src": "545:203:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 295,
+        "src": "26:724:2"
+      }
+    ],
+    "src": "0:751:2"
+  },
+  "bytecode": "60806040526040516020806102128339810160405251670de0b6b3a7640000341461002957600080fd5b506101d9806100396000396000f3006080604052600436106100615763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166370a082318114610066578063b2fa1c9e146100a6578063d96a094a146100cf578063e4849b32146100dc575b600080fd5b34801561007257600080fd5b5061009473ffffffffffffffffffffffffffffffffffffffff600435166100f4565b60408051918252519081900360200190f35b3480156100b257600080fd5b506100bb610106565b604080519115158252519081900360200190f35b6100da600435610115565b005b3480156100e857600080fd5b506100da600435610143565b60006020819052908152604090205481565b670de0b6b3a764000030311090565b34670de0b6b3a764000082021461012b57600080fd5b33600090815260208190526040902080549091019055565b3360009081526020819052604090205481111561015f57600080fd5b336000818152602081905260408082208054859003905551670de0b6b3a7640000840280156108fc0292909190818181858888f193505050501580156101a9573d6000803e3d6000fd5b50505600a165627a7a72305820c1940ba11fb0e0ae7d8253f0d19cef91368be45e4336d9ad61db46b72ef652910029",
+  "bytecodeSha1": "5529e670ccf78829c38a0b2003eeb114a40f4dd3",
+  "compiler": {
+    "evm_version": "byzantium",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "version": "0.4.26+commit.4563c3fc"
+  },
+  "contractName": "TokenSaleChallenge",
+  "coverageMap": {
+    "branches": {
+      "2": {
+        "TokenSaleChallenge.buy": {
+          "6": [
+            446,
+            486,
+            true
+          ]
+        },
+        "TokenSaleChallenge.sell": {
+          "7": [
+            603,
+            637,
+            true
+          ]
+        }
+      }
+    },
+    "statements": {
+      "2": {
+        "TokenSaleChallenge.buy": {
+          "1": [
+            438,
+            487
+          ],
+          "2": [
+            498,
+            532
+          ]
+        },
+        "TokenSaleChallenge.isComplete": {
+          "0": [
+            330,
+            368
+          ]
+        },
+        "TokenSaleChallenge.sell": {
+          "3": [
+            595,
+            638
+          ],
+          "4": [
+            649,
+            683
+          ],
+          "5": [
+            693,
+            741
+          ]
+        }
+      }
+    }
+  },
+  "dependencies": [],
+  "deployedBytecode": "6080604052600436106100615763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166370a082318114610066578063b2fa1c9e146100a6578063d96a094a146100cf578063e4849b32146100dc575b600080fd5b34801561007257600080fd5b5061009473ffffffffffffffffffffffffffffffffffffffff600435166100f4565b60408051918252519081900360200190f35b3480156100b257600080fd5b506100bb610106565b604080519115158252519081900360200190f35b6100da600435610115565b005b3480156100e857600080fd5b506100da600435610143565b60006020819052908152604090205481565b670de0b6b3a764000030311090565b34670de0b6b3a764000082021461012b57600080fd5b33600090815260208190526040902080549091019055565b3360009081526020819052604090205481111561015f57600080fd5b336000818152602081905260408082208054859003905551670de0b6b3a7640000840280156108fc0292909190818181858888f193505050501580156101a9573d6000803e3d6000fd5b50505600a165627a7a72305820c1940ba11fb0e0ae7d8253f0d19cef91368be45e4336d9ad61db46b72ef652910029",
+  "deployedSourceMap": "26:724:2:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;60:44;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;60:44:2;;;;;;;;;;;;;;;;;;;;;;;271:104;;8:9:-1;5:2;;;30:1;27;20:12;5:2;271:104:2;;;;;;;;;;;;;;;;;;;;;;381:158;;;;;;;;545:203;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;545:203:2;;;;;60:44;;;;;;;;;;;;;;:::o;271:104::-;361:7;345:4;337:21;:31;271:104;:::o;381:158::-;446:9;145:7;459:27;;446:40;438:49;;;;;;508:10;498:9;:21;;;;;;;;;;:34;;;;;;;381:158::o;545:203::-;613:10;603:9;:21;;;;;;;;;;;:34;-1:-1:-1;603:34:2;595:43;;;;;;659:10;649:9;:21;;;;;;;;;;;:34;;;;;;;693:48;145:7;713:27;;693:48;;;;;713:27;;693:48;;649:9;693:48;713:27;659:10;693:48;;;;;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;693:48:2;545:203;:::o",
+  "language": "Solidity",
+  "natspec": {
+    "methods": {}
+  },
+  "offset": [
+    26,
+    750
+  ],
+  "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x4 CALLDATASIZE LT PUSH2 0x61 JUMPI PUSH4 0xFFFFFFFF PUSH29 0x100000000000000000000000000000000000000000000000000000000 PUSH1 0x0 CALLDATALOAD DIV AND PUSH4 0x70A08231 DUP2 EQ PUSH2 0x66 JUMPI DUP1 PUSH4 0xB2FA1C9E EQ PUSH2 0xA6 JUMPI DUP1 PUSH4 0xD96A094A EQ PUSH2 0xCF JUMPI DUP1 PUSH4 0xE4849B32 EQ PUSH2 0xDC JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST CALLVALUE DUP1 ISZERO PUSH2 0x72 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH2 0x94 PUSH20 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF PUSH1 0x4 CALLDATALOAD AND PUSH2 0xF4 JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD SWAP2 DUP3 MSTORE MLOAD SWAP1 DUP2 SWAP1 SUB PUSH1 0x20 ADD SWAP1 RETURN JUMPDEST CALLVALUE DUP1 ISZERO PUSH2 0xB2 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH2 0xBB PUSH2 0x106 JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD SWAP2 ISZERO ISZERO DUP3 MSTORE MLOAD SWAP1 DUP2 SWAP1 SUB PUSH1 0x20 ADD SWAP1 RETURN JUMPDEST PUSH2 0xDA PUSH1 0x4 CALLDATALOAD PUSH2 0x115 JUMP JUMPDEST STOP JUMPDEST CALLVALUE DUP1 ISZERO PUSH2 0xE8 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH2 0xDA PUSH1 0x4 CALLDATALOAD PUSH2 0x143 JUMP JUMPDEST PUSH1 0x0 PUSH1 0x20 DUP2 SWAP1 MSTORE SWAP1 DUP2 MSTORE PUSH1 0x40 SWAP1 KECCAK256 SLOAD DUP2 JUMP JUMPDEST PUSH8 0xDE0B6B3A7640000 ADDRESS BALANCE LT SWAP1 JUMP JUMPDEST CALLVALUE PUSH8 0xDE0B6B3A7640000 DUP3 MUL EQ PUSH2 0x12B JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST CALLER PUSH1 0x0 SWAP1 DUP2 MSTORE PUSH1 0x20 DUP2 SWAP1 MSTORE PUSH1 0x40 SWAP1 KECCAK256 DUP1 SLOAD SWAP1 SWAP2 ADD SWAP1 SSTORE JUMP JUMPDEST CALLER PUSH1 0x0 SWAP1 DUP2 MSTORE PUSH1 0x20 DUP2 SWAP1 MSTORE PUSH1 0x40 SWAP1 KECCAK256 SLOAD DUP2 GT ISZERO PUSH2 0x15F JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST CALLER PUSH1 0x0 DUP2 DUP2 MSTORE PUSH1 0x20 DUP2 SWAP1 MSTORE PUSH1 0x40 DUP1 DUP3 KECCAK256 DUP1 SLOAD DUP6 SWAP1 SUB SWAP1 SSTORE MLOAD PUSH8 0xDE0B6B3A7640000 DUP5 MUL DUP1 ISZERO PUSH2 0x8FC MUL SWAP3 SWAP1 SWAP2 SWAP1 DUP2 DUP2 DUP2 DUP6 DUP9 DUP9 CALL SWAP4 POP POP POP POP ISZERO DUP1 ISZERO PUSH2 0x1A9 JUMPI RETURNDATASIZE PUSH1 0x0 DUP1 RETURNDATACOPY RETURNDATASIZE PUSH1 0x0 REVERT JUMPDEST POP POP JUMP STOP LOG1 PUSH6 0x627A7A723058 KECCAK256 0xc1 SWAP5 SIGNEXTEND LOG1 0x1f 0xb0 0xe0 0xae PUSH30 0x8253F0D19CEF91368BE45E4336D9AD61DB46B72EF6529100290000000000 ",
+  "pcMap": {
+    "0": {
+      "offset": [
+        26,
+        750
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x80"
+    },
+    "2": {
+      "fn": null,
+      "offset": [
+        26,
+        750
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x40"
+    },
+    "4": {
+      "fn": null,
+      "offset": [
+        26,
+        750
+      ],
+      "op": "MSTORE",
+      "path": "2"
+    },
+    "5": {
+      "fn": null,
+      "offset": [
+        26,
+        750
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x4"
+    },
+    "7": {
+      "fn": null,
+      "offset": [
+        26,
+        750
+      ],
+      "op": "CALLDATASIZE",
+      "path": "2"
+    },
+    "8": {
+      "fn": null,
+      "offset": [
+        26,
+        750
+      ],
+      "op": "LT",
+      "path": "2"
+    },
+    "9": {
+      "fn": null,
+      "offset": [
+        26,
+        750
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0x61"
+    },
+    "12": {
+      "fn": null,
+      "offset": [
+        26,
+        750
+      ],
+      "op": "JUMPI",
+      "path": "2"
+    },
+    "13": {
+      "fn": null,
+      "offset": [
+        26,
+        750
+      ],
+      "op": "PUSH4",
+      "path": "2",
+      "value": "0xFFFFFFFF"
+    },
+    "18": {
+      "fn": null,
+      "offset": [
+        26,
+        750
+      ],
+      "op": "PUSH29",
+      "path": "2",
+      "value": "0x100000000000000000000000000000000000000000000000000000000"
+    },
+    "48": {
+      "fn": null,
+      "offset": [
+        26,
+        750
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x0"
+    },
+    "50": {
+      "fn": null,
+      "offset": [
+        26,
+        750
+      ],
+      "op": "CALLDATALOAD",
+      "path": "2"
+    },
+    "51": {
+      "fn": null,
+      "offset": [
+        26,
+        750
+      ],
+      "op": "DIV",
+      "path": "2"
+    },
+    "52": {
+      "fn": null,
+      "offset": [
+        26,
+        750
+      ],
+      "op": "AND",
+      "path": "2"
+    },
+    "53": {
+      "fn": null,
+      "offset": [
+        26,
+        750
+      ],
+      "op": "PUSH4",
+      "path": "2",
+      "value": "0x70A08231"
+    },
+    "58": {
+      "fn": null,
+      "offset": [
+        26,
+        750
+      ],
+      "op": "DUP2",
+      "path": "2"
+    },
+    "59": {
+      "fn": null,
+      "offset": [
+        26,
+        750
+      ],
+      "op": "EQ",
+      "path": "2"
+    },
+    "60": {
+      "fn": null,
+      "offset": [
+        26,
+        750
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0x66"
+    },
+    "63": {
+      "fn": null,
+      "offset": [
+        26,
+        750
+      ],
+      "op": "JUMPI",
+      "path": "2"
+    },
+    "64": {
+      "fn": null,
+      "offset": [
+        26,
+        750
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "65": {
+      "fn": null,
+      "offset": [
+        26,
+        750
+      ],
+      "op": "PUSH4",
+      "path": "2",
+      "value": "0xB2FA1C9E"
+    },
+    "70": {
+      "fn": null,
+      "offset": [
+        26,
+        750
+      ],
+      "op": "EQ",
+      "path": "2"
+    },
+    "71": {
+      "fn": null,
+      "offset": [
+        26,
+        750
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0xA6"
+    },
+    "74": {
+      "fn": null,
+      "offset": [
+        26,
+        750
+      ],
+      "op": "JUMPI",
+      "path": "2"
+    },
+    "75": {
+      "fn": null,
+      "offset": [
+        26,
+        750
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "76": {
+      "fn": null,
+      "offset": [
+        26,
+        750
+      ],
+      "op": "PUSH4",
+      "path": "2",
+      "value": "0xD96A094A"
+    },
+    "81": {
+      "fn": null,
+      "offset": [
+        26,
+        750
+      ],
+      "op": "EQ",
+      "path": "2"
+    },
+    "82": {
+      "fn": null,
+      "offset": [
+        26,
+        750
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0xCF"
+    },
+    "85": {
+      "fn": null,
+      "offset": [
+        26,
+        750
+      ],
+      "op": "JUMPI",
+      "path": "2"
+    },
+    "86": {
+      "fn": null,
+      "offset": [
+        26,
+        750
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "87": {
+      "fn": null,
+      "offset": [
+        26,
+        750
+      ],
+      "op": "PUSH4",
+      "path": "2",
+      "value": "0xE4849B32"
+    },
+    "92": {
+      "fn": null,
+      "offset": [
+        26,
+        750
+      ],
+      "op": "EQ",
+      "path": "2"
+    },
+    "93": {
+      "fn": null,
+      "offset": [
+        26,
+        750
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0xDC"
+    },
+    "96": {
+      "fn": null,
+      "offset": [
+        26,
+        750
+      ],
+      "op": "JUMPI",
+      "path": "2"
+    },
+    "97": {
+      "fn": null,
+      "offset": [
+        26,
+        750
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "98": {
+      "fn": null,
+      "offset": [
+        26,
+        750
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x0"
+    },
+    "100": {
+      "fn": null,
+      "offset": [
+        26,
+        750
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "101": {
+      "first_revert": true,
+      "fn": null,
+      "offset": [
+        26,
+        750
+      ],
+      "op": "REVERT",
+      "path": "2"
+    },
+    "102": {
+      "offset": [
+        60,
+        104
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "103": {
+      "fn": null,
+      "offset": [
+        60,
+        104
+      ],
+      "op": "CALLVALUE",
+      "path": "2"
+    },
+    "104": {
+      "op": "DUP1"
+    },
+    "105": {
+      "op": "ISZERO"
+    },
+    "106": {
+      "op": "PUSH2",
+      "value": "0x72"
+    },
+    "109": {
+      "op": "JUMPI"
+    },
+    "110": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "112": {
+      "op": "DUP1"
+    },
+    "113": {
+      "dev": "Cannot send ether to nonpayable function",
+      "fn": null,
+      "offset": [
+        60,
+        104
+      ],
+      "op": "REVERT",
+      "path": "2"
+    },
+    "114": {
+      "op": "JUMPDEST"
+    },
+    "115": {
+      "op": "POP"
+    },
+    "116": {
+      "offset": [
+        60,
+        104
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0x94"
+    },
+    "119": {
+      "fn": null,
+      "offset": [
+        60,
+        104
+      ],
+      "op": "PUSH20",
+      "path": "2",
+      "value": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+    },
+    "140": {
+      "fn": null,
+      "offset": [
+        60,
+        104
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x4"
+    },
+    "142": {
+      "fn": null,
+      "offset": [
+        60,
+        104
+      ],
+      "op": "CALLDATALOAD",
+      "path": "2"
+    },
+    "143": {
+      "fn": null,
+      "offset": [
+        60,
+        104
+      ],
+      "op": "AND",
+      "path": "2"
+    },
+    "144": {
+      "fn": null,
+      "offset": [
+        60,
+        104
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0xF4"
+    },
+    "147": {
+      "fn": null,
+      "offset": [
+        60,
+        104
+      ],
+      "op": "JUMP",
+      "path": "2"
+    },
+    "148": {
+      "fn": null,
+      "offset": [
+        60,
+        104
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "149": {
+      "fn": null,
+      "offset": [
+        60,
+        104
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x40"
+    },
+    "151": {
+      "fn": null,
+      "offset": [
+        60,
+        104
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "152": {
+      "fn": null,
+      "offset": [
+        60,
+        104
+      ],
+      "op": "MLOAD",
+      "path": "2"
+    },
+    "153": {
+      "fn": null,
+      "offset": [
+        60,
+        104
+      ],
+      "op": "SWAP2",
+      "path": "2"
+    },
+    "154": {
+      "fn": null,
+      "offset": [
+        60,
+        104
+      ],
+      "op": "DUP3",
+      "path": "2"
+    },
+    "155": {
+      "fn": null,
+      "offset": [
+        60,
+        104
+      ],
+      "op": "MSTORE",
+      "path": "2"
+    },
+    "156": {
+      "fn": null,
+      "offset": [
+        60,
+        104
+      ],
+      "op": "MLOAD",
+      "path": "2"
+    },
+    "157": {
+      "fn": null,
+      "offset": [
+        60,
+        104
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "158": {
+      "fn": null,
+      "offset": [
+        60,
+        104
+      ],
+      "op": "DUP2",
+      "path": "2"
+    },
+    "159": {
+      "fn": null,
+      "offset": [
+        60,
+        104
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "160": {
+      "fn": null,
+      "offset": [
+        60,
+        104
+      ],
+      "op": "SUB",
+      "path": "2"
+    },
+    "161": {
+      "fn": null,
+      "offset": [
+        60,
+        104
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x20"
+    },
+    "163": {
+      "fn": null,
+      "offset": [
+        60,
+        104
+      ],
+      "op": "ADD",
+      "path": "2"
+    },
+    "164": {
+      "fn": null,
+      "offset": [
+        60,
+        104
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "165": {
+      "fn": null,
+      "offset": [
+        60,
+        104
+      ],
+      "op": "RETURN",
+      "path": "2"
+    },
+    "166": {
+      "fn": "TokenSaleChallenge.isComplete",
+      "offset": [
+        271,
+        375
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "167": {
+      "fn": "TokenSaleChallenge.isComplete",
+      "offset": [
+        271,
+        375
+      ],
+      "op": "CALLVALUE",
+      "path": "2"
+    },
+    "168": {
+      "op": "DUP1"
+    },
+    "169": {
+      "op": "ISZERO"
+    },
+    "170": {
+      "op": "PUSH2",
+      "value": "0xB2"
+    },
+    "173": {
+      "op": "JUMPI"
+    },
+    "174": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "176": {
+      "op": "DUP1"
+    },
+    "177": {
+      "dev": "Cannot send ether to nonpayable function",
+      "fn": "TokenSaleChallenge.isComplete",
+      "offset": [
+        271,
+        375
+      ],
+      "op": "REVERT",
+      "path": "2"
+    },
+    "178": {
+      "op": "JUMPDEST"
+    },
+    "179": {
+      "fn": "TokenSaleChallenge.isComplete",
+      "offset": [
+        271,
+        375
+      ],
+      "op": "POP",
+      "path": "2"
+    },
+    "180": {
+      "fn": "TokenSaleChallenge.isComplete",
+      "offset": [
+        271,
+        375
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0xBB"
+    },
+    "183": {
+      "fn": "TokenSaleChallenge.isComplete",
+      "offset": [
+        271,
+        375
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0x106"
+    },
+    "186": {
+      "fn": "TokenSaleChallenge.isComplete",
+      "offset": [
+        271,
+        375
+      ],
+      "op": "JUMP",
+      "path": "2"
+    },
+    "187": {
+      "fn": "TokenSaleChallenge.isComplete",
+      "offset": [
+        271,
+        375
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "188": {
+      "fn": "TokenSaleChallenge.isComplete",
+      "offset": [
+        271,
+        375
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x40"
+    },
+    "190": {
+      "fn": "TokenSaleChallenge.isComplete",
+      "offset": [
+        271,
+        375
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "191": {
+      "fn": "TokenSaleChallenge.isComplete",
+      "offset": [
+        271,
+        375
+      ],
+      "op": "MLOAD",
+      "path": "2"
+    },
+    "192": {
+      "fn": "TokenSaleChallenge.isComplete",
+      "offset": [
+        271,
+        375
+      ],
+      "op": "SWAP2",
+      "path": "2"
+    },
+    "193": {
+      "fn": "TokenSaleChallenge.isComplete",
+      "offset": [
+        271,
+        375
+      ],
+      "op": "ISZERO",
+      "path": "2"
+    },
+    "194": {
+      "fn": "TokenSaleChallenge.isComplete",
+      "offset": [
+        271,
+        375
+      ],
+      "op": "ISZERO",
+      "path": "2"
+    },
+    "195": {
+      "fn": "TokenSaleChallenge.isComplete",
+      "offset": [
+        271,
+        375
+      ],
+      "op": "DUP3",
+      "path": "2"
+    },
+    "196": {
+      "fn": "TokenSaleChallenge.isComplete",
+      "offset": [
+        271,
+        375
+      ],
+      "op": "MSTORE",
+      "path": "2"
+    },
+    "197": {
+      "fn": "TokenSaleChallenge.isComplete",
+      "offset": [
+        271,
+        375
+      ],
+      "op": "MLOAD",
+      "path": "2"
+    },
+    "198": {
+      "fn": "TokenSaleChallenge.isComplete",
+      "offset": [
+        271,
+        375
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "199": {
+      "fn": "TokenSaleChallenge.isComplete",
+      "offset": [
+        271,
+        375
+      ],
+      "op": "DUP2",
+      "path": "2"
+    },
+    "200": {
+      "fn": "TokenSaleChallenge.isComplete",
+      "offset": [
+        271,
+        375
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "201": {
+      "fn": "TokenSaleChallenge.isComplete",
+      "offset": [
+        271,
+        375
+      ],
+      "op": "SUB",
+      "path": "2"
+    },
+    "202": {
+      "fn": "TokenSaleChallenge.isComplete",
+      "offset": [
+        271,
+        375
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x20"
+    },
+    "204": {
+      "fn": "TokenSaleChallenge.isComplete",
+      "offset": [
+        271,
+        375
+      ],
+      "op": "ADD",
+      "path": "2"
+    },
+    "205": {
+      "fn": "TokenSaleChallenge.isComplete",
+      "offset": [
+        271,
+        375
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "206": {
+      "fn": "TokenSaleChallenge.isComplete",
+      "offset": [
+        271,
+        375
+      ],
+      "op": "RETURN",
+      "path": "2"
+    },
+    "207": {
+      "fn": "TokenSaleChallenge.buy",
+      "offset": [
+        381,
+        539
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "208": {
+      "fn": "TokenSaleChallenge.buy",
+      "offset": [
+        381,
+        539
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0xDA"
+    },
+    "211": {
+      "fn": "TokenSaleChallenge.buy",
+      "offset": [
+        381,
+        539
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x4"
+    },
+    "213": {
+      "fn": "TokenSaleChallenge.buy",
+      "offset": [
+        381,
+        539
+      ],
+      "op": "CALLDATALOAD",
+      "path": "2"
+    },
+    "214": {
+      "fn": "TokenSaleChallenge.buy",
+      "offset": [
+        381,
+        539
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0x115"
+    },
+    "217": {
+      "fn": "TokenSaleChallenge.buy",
+      "offset": [
+        381,
+        539
+      ],
+      "op": "JUMP",
+      "path": "2"
+    },
+    "218": {
+      "fn": "TokenSaleChallenge.buy",
+      "offset": [
+        381,
+        539
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "219": {
+      "fn": "TokenSaleChallenge.buy",
+      "offset": [
+        381,
+        539
+      ],
+      "op": "STOP",
+      "path": "2"
+    },
+    "220": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        545,
+        748
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "221": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        545,
+        748
+      ],
+      "op": "CALLVALUE",
+      "path": "2"
+    },
+    "222": {
+      "op": "DUP1"
+    },
+    "223": {
+      "op": "ISZERO"
+    },
+    "224": {
+      "op": "PUSH2",
+      "value": "0xE8"
+    },
+    "227": {
+      "op": "JUMPI"
+    },
+    "228": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "230": {
+      "op": "DUP1"
+    },
+    "231": {
+      "dev": "Cannot send ether to nonpayable function",
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        545,
+        748
+      ],
+      "op": "REVERT",
+      "path": "2"
+    },
+    "232": {
+      "op": "JUMPDEST"
+    },
+    "233": {
+      "op": "POP"
+    },
+    "234": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        545,
+        748
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0xDA"
+    },
+    "237": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        545,
+        748
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x4"
+    },
+    "239": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        545,
+        748
+      ],
+      "op": "CALLDATALOAD",
+      "path": "2"
+    },
+    "240": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        545,
+        748
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0x143"
+    },
+    "243": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        545,
+        748
+      ],
+      "op": "JUMP",
+      "path": "2"
+    },
+    "244": {
+      "offset": [
+        60,
+        104
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "245": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        60,
+        104
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x0"
+    },
+    "247": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        60,
+        104
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x20"
+    },
+    "249": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        60,
+        104
+      ],
+      "op": "DUP2",
+      "path": "2"
+    },
+    "250": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        60,
+        104
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "251": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        60,
+        104
+      ],
+      "op": "MSTORE",
+      "path": "2"
+    },
+    "252": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        60,
+        104
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "253": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        60,
+        104
+      ],
+      "op": "DUP2",
+      "path": "2"
+    },
+    "254": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        60,
+        104
+      ],
+      "op": "MSTORE",
+      "path": "2"
+    },
+    "255": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        60,
+        104
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x40"
+    },
+    "257": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        60,
+        104
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "258": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        60,
+        104
+      ],
+      "op": "KECCAK256",
+      "path": "2"
+    },
+    "259": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        60,
+        104
+      ],
+      "op": "SLOAD",
+      "path": "2"
+    },
+    "260": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        60,
+        104
+      ],
+      "op": "DUP2",
+      "path": "2"
+    },
+    "261": {
+      "fn": "TokenSaleChallenge.sell",
+      "jump": "o",
+      "offset": [
+        60,
+        104
+      ],
+      "op": "JUMP",
+      "path": "2"
+    },
+    "262": {
+      "fn": "TokenSaleChallenge.isComplete",
+      "offset": [
+        271,
+        375
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "263": {
+      "fn": "TokenSaleChallenge.isComplete",
+      "offset": [
+        361,
+        368
+      ],
+      "op": "PUSH8",
+      "path": "2",
+      "statement": 0,
+      "value": "0xDE0B6B3A7640000"
+    },
+    "272": {
+      "fn": "TokenSaleChallenge.isComplete",
+      "offset": [
+        345,
+        349
+      ],
+      "op": "ADDRESS",
+      "path": "2"
+    },
+    "273": {
+      "fn": "TokenSaleChallenge.isComplete",
+      "offset": [
+        337,
+        358
+      ],
+      "op": "BALANCE",
+      "path": "2"
+    },
+    "274": {
+      "fn": "TokenSaleChallenge.isComplete",
+      "offset": [
+        337,
+        368
+      ],
+      "op": "LT",
+      "path": "2"
+    },
+    "275": {
+      "fn": "TokenSaleChallenge.isComplete",
+      "offset": [
+        271,
+        375
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "276": {
+      "fn": "TokenSaleChallenge.isComplete",
+      "jump": "o",
+      "offset": [
+        271,
+        375
+      ],
+      "op": "JUMP",
+      "path": "2"
+    },
+    "277": {
+      "fn": "TokenSaleChallenge.buy",
+      "offset": [
+        381,
+        539
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "278": {
+      "fn": "TokenSaleChallenge.buy",
+      "offset": [
+        446,
+        455
+      ],
+      "op": "CALLVALUE",
+      "path": "2",
+      "statement": 1
+    },
+    "279": {
+      "offset": [
+        145,
+        152
+      ],
+      "op": "PUSH8",
+      "path": "2",
+      "value": "0xDE0B6B3A7640000"
+    },
+    "288": {
+      "fn": "TokenSaleChallenge.buy",
+      "offset": [
+        459,
+        486
+      ],
+      "op": "DUP3",
+      "path": "2"
+    },
+    "289": {
+      "fn": "TokenSaleChallenge.buy",
+      "offset": [
+        459,
+        486
+      ],
+      "op": "MUL",
+      "path": "2"
+    },
+    "290": {
+      "branch": 6,
+      "fn": "TokenSaleChallenge.buy",
+      "offset": [
+        446,
+        486
+      ],
+      "op": "EQ",
+      "path": "2"
+    },
+    "291": {
+      "fn": "TokenSaleChallenge.buy",
+      "offset": [
+        438,
+        487
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0x12B"
+    },
+    "294": {
+      "branch": 6,
+      "fn": "TokenSaleChallenge.buy",
+      "offset": [
+        438,
+        487
+      ],
+      "op": "JUMPI",
+      "path": "2"
+    },
+    "295": {
+      "fn": "TokenSaleChallenge.buy",
+      "offset": [
+        438,
+        487
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x0"
+    },
+    "297": {
+      "fn": "TokenSaleChallenge.buy",
+      "offset": [
+        438,
+        487
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "298": {
+      "fn": "TokenSaleChallenge.buy",
+      "offset": [
+        438,
+        487
+      ],
+      "op": "REVERT",
+      "path": "2"
+    },
+    "299": {
+      "fn": "TokenSaleChallenge.buy",
+      "offset": [
+        438,
+        487
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "300": {
+      "fn": "TokenSaleChallenge.buy",
+      "offset": [
+        508,
+        518
+      ],
+      "op": "CALLER",
+      "path": "2",
+      "statement": 2
+    },
+    "301": {
+      "fn": "TokenSaleChallenge.buy",
+      "offset": [
+        498,
+        507
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x0"
+    },
+    "303": {
+      "fn": "TokenSaleChallenge.buy",
+      "offset": [
+        498,
+        519
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "304": {
+      "fn": "TokenSaleChallenge.buy",
+      "offset": [
+        498,
+        519
+      ],
+      "op": "DUP2",
+      "path": "2"
+    },
+    "305": {
+      "fn": "TokenSaleChallenge.buy",
+      "offset": [
+        498,
+        519
+      ],
+      "op": "MSTORE",
+      "path": "2"
+    },
+    "306": {
+      "fn": "TokenSaleChallenge.buy",
+      "offset": [
+        498,
+        519
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x20"
+    },
+    "308": {
+      "fn": "TokenSaleChallenge.buy",
+      "offset": [
+        498,
+        519
+      ],
+      "op": "DUP2",
+      "path": "2"
+    },
+    "309": {
+      "fn": "TokenSaleChallenge.buy",
+      "offset": [
+        498,
+        519
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "310": {
+      "fn": "TokenSaleChallenge.buy",
+      "offset": [
+        498,
+        519
+      ],
+      "op": "MSTORE",
+      "path": "2"
+    },
+    "311": {
+      "fn": "TokenSaleChallenge.buy",
+      "offset": [
+        498,
+        519
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x40"
+    },
+    "313": {
+      "fn": "TokenSaleChallenge.buy",
+      "offset": [
+        498,
+        519
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "314": {
+      "fn": "TokenSaleChallenge.buy",
+      "offset": [
+        498,
+        519
+      ],
+      "op": "KECCAK256",
+      "path": "2"
+    },
+    "315": {
+      "fn": "TokenSaleChallenge.buy",
+      "offset": [
+        498,
+        532
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "316": {
+      "fn": "TokenSaleChallenge.buy",
+      "offset": [
+        498,
+        532
+      ],
+      "op": "SLOAD",
+      "path": "2"
+    },
+    "317": {
+      "fn": "TokenSaleChallenge.buy",
+      "offset": [
+        498,
+        532
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "318": {
+      "fn": "TokenSaleChallenge.buy",
+      "offset": [
+        498,
+        532
+      ],
+      "op": "SWAP2",
+      "path": "2"
+    },
+    "319": {
+      "fn": "TokenSaleChallenge.buy",
+      "offset": [
+        498,
+        532
+      ],
+      "op": "ADD",
+      "path": "2"
+    },
+    "320": {
+      "fn": "TokenSaleChallenge.buy",
+      "offset": [
+        498,
+        532
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "321": {
+      "fn": "TokenSaleChallenge.buy",
+      "offset": [
+        498,
+        532
+      ],
+      "op": "SSTORE",
+      "path": "2"
+    },
+    "322": {
+      "fn": "TokenSaleChallenge.buy",
+      "jump": "o",
+      "offset": [
+        381,
+        539
+      ],
+      "op": "JUMP",
+      "path": "2"
+    },
+    "323": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        545,
+        748
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "324": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        613,
+        623
+      ],
+      "op": "CALLER",
+      "path": "2",
+      "statement": 3
+    },
+    "325": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        603,
+        612
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x0"
+    },
+    "327": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        603,
+        624
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "328": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        603,
+        624
+      ],
+      "op": "DUP2",
+      "path": "2"
+    },
+    "329": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        603,
+        624
+      ],
+      "op": "MSTORE",
+      "path": "2"
+    },
+    "330": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        603,
+        624
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x20"
+    },
+    "332": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        603,
+        624
+      ],
+      "op": "DUP2",
+      "path": "2"
+    },
+    "333": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        603,
+        624
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "334": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        603,
+        624
+      ],
+      "op": "MSTORE",
+      "path": "2"
+    },
+    "335": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        603,
+        624
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x40"
+    },
+    "337": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        603,
+        624
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "338": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        603,
+        624
+      ],
+      "op": "KECCAK256",
+      "path": "2"
+    },
+    "339": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        603,
+        624
+      ],
+      "op": "SLOAD",
+      "path": "2"
+    },
+    "340": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        603,
+        637
+      ],
+      "op": "DUP2",
+      "path": "2"
+    },
+    "341": {
+      "op": "GT"
+    },
+    "342": {
+      "branch": 7,
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        603,
+        637
+      ],
+      "op": "ISZERO",
+      "path": "2"
+    },
+    "343": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        595,
+        638
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0x15F"
+    },
+    "346": {
+      "branch": 7,
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        595,
+        638
+      ],
+      "op": "JUMPI",
+      "path": "2"
+    },
+    "347": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        595,
+        638
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x0"
+    },
+    "349": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        595,
+        638
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "350": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        595,
+        638
+      ],
+      "op": "REVERT",
+      "path": "2"
+    },
+    "351": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        595,
+        638
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "352": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        659,
+        669
+      ],
+      "op": "CALLER",
+      "path": "2",
+      "statement": 4
+    },
+    "353": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        649,
+        658
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x0"
+    },
+    "355": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        649,
+        670
+      ],
+      "op": "DUP2",
+      "path": "2"
+    },
+    "356": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        649,
+        670
+      ],
+      "op": "DUP2",
+      "path": "2"
+    },
+    "357": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        649,
+        670
+      ],
+      "op": "MSTORE",
+      "path": "2"
+    },
+    "358": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        649,
+        670
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x20"
+    },
+    "360": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        649,
+        670
+      ],
+      "op": "DUP2",
+      "path": "2"
+    },
+    "361": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        649,
+        670
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "362": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        649,
+        670
+      ],
+      "op": "MSTORE",
+      "path": "2"
+    },
+    "363": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        649,
+        670
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x40"
+    },
+    "365": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        649,
+        670
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "366": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        649,
+        670
+      ],
+      "op": "DUP3",
+      "path": "2"
+    },
+    "367": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        649,
+        670
+      ],
+      "op": "KECCAK256",
+      "path": "2"
+    },
+    "368": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        649,
+        683
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "369": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        649,
+        683
+      ],
+      "op": "SLOAD",
+      "path": "2"
+    },
+    "370": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        649,
+        683
+      ],
+      "op": "DUP6",
+      "path": "2"
+    },
+    "371": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        649,
+        683
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "372": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        649,
+        683
+      ],
+      "op": "SUB",
+      "path": "2"
+    },
+    "373": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        649,
+        683
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "374": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        649,
+        683
+      ],
+      "op": "SSTORE",
+      "path": "2"
+    },
+    "375": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        693,
+        741
+      ],
+      "op": "MLOAD",
+      "path": "2",
+      "statement": 5
+    },
+    "376": {
+      "offset": [
+        145,
+        152
+      ],
+      "op": "PUSH8",
+      "path": "2",
+      "value": "0xDE0B6B3A7640000"
+    },
+    "385": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        713,
+        740
+      ],
+      "op": "DUP5",
+      "path": "2"
+    },
+    "386": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        713,
+        740
+      ],
+      "op": "MUL",
+      "path": "2"
+    },
+    "387": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        693,
+        741
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "388": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        693,
+        741
+      ],
+      "op": "ISZERO",
+      "path": "2"
+    },
+    "389": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        693,
+        741
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0x8FC"
+    },
+    "392": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        693,
+        741
+      ],
+      "op": "MUL",
+      "path": "2"
+    },
+    "393": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        693,
+        741
+      ],
+      "op": "SWAP3",
+      "path": "2"
+    },
+    "394": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        713,
+        740
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "395": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        713,
+        740
+      ],
+      "op": "SWAP2",
+      "path": "2"
+    },
+    "396": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        693,
+        741
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "397": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        693,
+        741
+      ],
+      "op": "DUP2",
+      "path": "2"
+    },
+    "398": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        649,
+        658
+      ],
+      "op": "DUP2",
+      "path": "2"
+    },
+    "399": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        693,
+        741
+      ],
+      "op": "DUP2",
+      "path": "2"
+    },
+    "400": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        713,
+        740
+      ],
+      "op": "DUP6",
+      "path": "2"
+    },
+    "401": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        659,
+        669
+      ],
+      "op": "DUP9",
+      "path": "2"
+    },
+    "402": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        693,
+        741
+      ],
+      "op": "DUP9",
+      "path": "2"
+    },
+    "403": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        693,
+        741
+      ],
+      "op": "CALL",
+      "path": "2"
+    },
+    "404": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        693,
+        741
+      ],
+      "op": "SWAP4",
+      "path": "2"
+    },
+    "405": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        693,
+        741
+      ],
+      "op": "POP",
+      "path": "2"
+    },
+    "406": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        693,
+        741
+      ],
+      "op": "POP",
+      "path": "2"
+    },
+    "407": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        693,
+        741
+      ],
+      "op": "POP",
+      "path": "2"
+    },
+    "408": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        693,
+        741
+      ],
+      "op": "POP",
+      "path": "2"
+    },
+    "409": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        693,
+        741
+      ],
+      "op": "ISZERO",
+      "path": "2"
+    },
+    "410": {
+      "op": "DUP1"
+    },
+    "411": {
+      "op": "ISZERO"
+    },
+    "412": {
+      "op": "PUSH2",
+      "value": "0x1A9"
+    },
+    "415": {
+      "op": "JUMPI"
+    },
+    "416": {
+      "op": "RETURNDATASIZE"
+    },
+    "417": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "419": {
+      "op": "DUP1"
+    },
+    "420": {
+      "op": "RETURNDATACOPY"
+    },
+    "421": {
+      "op": "RETURNDATASIZE"
+    },
+    "422": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "424": {
+      "op": "REVERT"
+    },
+    "425": {
+      "op": "JUMPDEST"
+    },
+    "426": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        693,
+        741
+      ],
+      "op": "POP",
+      "path": "2"
+    },
+    "427": {
+      "fn": "TokenSaleChallenge.sell",
+      "offset": [
+        545,
+        748
+      ],
+      "op": "POP",
+      "path": "2"
+    },
+    "428": {
+      "fn": "TokenSaleChallenge.sell",
+      "jump": "o",
+      "offset": [
+        545,
+        748
+      ],
+      "op": "JUMP",
+      "path": "2"
+    }
+  },
+  "sha1": "a61b17db872705089a03aae638a23c7631092516",
+  "source": "pragma solidity ^0.4.21;\n\ncontract TokenSaleChallenge {\n    mapping(address => uint256) public balanceOf;\n    uint256 constant PRICE_PER_TOKEN = 1 ether;\n\n    function TokenSaleChallenge(address _player) public payable {\n        require(msg.value == 1 ether);\n    }\n\n    function isComplete() public view returns (bool) {\n        return address(this).balance < 1 ether;\n    }\n\n    function buy(uint256 numTokens) public payable {\n        require(msg.value == numTokens * PRICE_PER_TOKEN);\n\n        balanceOf[msg.sender] += numTokens;\n    }\n\n    function sell(uint256 numTokens) public {\n        require(balanceOf[msg.sender] >= numTokens);\n\n        balanceOf[msg.sender] -= numTokens;\n        msg.sender.transfer(numTokens * PRICE_PER_TOKEN);\n    }\n}\n",
+  "sourceMap": "26:724:2:-;;;159:106;;;;;;;;;;;;250:7;237:9;:20;229:29;;;;;;159:106;26:724;;;;;;",
+  "sourcePath": "contracts/Token-sale.sol",
+  "type": "contract"
+}

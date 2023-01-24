@@ -1,0 +1,2915 @@
+{
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "key",
+          "type": "uint256"
+        },
+        {
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "set",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "key",
+          "type": "uint256"
+        }
+      ],
+      "name": "get",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "isComplete",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "allSourcePaths": {
+    "0": "contracts/Mapping.sol"
+  },
+  "ast": {
+    "absolutePath": "contracts/Mapping.sol",
+    "exportedSymbols": {
+      "MappingChallenge": [
+        47
+      ]
+    },
+    "id": 48,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".21"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 47,
+        "linearizedBaseContracts": [
+          47
+        ],
+        "name": "MappingChallenge",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 3,
+            "name": "isComplete",
+            "nodeType": "VariableDeclaration",
+            "scope": 47,
+            "src": "58:22:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 2,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "58:4:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 6,
+            "name": "map",
+            "nodeType": "VariableDeclaration",
+            "scope": 47,
+            "src": "86:13:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_uint256_$dyn_storage",
+              "typeString": "uint256[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 4,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "86:7:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "id": 5,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "86:9:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                "typeString": "uint256[]"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 33,
+              "nodeType": "Block",
+              "src": "154:153:0",
+              "statements": [
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 16,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 13,
+                        "name": "map",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6,
+                        "src": "210:3:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_uint256_$dyn_storage",
+                          "typeString": "uint256[] storage ref"
+                        }
+                      },
+                      "id": 14,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "length",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "210:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "<=",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "id": 15,
+                      "name": "key",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 8,
+                      "src": "224:3:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "210:17:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 26,
+                  "nodeType": "IfStatement",
+                  "src": "206:68:0",
+                  "trueBody": {
+                    "id": 25,
+                    "nodeType": "Block",
+                    "src": "229:45:0",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 23,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftHandSide": {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 17,
+                              "name": "map",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 6,
+                              "src": "243:3:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_array$_t_uint256_$dyn_storage",
+                                "typeString": "uint256[] storage ref"
+                              }
+                            },
+                            "id": 19,
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": true,
+                            "memberName": "length",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "243:10:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "nodeType": "Assignment",
+                          "operator": "=",
+                          "rightHandSide": {
+                            "argumentTypes": null,
+                            "commonType": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            },
+                            "id": 22,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "leftExpression": {
+                              "argumentTypes": null,
+                              "id": 20,
+                              "name": "key",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 8,
+                              "src": "256:3:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            "nodeType": "BinaryOperation",
+                            "operator": "+",
+                            "rightExpression": {
+                              "argumentTypes": null,
+                              "hexValue": "31",
+                              "id": 21,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "262:1:0",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_1_by_1",
+                                "typeString": "int_const 1"
+                              },
+                              "value": "1"
+                            },
+                            "src": "256:7:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "src": "243:20:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "id": 24,
+                        "nodeType": "ExpressionStatement",
+                        "src": "243:20:0"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 31,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 27,
+                        "name": "map",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6,
+                        "src": "284:3:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_uint256_$dyn_storage",
+                          "typeString": "uint256[] storage ref"
+                        }
+                      },
+                      "id": 29,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 28,
+                        "name": "key",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 8,
+                        "src": "288:3:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "284:8:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 30,
+                      "name": "value",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10,
+                      "src": "295:5:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "284:16:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 32,
+                  "nodeType": "ExpressionStatement",
+                  "src": "284:16:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 34,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "set",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 8,
+                  "name": "key",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34,
+                  "src": "119:11:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "119:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10,
+                  "name": "value",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34,
+                  "src": "132:13:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "132:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "118:28:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 12,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "154:0:0"
+            },
+            "scope": 47,
+            "src": "106:201:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 45,
+              "nodeType": "Block",
+              "src": "369:32:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 41,
+                      "name": "map",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6,
+                      "src": "386:3:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_uint256_$dyn_storage",
+                        "typeString": "uint256[] storage ref"
+                      }
+                    },
+                    "id": 43,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 42,
+                      "name": "key",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 36,
+                      "src": "390:3:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "386:8:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 40,
+                  "id": 44,
+                  "nodeType": "Return",
+                  "src": "379:15:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 46,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "get",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 37,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 36,
+                  "name": "key",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 46,
+                  "src": "326:11:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 35,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "326:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "325:13:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 40,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 39,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 46,
+                  "src": "360:7:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 38,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "360:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "359:9:0"
+            },
+            "scope": 47,
+            "src": "313:88:0",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 48,
+        "src": "26:377:0"
+      }
+    ],
+    "src": "0:404:0"
+  },
+  "bytecode": "608060405234801561001057600080fd5b506101a9806100206000396000f3006080604052600436106100565763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416631ab06ee5811461005b5780639507d39a14610078578063b2fa1c9e146100a2575b600080fd5b34801561006757600080fd5b506100766004356024356100cb565b005b34801561008457600080fd5b50610090600435610107565b60408051918252519081900360200190f35b3480156100ae57600080fd5b506100b761012a565b604080519115158252519081900360200190f35b60015482106100e757816001016001816100e59190610133565b505b806001838154811015156100f757fe5b6000918252602090912001555050565b600060018281548110151561011857fe5b90600052602060002001549050919050565b60005460ff1681565b8154818355818111156101575760008381526020902061015791810190830161015c565b505050565b61017a91905b808211156101765760008155600101610162565b5090565b905600a165627a7a72305820034f58cf36504aee3129651bc48ae3f4a1ddf20185682aad98a4dc616380c5650029",
+  "bytecodeSha1": "3e44f48c2c5cb6475982a6a8add05ba04b005ae3",
+  "compiler": {
+    "evm_version": "byzantium",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "version": "0.4.26+commit.4563c3fc"
+  },
+  "contractName": "MappingChallenge",
+  "coverageMap": {
+    "branches": {
+      "0": {
+        "MappingChallenge.set": {
+          "3": [
+            210,
+            227,
+            false
+          ]
+        }
+      }
+    },
+    "statements": {
+      "0": {
+        "MappingChallenge.get": {
+          "2": [
+            379,
+            394
+          ]
+        },
+        "MappingChallenge.set": {
+          "0": [
+            243,
+            263
+          ],
+          "1": [
+            284,
+            300
+          ]
+        }
+      }
+    }
+  },
+  "dependencies": [],
+  "deployedBytecode": "6080604052600436106100565763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416631ab06ee5811461005b5780639507d39a14610078578063b2fa1c9e146100a2575b600080fd5b34801561006757600080fd5b506100766004356024356100cb565b005b34801561008457600080fd5b50610090600435610107565b60408051918252519081900360200190f35b3480156100ae57600080fd5b506100b761012a565b604080519115158252519081900360200190f35b60015482106100e757816001016001816100e59190610133565b505b806001838154811015156100f757fe5b6000918252602090912001555050565b600060018281548110151561011857fe5b90600052602060002001549050919050565b60005460ff1681565b8154818355818111156101575760008381526020902061015791810190830161015c565b505050565b61017a91905b808211156101765760008155600101610162565b5090565b905600a165627a7a72305820034f58cf36504aee3129651bc48ae3f4a1ddf20185682aad98a4dc616380c5650029",
+  "deployedSourceMap": "26:377:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;106:201;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;106:201:0;;;;;;;;;313:88;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;313:88:0;;;;;;;;;;;;;;;;;;;;;58:22;;8:9:-1;5:2;;;30:1;27;20:12;5:2;58:22:0;;;;;;;;;;;;;;;;;;;;;;106:201;210:3;:10;:17;-1:-1:-1;206:68:0;;256:3;262:1;256:7;243:3;:20;;;;;:::i;:::-;;206:68;295:5;284:3;288;284:8;;;;;;;;;;;;;;;;;;;:16;-1:-1:-1;;106:201:0:o;313:88::-;360:7;386:3;390;386:8;;;;;;;;;;;;;;;;;;379:15;;313:88;;;:::o;58:22::-;;;;;;:::o;26:377::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "language": "Solidity",
+  "natspec": {
+    "methods": {}
+  },
+  "offset": [
+    26,
+    403
+  ],
+  "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x4 CALLDATASIZE LT PUSH2 0x56 JUMPI PUSH4 0xFFFFFFFF PUSH29 0x100000000000000000000000000000000000000000000000000000000 PUSH1 0x0 CALLDATALOAD DIV AND PUSH4 0x1AB06EE5 DUP2 EQ PUSH2 0x5B JUMPI DUP1 PUSH4 0x9507D39A EQ PUSH2 0x78 JUMPI DUP1 PUSH4 0xB2FA1C9E EQ PUSH2 0xA2 JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST CALLVALUE DUP1 ISZERO PUSH2 0x67 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH2 0x76 PUSH1 0x4 CALLDATALOAD PUSH1 0x24 CALLDATALOAD PUSH2 0xCB JUMP JUMPDEST STOP JUMPDEST CALLVALUE DUP1 ISZERO PUSH2 0x84 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH2 0x90 PUSH1 0x4 CALLDATALOAD PUSH2 0x107 JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD SWAP2 DUP3 MSTORE MLOAD SWAP1 DUP2 SWAP1 SUB PUSH1 0x20 ADD SWAP1 RETURN JUMPDEST CALLVALUE DUP1 ISZERO PUSH2 0xAE JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH2 0xB7 PUSH2 0x12A JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD SWAP2 ISZERO ISZERO DUP3 MSTORE MLOAD SWAP1 DUP2 SWAP1 SUB PUSH1 0x20 ADD SWAP1 RETURN JUMPDEST PUSH1 0x1 SLOAD DUP3 LT PUSH2 0xE7 JUMPI DUP2 PUSH1 0x1 ADD PUSH1 0x1 DUP2 PUSH2 0xE5 SWAP2 SWAP1 PUSH2 0x133 JUMP JUMPDEST POP JUMPDEST DUP1 PUSH1 0x1 DUP4 DUP2 SLOAD DUP2 LT ISZERO ISZERO PUSH2 0xF7 JUMPI INVALID JUMPDEST PUSH1 0x0 SWAP2 DUP3 MSTORE PUSH1 0x20 SWAP1 SWAP2 KECCAK256 ADD SSTORE POP POP JUMP JUMPDEST PUSH1 0x0 PUSH1 0x1 DUP3 DUP2 SLOAD DUP2 LT ISZERO ISZERO PUSH2 0x118 JUMPI INVALID JUMPDEST SWAP1 PUSH1 0x0 MSTORE PUSH1 0x20 PUSH1 0x0 KECCAK256 ADD SLOAD SWAP1 POP SWAP2 SWAP1 POP JUMP JUMPDEST PUSH1 0x0 SLOAD PUSH1 0xFF AND DUP2 JUMP JUMPDEST DUP2 SLOAD DUP2 DUP4 SSTORE DUP2 DUP2 GT ISZERO PUSH2 0x157 JUMPI PUSH1 0x0 DUP4 DUP2 MSTORE PUSH1 0x20 SWAP1 KECCAK256 PUSH2 0x157 SWAP2 DUP2 ADD SWAP1 DUP4 ADD PUSH2 0x15C JUMP JUMPDEST POP POP POP JUMP JUMPDEST PUSH2 0x17A SWAP2 SWAP1 JUMPDEST DUP1 DUP3 GT ISZERO PUSH2 0x176 JUMPI PUSH1 0x0 DUP2 SSTORE PUSH1 0x1 ADD PUSH2 0x162 JUMP JUMPDEST POP SWAP1 JUMP JUMPDEST SWAP1 JUMP STOP LOG1 PUSH6 0x627A7A723058 KECCAK256 SUB 0x4f PC 0xcf CALLDATASIZE POP 0x4a 0xee BALANCE 0x29 PUSH6 0x1BC48AE3F4A1 0xdd CALLCODE ADD DUP6 PUSH9 0x2AAD98A4DC616380C5 PUSH6 0x2900000000 ",
+  "pcMap": {
+    "0": {
+      "offset": [
+        26,
+        403
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x80"
+    },
+    "2": {
+      "fn": null,
+      "offset": [
+        26,
+        403
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "4": {
+      "fn": null,
+      "offset": [
+        26,
+        403
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "5": {
+      "fn": null,
+      "offset": [
+        26,
+        403
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "7": {
+      "fn": null,
+      "offset": [
+        26,
+        403
+      ],
+      "op": "CALLDATASIZE",
+      "path": "0"
+    },
+    "8": {
+      "fn": null,
+      "offset": [
+        26,
+        403
+      ],
+      "op": "LT",
+      "path": "0"
+    },
+    "9": {
+      "fn": null,
+      "offset": [
+        26,
+        403
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x56"
+    },
+    "12": {
+      "fn": null,
+      "offset": [
+        26,
+        403
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "13": {
+      "fn": null,
+      "offset": [
+        26,
+        403
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0xFFFFFFFF"
+    },
+    "18": {
+      "fn": null,
+      "offset": [
+        26,
+        403
+      ],
+      "op": "PUSH29",
+      "path": "0",
+      "value": "0x100000000000000000000000000000000000000000000000000000000"
+    },
+    "48": {
+      "fn": null,
+      "offset": [
+        26,
+        403
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "50": {
+      "fn": null,
+      "offset": [
+        26,
+        403
+      ],
+      "op": "CALLDATALOAD",
+      "path": "0"
+    },
+    "51": {
+      "fn": null,
+      "offset": [
+        26,
+        403
+      ],
+      "op": "DIV",
+      "path": "0"
+    },
+    "52": {
+      "fn": null,
+      "offset": [
+        26,
+        403
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "53": {
+      "fn": null,
+      "offset": [
+        26,
+        403
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x1AB06EE5"
+    },
+    "58": {
+      "fn": null,
+      "offset": [
+        26,
+        403
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "59": {
+      "fn": null,
+      "offset": [
+        26,
+        403
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "60": {
+      "fn": null,
+      "offset": [
+        26,
+        403
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x5B"
+    },
+    "63": {
+      "fn": null,
+      "offset": [
+        26,
+        403
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "64": {
+      "fn": null,
+      "offset": [
+        26,
+        403
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "65": {
+      "fn": null,
+      "offset": [
+        26,
+        403
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x9507D39A"
+    },
+    "70": {
+      "fn": null,
+      "offset": [
+        26,
+        403
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "71": {
+      "fn": null,
+      "offset": [
+        26,
+        403
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x78"
+    },
+    "74": {
+      "fn": null,
+      "offset": [
+        26,
+        403
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "75": {
+      "fn": null,
+      "offset": [
+        26,
+        403
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "76": {
+      "fn": null,
+      "offset": [
+        26,
+        403
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0xB2FA1C9E"
+    },
+    "81": {
+      "fn": null,
+      "offset": [
+        26,
+        403
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "82": {
+      "fn": null,
+      "offset": [
+        26,
+        403
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xA2"
+    },
+    "85": {
+      "fn": null,
+      "offset": [
+        26,
+        403
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "86": {
+      "fn": null,
+      "offset": [
+        26,
+        403
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "87": {
+      "fn": null,
+      "offset": [
+        26,
+        403
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "89": {
+      "fn": null,
+      "offset": [
+        26,
+        403
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "90": {
+      "first_revert": true,
+      "fn": null,
+      "offset": [
+        26,
+        403
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "91": {
+      "fn": "MappingChallenge.set",
+      "offset": [
+        106,
+        307
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "92": {
+      "fn": "MappingChallenge.set",
+      "offset": [
+        106,
+        307
+      ],
+      "op": "CALLVALUE",
+      "path": "0"
+    },
+    "93": {
+      "op": "DUP1"
+    },
+    "94": {
+      "op": "ISZERO"
+    },
+    "95": {
+      "op": "PUSH2",
+      "value": "0x67"
+    },
+    "98": {
+      "op": "JUMPI"
+    },
+    "99": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "101": {
+      "op": "DUP1"
+    },
+    "102": {
+      "dev": "Cannot send ether to nonpayable function",
+      "fn": "MappingChallenge.set",
+      "offset": [
+        106,
+        307
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "103": {
+      "op": "JUMPDEST"
+    },
+    "104": {
+      "op": "POP"
+    },
+    "105": {
+      "fn": "MappingChallenge.set",
+      "offset": [
+        106,
+        307
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x76"
+    },
+    "108": {
+      "fn": "MappingChallenge.set",
+      "offset": [
+        106,
+        307
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "110": {
+      "fn": "MappingChallenge.set",
+      "offset": [
+        106,
+        307
+      ],
+      "op": "CALLDATALOAD",
+      "path": "0"
+    },
+    "111": {
+      "fn": "MappingChallenge.set",
+      "offset": [
+        106,
+        307
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x24"
+    },
+    "113": {
+      "fn": "MappingChallenge.set",
+      "offset": [
+        106,
+        307
+      ],
+      "op": "CALLDATALOAD",
+      "path": "0"
+    },
+    "114": {
+      "fn": "MappingChallenge.set",
+      "offset": [
+        106,
+        307
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xCB"
+    },
+    "117": {
+      "fn": "MappingChallenge.set",
+      "offset": [
+        106,
+        307
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "118": {
+      "fn": "MappingChallenge.set",
+      "offset": [
+        106,
+        307
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "119": {
+      "fn": "MappingChallenge.set",
+      "offset": [
+        106,
+        307
+      ],
+      "op": "STOP",
+      "path": "0"
+    },
+    "120": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        313,
+        401
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "121": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        313,
+        401
+      ],
+      "op": "CALLVALUE",
+      "path": "0"
+    },
+    "122": {
+      "op": "DUP1"
+    },
+    "123": {
+      "op": "ISZERO"
+    },
+    "124": {
+      "op": "PUSH2",
+      "value": "0x84"
+    },
+    "127": {
+      "op": "JUMPI"
+    },
+    "128": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "130": {
+      "op": "DUP1"
+    },
+    "131": {
+      "dev": "Cannot send ether to nonpayable function",
+      "fn": "MappingChallenge.get",
+      "offset": [
+        313,
+        401
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "132": {
+      "op": "JUMPDEST"
+    },
+    "133": {
+      "op": "POP"
+    },
+    "134": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        313,
+        401
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x90"
+    },
+    "137": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        313,
+        401
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "139": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        313,
+        401
+      ],
+      "op": "CALLDATALOAD",
+      "path": "0"
+    },
+    "140": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        313,
+        401
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x107"
+    },
+    "143": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        313,
+        401
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "144": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        313,
+        401
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "145": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        313,
+        401
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "147": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        313,
+        401
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "148": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        313,
+        401
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "149": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        313,
+        401
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "150": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        313,
+        401
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "151": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        313,
+        401
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "152": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        313,
+        401
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "153": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        313,
+        401
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "154": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        313,
+        401
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "155": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        313,
+        401
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "156": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        313,
+        401
+      ],
+      "op": "SUB",
+      "path": "0"
+    },
+    "157": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        313,
+        401
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "159": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        313,
+        401
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "160": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        313,
+        401
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "161": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        313,
+        401
+      ],
+      "op": "RETURN",
+      "path": "0"
+    },
+    "162": {
+      "offset": [
+        58,
+        80
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "163": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        58,
+        80
+      ],
+      "op": "CALLVALUE",
+      "path": "0"
+    },
+    "164": {
+      "op": "DUP1"
+    },
+    "165": {
+      "op": "ISZERO"
+    },
+    "166": {
+      "op": "PUSH2",
+      "value": "0xAE"
+    },
+    "169": {
+      "op": "JUMPI"
+    },
+    "170": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "172": {
+      "op": "DUP1"
+    },
+    "173": {
+      "dev": "Cannot send ether to nonpayable function",
+      "fn": "MappingChallenge.get",
+      "offset": [
+        58,
+        80
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "174": {
+      "op": "JUMPDEST"
+    },
+    "175": {
+      "offset": [
+        58,
+        80
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "176": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        58,
+        80
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xB7"
+    },
+    "179": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        58,
+        80
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x12A"
+    },
+    "182": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        58,
+        80
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "183": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        58,
+        80
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "184": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        58,
+        80
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "186": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        58,
+        80
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "187": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        58,
+        80
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "188": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        58,
+        80
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "189": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        58,
+        80
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "190": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        58,
+        80
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "191": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        58,
+        80
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "192": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        58,
+        80
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "193": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        58,
+        80
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "194": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        58,
+        80
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "195": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        58,
+        80
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "196": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        58,
+        80
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "197": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        58,
+        80
+      ],
+      "op": "SUB",
+      "path": "0"
+    },
+    "198": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        58,
+        80
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "200": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        58,
+        80
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "201": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        58,
+        80
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "202": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        58,
+        80
+      ],
+      "op": "RETURN",
+      "path": "0"
+    },
+    "203": {
+      "fn": "MappingChallenge.set",
+      "offset": [
+        106,
+        307
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "204": {
+      "fn": "MappingChallenge.set",
+      "offset": [
+        210,
+        213
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x1"
+    },
+    "206": {
+      "fn": "MappingChallenge.set",
+      "offset": [
+        210,
+        220
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "207": {
+      "branch": 3,
+      "fn": "MappingChallenge.set",
+      "offset": [
+        210,
+        227
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "208": {
+      "op": "LT"
+    },
+    "209": {
+      "fn": "MappingChallenge.set",
+      "offset": [
+        206,
+        274
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xE7"
+    },
+    "212": {
+      "branch": 3,
+      "fn": "MappingChallenge.set",
+      "offset": [
+        206,
+        274
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "213": {
+      "fn": "MappingChallenge.set",
+      "offset": [
+        256,
+        259
+      ],
+      "op": "DUP2",
+      "path": "0",
+      "statement": 0
+    },
+    "214": {
+      "fn": "MappingChallenge.set",
+      "offset": [
+        262,
+        263
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x1"
+    },
+    "216": {
+      "fn": "MappingChallenge.set",
+      "offset": [
+        256,
+        263
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "217": {
+      "fn": "MappingChallenge.set",
+      "offset": [
+        243,
+        246
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x1"
+    },
+    "219": {
+      "fn": "MappingChallenge.set",
+      "offset": [
+        243,
+        263
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "220": {
+      "fn": "MappingChallenge.set",
+      "offset": [
+        243,
+        263
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xE5"
+    },
+    "223": {
+      "fn": "MappingChallenge.set",
+      "offset": [
+        243,
+        263
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "224": {
+      "fn": "MappingChallenge.set",
+      "offset": [
+        243,
+        263
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "225": {
+      "fn": "MappingChallenge.set",
+      "offset": [
+        243,
+        263
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x133"
+    },
+    "228": {
+      "fn": "MappingChallenge.set",
+      "jump": "i",
+      "offset": [
+        243,
+        263
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "229": {
+      "fn": "MappingChallenge.set",
+      "offset": [
+        243,
+        263
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "230": {
+      "fn": "MappingChallenge.set",
+      "offset": [
+        243,
+        263
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "231": {
+      "fn": "MappingChallenge.set",
+      "offset": [
+        206,
+        274
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "232": {
+      "fn": "MappingChallenge.set",
+      "offset": [
+        295,
+        300
+      ],
+      "op": "DUP1",
+      "path": "0",
+      "statement": 1
+    },
+    "233": {
+      "fn": "MappingChallenge.set",
+      "offset": [
+        284,
+        287
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x1"
+    },
+    "235": {
+      "fn": "MappingChallenge.set",
+      "offset": [
+        288,
+        291
+      ],
+      "op": "DUP4",
+      "path": "0"
+    },
+    "236": {
+      "fn": "MappingChallenge.set",
+      "offset": [
+        284,
+        292
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "237": {
+      "fn": "MappingChallenge.set",
+      "offset": [
+        284,
+        292
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "238": {
+      "fn": "MappingChallenge.set",
+      "offset": [
+        284,
+        292
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "239": {
+      "fn": "MappingChallenge.set",
+      "offset": [
+        284,
+        292
+      ],
+      "op": "LT",
+      "path": "0"
+    },
+    "240": {
+      "fn": "MappingChallenge.set",
+      "offset": [
+        284,
+        292
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "241": {
+      "fn": "MappingChallenge.set",
+      "offset": [
+        284,
+        292
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "242": {
+      "fn": "MappingChallenge.set",
+      "offset": [
+        284,
+        292
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xF7"
+    },
+    "245": {
+      "fn": "MappingChallenge.set",
+      "offset": [
+        284,
+        292
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "246": {
+      "dev": "Index out of range",
+      "fn": "MappingChallenge.set",
+      "offset": [
+        284,
+        292
+      ],
+      "op": "INVALID",
+      "path": "0"
+    },
+    "247": {
+      "fn": "MappingChallenge.set",
+      "offset": [
+        284,
+        292
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "248": {
+      "fn": "MappingChallenge.set",
+      "offset": [
+        284,
+        292
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "250": {
+      "fn": "MappingChallenge.set",
+      "offset": [
+        284,
+        292
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "251": {
+      "fn": "MappingChallenge.set",
+      "offset": [
+        284,
+        292
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "252": {
+      "fn": "MappingChallenge.set",
+      "offset": [
+        284,
+        292
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "253": {
+      "fn": "MappingChallenge.set",
+      "offset": [
+        284,
+        292
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "255": {
+      "fn": "MappingChallenge.set",
+      "offset": [
+        284,
+        292
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "256": {
+      "fn": "MappingChallenge.set",
+      "offset": [
+        284,
+        292
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "257": {
+      "fn": "MappingChallenge.set",
+      "offset": [
+        284,
+        292
+      ],
+      "op": "KECCAK256",
+      "path": "0"
+    },
+    "258": {
+      "fn": "MappingChallenge.set",
+      "offset": [
+        284,
+        292
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "259": {
+      "fn": "MappingChallenge.set",
+      "offset": [
+        284,
+        300
+      ],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "260": {
+      "op": "POP"
+    },
+    "261": {
+      "op": "POP"
+    },
+    "262": {
+      "fn": "MappingChallenge.set",
+      "jump": "o",
+      "offset": [
+        106,
+        307
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "263": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        313,
+        401
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "264": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        360,
+        367
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "266": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        386,
+        389
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 2,
+      "value": "0x1"
+    },
+    "268": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        390,
+        393
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "269": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        386,
+        394
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "270": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        386,
+        394
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "271": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        386,
+        394
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "272": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        386,
+        394
+      ],
+      "op": "LT",
+      "path": "0"
+    },
+    "273": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        386,
+        394
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "274": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        386,
+        394
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "275": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        386,
+        394
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x118"
+    },
+    "278": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        386,
+        394
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "279": {
+      "dev": "Index out of range",
+      "fn": "MappingChallenge.get",
+      "offset": [
+        386,
+        394
+      ],
+      "op": "INVALID",
+      "path": "0"
+    },
+    "280": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        386,
+        394
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "281": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        386,
+        394
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "282": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        386,
+        394
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "284": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        386,
+        394
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "285": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        386,
+        394
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "287": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        386,
+        394
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "289": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        386,
+        394
+      ],
+      "op": "KECCAK256",
+      "path": "0"
+    },
+    "290": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        386,
+        394
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "291": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        386,
+        394
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "292": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        379,
+        394
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "293": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        379,
+        394
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "294": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        313,
+        401
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "295": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        313,
+        401
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "296": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        313,
+        401
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "297": {
+      "fn": "MappingChallenge.get",
+      "jump": "o",
+      "offset": [
+        313,
+        401
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "298": {
+      "offset": [
+        58,
+        80
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "299": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        58,
+        80
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "301": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        58,
+        80
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "302": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        58,
+        80
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xFF"
+    },
+    "304": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        58,
+        80
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "305": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        58,
+        80
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "306": {
+      "fn": "MappingChallenge.get",
+      "jump": "o",
+      "offset": [
+        58,
+        80
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "307": {
+      "offset": [
+        26,
+        403
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "308": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "309": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "310": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "311": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "DUP4",
+      "path": "0"
+    },
+    "312": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "313": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "314": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "315": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "GT",
+      "path": "0"
+    },
+    "316": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "317": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x157"
+    },
+    "320": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "321": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "323": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "DUP4",
+      "path": "0"
+    },
+    "324": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "325": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "326": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "328": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "329": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "KECCAK256",
+      "path": "0"
+    },
+    "330": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x157"
+    },
+    "333": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "334": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "335": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "336": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "337": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "DUP4",
+      "path": "0"
+    },
+    "338": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "339": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x15C"
+    },
+    "342": {
+      "fn": "MappingChallenge.get",
+      "jump": "i",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "343": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "344": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "345": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "346": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "347": {
+      "fn": "MappingChallenge.get",
+      "jump": "o",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "348": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "349": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x17A"
+    },
+    "352": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "353": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "354": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "355": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "356": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "357": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "GT",
+      "path": "0"
+    },
+    "358": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "359": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x176"
+    },
+    "362": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "363": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "365": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "366": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "367": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x1"
+    },
+    "369": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "370": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x162"
+    },
+    "373": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "374": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "375": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "376": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "377": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "378": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "379": {
+      "fn": "MappingChallenge.get",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "380": {
+      "fn": "MappingChallenge.get",
+      "jump": "o",
+      "offset": [
+        26,
+        403
+      ],
+      "op": "JUMP",
+      "path": "0"
+    }
+  },
+  "sha1": "639659d466e5223d3e3f7c9a521b3c44648c555f",
+  "source": "pragma solidity ^0.4.21;\n\ncontract MappingChallenge {\n    bool public isComplete;\n    uint256[] map;\n\n    function set(uint256 key, uint256 value) public {\n        // Expand dynamic array as needed\n        if (map.length <= key) {\n            map.length = key + 1;\n        }\n\n        map[key] = value;\n    }\n\n    function get(uint256 key) public view returns (uint256) {\n        return map[key];\n    }\n}\n",
+  "sourceMap": "26:377:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;26:377:0;;;;;;;",
+  "sourcePath": "contracts/Mapping.sol",
+  "type": "contract"
+}

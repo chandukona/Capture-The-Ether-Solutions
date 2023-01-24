@@ -1,0 +1,2424 @@
+{
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "n",
+          "type": "uint8"
+        }
+      ],
+      "name": "guess",
+      "outputs": [],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "isComplete",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "constructor"
+    }
+  ],
+  "allSourcePaths": {
+    "0": "contracts/Guess-the-new-number.sol"
+  },
+  "ast": {
+    "absolutePath": "contracts/Guess-the-new-number.sol",
+    "exportedSymbols": {
+      "GuessTheNewNumberChallenge": [
+        67
+      ]
+    },
+    "id": 68,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".21"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 67,
+        "linearizedBaseContracts": [
+          67
+        ],
+        "name": "GuessTheNewNumberChallenge",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 11,
+              "nodeType": "Block",
+              "src": "121:46:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 8,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 5,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 82,
+                            "src": "139:3:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 6,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "value",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "139:9:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "hexValue": "31",
+                          "id": 7,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "152:7:0",
+                          "subdenomination": "ether",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_1000000000000000000_by_1",
+                            "typeString": "int_const 1000000000000000000"
+                          },
+                          "value": "1"
+                        },
+                        "src": "139:20:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 4,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        85,
+                        86
+                      ],
+                      "referencedDeclaration": 85,
+                      "src": "131:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 9,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "131:29:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 10,
+                  "nodeType": "ExpressionStatement",
+                  "src": "131:29:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 12,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "GuessTheNewNumberChallenge",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "103:2:0"
+            },
+            "payable": true,
+            "returnParameters": {
+              "id": 3,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "121:0:0"
+            },
+            "scope": 67,
+            "src": "68:99:0",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 24,
+              "nodeType": "Block",
+              "src": "222:50:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 22,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 18,
+                            "name": "this",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 95,
+                            "src": "247:4:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_GuessTheNewNumberChallenge_$67",
+                              "typeString": "contract GuessTheNewNumberChallenge"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_contract$_GuessTheNewNumberChallenge_$67",
+                              "typeString": "contract GuessTheNewNumberChallenge"
+                            }
+                          ],
+                          "id": 17,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "239:7:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_address_$",
+                            "typeString": "type(address)"
+                          },
+                          "typeName": "address"
+                        },
+                        "id": 19,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "239:13:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "id": 20,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "balance",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "239:21:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 21,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "264:1:0",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "239:26:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 16,
+                  "id": 23,
+                  "nodeType": "Return",
+                  "src": "232:33:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 25,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "isComplete",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 13,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "192:2:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 16,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 25,
+                  "src": "216:4:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 14,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "216:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "215:6:0"
+            },
+            "scope": 67,
+            "src": "173:99:0",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 65,
+              "nodeType": "Block",
+              "src": "317:207:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 34,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 31,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 82,
+                            "src": "335:3:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 32,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "value",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "335:9:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "hexValue": "31",
+                          "id": 33,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "348:7:0",
+                          "subdenomination": "ether",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_1000000000000000000_by_1",
+                            "typeString": "int_const 1000000000000000000"
+                          },
+                          "value": "1"
+                        },
+                        "src": "335:20:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 30,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        85,
+                        86
+                      ],
+                      "referencedDeclaration": 85,
+                      "src": "327:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 35,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "327:29:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 36,
+                  "nodeType": "ExpressionStatement",
+                  "src": "327:29:0"
+                },
+                {
+                  "assignments": [
+                    38
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 38,
+                      "name": "answer",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 66,
+                      "src": "366:12:0",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      },
+                      "typeName": {
+                        "id": 37,
+                        "name": "uint8",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "366:5:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 51,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "arguments": [
+                              {
+                                "argumentTypes": null,
+                                "commonType": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                },
+                                "id": 46,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": false,
+                                "lValueRequested": false,
+                                "leftExpression": {
+                                  "argumentTypes": null,
+                                  "expression": {
+                                    "argumentTypes": null,
+                                    "id": 43,
+                                    "name": "block",
+                                    "nodeType": "Identifier",
+                                    "overloadedDeclarations": [],
+                                    "referencedDeclaration": 72,
+                                    "src": "413:5:0",
+                                    "typeDescriptions": {
+                                      "typeIdentifier": "t_magic_block",
+                                      "typeString": "block"
+                                    }
+                                  },
+                                  "id": 44,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "memberName": "number",
+                                  "nodeType": "MemberAccess",
+                                  "referencedDeclaration": null,
+                                  "src": "413:12:0",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  }
+                                },
+                                "nodeType": "BinaryOperation",
+                                "operator": "-",
+                                "rightExpression": {
+                                  "argumentTypes": null,
+                                  "hexValue": "31",
+                                  "id": 45,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "kind": "number",
+                                  "lValueRequested": false,
+                                  "nodeType": "Literal",
+                                  "src": "428:1:0",
+                                  "subdenomination": null,
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_rational_1_by_1",
+                                    "typeString": "int_const 1"
+                                  },
+                                  "value": "1"
+                                },
+                                "src": "413:16:0",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              ],
+                              "expression": {
+                                "argumentTypes": null,
+                                "id": 41,
+                                "name": "block",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 72,
+                                "src": "397:5:0",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_magic_block",
+                                  "typeString": "block"
+                                }
+                              },
+                              "id": 42,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberName": "blockhash",
+                              "nodeType": "MemberAccess",
+                              "referencedDeclaration": null,
+                              "src": "397:15:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_function_blockhash_view$_t_uint256_$returns$_t_bytes32_$",
+                                "typeString": "function (uint256) view returns (bytes32)"
+                              }
+                            },
+                            "id": 47,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "kind": "functionCall",
+                            "lValueRequested": false,
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "397:33:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bytes32",
+                              "typeString": "bytes32"
+                            }
+                          },
+                          {
+                            "argumentTypes": null,
+                            "id": 48,
+                            "name": "now",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 84,
+                            "src": "432:3:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_bytes32",
+                              "typeString": "bytes32"
+                            },
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          ],
+                          "id": 40,
+                          "name": "keccak256",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 76,
+                          "src": "387:9:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
+                            "typeString": "function () pure returns (bytes32)"
+                          }
+                        },
+                        "id": 49,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "387:49:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      ],
+                      "id": 39,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "ElementaryTypeNameExpression",
+                      "src": "381:5:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_uint8_$",
+                        "typeString": "type(uint8)"
+                      },
+                      "typeName": "uint8"
+                    },
+                    "id": 50,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "381:56:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "366:71:0"
+                },
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    },
+                    "id": 54,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 52,
+                      "name": "n",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 27,
+                      "src": "452:1:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "id": 53,
+                      "name": "answer",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 38,
+                      "src": "457:6:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "src": "452:11:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 64,
+                  "nodeType": "IfStatement",
+                  "src": "448:70:0",
+                  "trueBody": {
+                    "id": 63,
+                    "nodeType": "Block",
+                    "src": "465:53:0",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "32",
+                              "id": 60,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "499:7:0",
+                              "subdenomination": "ether",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_2000000000000000000_by_1",
+                                "typeString": "int_const 2000000000000000000"
+                              },
+                              "value": "2"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_rational_2000000000000000000_by_1",
+                                "typeString": "int_const 2000000000000000000"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": null,
+                              "expression": {
+                                "argumentTypes": null,
+                                "id": 55,
+                                "name": "msg",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 82,
+                                "src": "479:3:0",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_magic_message",
+                                  "typeString": "msg"
+                                }
+                              },
+                              "id": 58,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberName": "sender",
+                              "nodeType": "MemberAccess",
+                              "referencedDeclaration": null,
+                              "src": "479:10:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            },
+                            "id": 59,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "transfer",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "479:19:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_transfer_nonpayable$_t_uint256_$returns$__$",
+                              "typeString": "function (uint256)"
+                            }
+                          },
+                          "id": 61,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "479:28:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 62,
+                        "nodeType": "ExpressionStatement",
+                        "src": "479:28:0"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 66,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "guess",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 28,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 27,
+                  "name": "n",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 66,
+                  "src": "293:7:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 26,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "293:5:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "292:9:0"
+            },
+            "payable": true,
+            "returnParameters": {
+              "id": 29,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "317:0:0"
+            },
+            "scope": 67,
+            "src": "278:246:0",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 68,
+        "src": "26:500:0"
+      }
+    ],
+    "src": "0:527:0"
+  },
+  "bytecode": "6080604052670de0b6b3a7640000341461001857600080fd5b610128806100276000396000f30060806040526004361060485763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416634ba4c16b8114604d578063b2fa1c9e14605b575b600080fd5b605960ff600435166081565b005b348015606657600080fd5b50606d60f6565b604080519115158252519081900360200190f35b6000670de0b6b3a76400003414609657600080fd5b50604080516000194301408152426020820152815190819003909101902060ff828116908216141560f2576040513390600090671bc16d674ec800009082818181858883f1935050505015801560f0573d6000803e3d6000fd5b505b5050565b303115905600a165627a7a723058203274aeed3cda6c529baf9a60ac88b5bf3aa4814ac4ce69249d0cb5cd7f72a9280029",
+  "bytecodeSha1": "89d621e1b23009b34bd8babed49727ffa2cfbfcf",
+  "compiler": {
+    "evm_version": "byzantium",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "version": "0.4.26+commit.4563c3fc"
+  },
+  "contractName": "GuessTheNewNumberChallenge",
+  "coverageMap": {
+    "branches": {
+      "0": {
+        "GuessTheNewNumberChallenge.guess": {
+          "3": [
+            335,
+            355,
+            true
+          ],
+          "4": [
+            452,
+            463,
+            false
+          ]
+        }
+      }
+    },
+    "statements": {
+      "0": {
+        "GuessTheNewNumberChallenge.guess": {
+          "0": [
+            327,
+            356
+          ],
+          "1": [
+            479,
+            507
+          ]
+        },
+        "GuessTheNewNumberChallenge.isComplete": {
+          "2": [
+            232,
+            265
+          ]
+        }
+      }
+    }
+  },
+  "dependencies": [],
+  "deployedBytecode": "60806040526004361060485763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416634ba4c16b8114604d578063b2fa1c9e14605b575b600080fd5b605960ff600435166081565b005b348015606657600080fd5b50606d60f6565b604080519115158252519081900360200190f35b6000670de0b6b3a76400003414609657600080fd5b50604080516000194301408152426020820152815190819003909101902060ff828116908216141560f2576040513390600090671bc16d674ec800009082818181858883f1935050505015801560f0573d6000803e3d6000fd5b505b5050565b303115905600a165627a7a723058203274aeed3cda6c529baf9a60ac88b5bf3aa4814ac4ce69249d0cb5cd7f72a9280029",
+  "deployedSourceMap": "26:500:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;278:246;;;;;;;;;;173:99;;8:9:-1;5:2;;;30:1;27;20:12;5:2;173:99:0;;;;;;;;;;;;;;;;;;;;;;278:246;366:12;348:7;335:9;:20;327:29;;;;;;-1:-1:-1;387:49:0;;;-1:-1:-1;;413:12:0;:16;397:33;387:49;;432:3;387:49;;;;;;;;;;;;;;;452:11;;;;;;;;448:70;;;479:28;;:10;;:28;;499:7;;479:28;;;;499:7;479:10;:28;;;;;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;479:28:0;448:70;278:246;;:::o;173:99::-;247:4;239:21;:26;173:99;:::o",
+  "language": "Solidity",
+  "natspec": {
+    "methods": {}
+  },
+  "offset": [
+    26,
+    526
+  ],
+  "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x4 CALLDATASIZE LT PUSH1 0x48 JUMPI PUSH4 0xFFFFFFFF PUSH29 0x100000000000000000000000000000000000000000000000000000000 PUSH1 0x0 CALLDATALOAD DIV AND PUSH4 0x4BA4C16B DUP2 EQ PUSH1 0x4D JUMPI DUP1 PUSH4 0xB2FA1C9E EQ PUSH1 0x5B JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x59 PUSH1 0xFF PUSH1 0x4 CALLDATALOAD AND PUSH1 0x81 JUMP JUMPDEST STOP JUMPDEST CALLVALUE DUP1 ISZERO PUSH1 0x66 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x6D PUSH1 0xF6 JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD SWAP2 ISZERO ISZERO DUP3 MSTORE MLOAD SWAP1 DUP2 SWAP1 SUB PUSH1 0x20 ADD SWAP1 RETURN JUMPDEST PUSH1 0x0 PUSH8 0xDE0B6B3A7640000 CALLVALUE EQ PUSH1 0x96 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x40 DUP1 MLOAD PUSH1 0x0 NOT NUMBER ADD BLOCKHASH DUP2 MSTORE TIMESTAMP PUSH1 0x20 DUP3 ADD MSTORE DUP2 MLOAD SWAP1 DUP2 SWAP1 SUB SWAP1 SWAP2 ADD SWAP1 KECCAK256 PUSH1 0xFF DUP3 DUP2 AND SWAP1 DUP3 AND EQ ISZERO PUSH1 0xF2 JUMPI PUSH1 0x40 MLOAD CALLER SWAP1 PUSH1 0x0 SWAP1 PUSH8 0x1BC16D674EC80000 SWAP1 DUP3 DUP2 DUP2 DUP2 DUP6 DUP9 DUP4 CALL SWAP4 POP POP POP POP ISZERO DUP1 ISZERO PUSH1 0xF0 JUMPI RETURNDATASIZE PUSH1 0x0 DUP1 RETURNDATACOPY RETURNDATASIZE PUSH1 0x0 REVERT JUMPDEST POP JUMPDEST POP POP JUMP JUMPDEST ADDRESS BALANCE ISZERO SWAP1 JUMP STOP LOG1 PUSH6 0x627A7A723058 KECCAK256 ORIGIN PUSH21 0xAEED3CDA6C529BAF9A60AC88B5BF3AA4814AC4CE69 0x24 SWAP14 0xc 0xb5 0xcd PUSH32 0x72A9280029000000000000000000000000000000000000000000000000000000 ",
+  "pcMap": {
+    "0": {
+      "offset": [
+        26,
+        526
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x80"
+    },
+    "2": {
+      "fn": null,
+      "offset": [
+        26,
+        526
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "4": {
+      "fn": null,
+      "offset": [
+        26,
+        526
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "5": {
+      "fn": null,
+      "offset": [
+        26,
+        526
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "7": {
+      "fn": null,
+      "offset": [
+        26,
+        526
+      ],
+      "op": "CALLDATASIZE",
+      "path": "0"
+    },
+    "8": {
+      "fn": null,
+      "offset": [
+        26,
+        526
+      ],
+      "op": "LT",
+      "path": "0"
+    },
+    "9": {
+      "fn": null,
+      "offset": [
+        26,
+        526
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x48"
+    },
+    "11": {
+      "fn": null,
+      "offset": [
+        26,
+        526
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "12": {
+      "fn": null,
+      "offset": [
+        26,
+        526
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0xFFFFFFFF"
+    },
+    "17": {
+      "fn": null,
+      "offset": [
+        26,
+        526
+      ],
+      "op": "PUSH29",
+      "path": "0",
+      "value": "0x100000000000000000000000000000000000000000000000000000000"
+    },
+    "47": {
+      "fn": null,
+      "offset": [
+        26,
+        526
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "49": {
+      "fn": null,
+      "offset": [
+        26,
+        526
+      ],
+      "op": "CALLDATALOAD",
+      "path": "0"
+    },
+    "50": {
+      "fn": null,
+      "offset": [
+        26,
+        526
+      ],
+      "op": "DIV",
+      "path": "0"
+    },
+    "51": {
+      "fn": null,
+      "offset": [
+        26,
+        526
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "52": {
+      "fn": null,
+      "offset": [
+        26,
+        526
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x4BA4C16B"
+    },
+    "57": {
+      "fn": null,
+      "offset": [
+        26,
+        526
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "58": {
+      "fn": null,
+      "offset": [
+        26,
+        526
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "59": {
+      "fn": null,
+      "offset": [
+        26,
+        526
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4D"
+    },
+    "61": {
+      "fn": null,
+      "offset": [
+        26,
+        526
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "62": {
+      "fn": null,
+      "offset": [
+        26,
+        526
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "63": {
+      "fn": null,
+      "offset": [
+        26,
+        526
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0xB2FA1C9E"
+    },
+    "68": {
+      "fn": null,
+      "offset": [
+        26,
+        526
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "69": {
+      "fn": null,
+      "offset": [
+        26,
+        526
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x5B"
+    },
+    "71": {
+      "fn": null,
+      "offset": [
+        26,
+        526
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "72": {
+      "fn": null,
+      "offset": [
+        26,
+        526
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "73": {
+      "fn": null,
+      "offset": [
+        26,
+        526
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "75": {
+      "fn": null,
+      "offset": [
+        26,
+        526
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "76": {
+      "first_revert": true,
+      "fn": null,
+      "offset": [
+        26,
+        526
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "77": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        278,
+        524
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "78": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        278,
+        524
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x59"
+    },
+    "80": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        278,
+        524
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xFF"
+    },
+    "82": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        278,
+        524
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "84": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        278,
+        524
+      ],
+      "op": "CALLDATALOAD",
+      "path": "0"
+    },
+    "85": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        278,
+        524
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "86": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        278,
+        524
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x81"
+    },
+    "88": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        278,
+        524
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "89": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        278,
+        524
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "90": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        278,
+        524
+      ],
+      "op": "STOP",
+      "path": "0"
+    },
+    "91": {
+      "fn": "GuessTheNewNumberChallenge.isComplete",
+      "offset": [
+        173,
+        272
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "92": {
+      "fn": "GuessTheNewNumberChallenge.isComplete",
+      "offset": [
+        173,
+        272
+      ],
+      "op": "CALLVALUE",
+      "path": "0"
+    },
+    "93": {
+      "op": "DUP1"
+    },
+    "94": {
+      "op": "ISZERO"
+    },
+    "95": {
+      "op": "PUSH1",
+      "value": "0x66"
+    },
+    "97": {
+      "op": "JUMPI"
+    },
+    "98": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "100": {
+      "op": "DUP1"
+    },
+    "101": {
+      "dev": "Cannot send ether to nonpayable function",
+      "fn": "GuessTheNewNumberChallenge.isComplete",
+      "offset": [
+        173,
+        272
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "102": {
+      "op": "JUMPDEST"
+    },
+    "103": {
+      "fn": "GuessTheNewNumberChallenge.isComplete",
+      "offset": [
+        173,
+        272
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "104": {
+      "fn": "GuessTheNewNumberChallenge.isComplete",
+      "offset": [
+        173,
+        272
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x6D"
+    },
+    "106": {
+      "fn": "GuessTheNewNumberChallenge.isComplete",
+      "offset": [
+        173,
+        272
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xF6"
+    },
+    "108": {
+      "fn": "GuessTheNewNumberChallenge.isComplete",
+      "offset": [
+        173,
+        272
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "109": {
+      "fn": "GuessTheNewNumberChallenge.isComplete",
+      "offset": [
+        173,
+        272
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "110": {
+      "fn": "GuessTheNewNumberChallenge.isComplete",
+      "offset": [
+        173,
+        272
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "112": {
+      "fn": "GuessTheNewNumberChallenge.isComplete",
+      "offset": [
+        173,
+        272
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "113": {
+      "fn": "GuessTheNewNumberChallenge.isComplete",
+      "offset": [
+        173,
+        272
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "114": {
+      "fn": "GuessTheNewNumberChallenge.isComplete",
+      "offset": [
+        173,
+        272
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "115": {
+      "fn": "GuessTheNewNumberChallenge.isComplete",
+      "offset": [
+        173,
+        272
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "116": {
+      "fn": "GuessTheNewNumberChallenge.isComplete",
+      "offset": [
+        173,
+        272
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "117": {
+      "fn": "GuessTheNewNumberChallenge.isComplete",
+      "offset": [
+        173,
+        272
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "118": {
+      "fn": "GuessTheNewNumberChallenge.isComplete",
+      "offset": [
+        173,
+        272
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "119": {
+      "fn": "GuessTheNewNumberChallenge.isComplete",
+      "offset": [
+        173,
+        272
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "120": {
+      "fn": "GuessTheNewNumberChallenge.isComplete",
+      "offset": [
+        173,
+        272
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "121": {
+      "fn": "GuessTheNewNumberChallenge.isComplete",
+      "offset": [
+        173,
+        272
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "122": {
+      "fn": "GuessTheNewNumberChallenge.isComplete",
+      "offset": [
+        173,
+        272
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "123": {
+      "fn": "GuessTheNewNumberChallenge.isComplete",
+      "offset": [
+        173,
+        272
+      ],
+      "op": "SUB",
+      "path": "0"
+    },
+    "124": {
+      "fn": "GuessTheNewNumberChallenge.isComplete",
+      "offset": [
+        173,
+        272
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "126": {
+      "fn": "GuessTheNewNumberChallenge.isComplete",
+      "offset": [
+        173,
+        272
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "127": {
+      "fn": "GuessTheNewNumberChallenge.isComplete",
+      "offset": [
+        173,
+        272
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "128": {
+      "fn": "GuessTheNewNumberChallenge.isComplete",
+      "offset": [
+        173,
+        272
+      ],
+      "op": "RETURN",
+      "path": "0"
+    },
+    "129": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        278,
+        524
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "130": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        366,
+        378
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "132": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        348,
+        355
+      ],
+      "op": "PUSH8",
+      "path": "0",
+      "statement": 0,
+      "value": "0xDE0B6B3A7640000"
+    },
+    "141": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        335,
+        344
+      ],
+      "op": "CALLVALUE",
+      "path": "0"
+    },
+    "142": {
+      "branch": 3,
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        335,
+        355
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "143": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        327,
+        356
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x96"
+    },
+    "145": {
+      "branch": 3,
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        327,
+        356
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "146": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        327,
+        356
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "148": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        327,
+        356
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "149": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        327,
+        356
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "150": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        327,
+        356
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "151": {
+      "op": "POP"
+    },
+    "152": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        387,
+        436
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "154": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        387,
+        436
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "155": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        387,
+        436
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "156": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "158": {
+      "op": "NOT"
+    },
+    "159": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        413,
+        425
+      ],
+      "op": "NUMBER",
+      "path": "0"
+    },
+    "160": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        413,
+        429
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "161": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        397,
+        430
+      ],
+      "op": "BLOCKHASH",
+      "path": "0"
+    },
+    "162": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        387,
+        436
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "163": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        387,
+        436
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "164": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        432,
+        435
+      ],
+      "op": "TIMESTAMP",
+      "path": "0"
+    },
+    "165": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        387,
+        436
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "167": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        387,
+        436
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "168": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        387,
+        436
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "169": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        387,
+        436
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "170": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        387,
+        436
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "171": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        387,
+        436
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "172": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        387,
+        436
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "173": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        387,
+        436
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "174": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        387,
+        436
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "175": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        387,
+        436
+      ],
+      "op": "SUB",
+      "path": "0"
+    },
+    "176": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        387,
+        436
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "177": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        387,
+        436
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "178": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        387,
+        436
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "179": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        387,
+        436
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "180": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        387,
+        436
+      ],
+      "op": "KECCAK256",
+      "path": "0"
+    },
+    "181": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        452,
+        463
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xFF"
+    },
+    "183": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        452,
+        463
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "184": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        452,
+        463
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "185": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        452,
+        463
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "186": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        452,
+        463
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "187": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        452,
+        463
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "188": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        452,
+        463
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "189": {
+      "branch": 4,
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        452,
+        463
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "190": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        448,
+        518
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "191": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        448,
+        518
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xF2"
+    },
+    "193": {
+      "branch": 4,
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        448,
+        518
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "194": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        479,
+        507
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 1,
+      "value": "0x40"
+    },
+    "196": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        479,
+        507
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "197": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        479,
+        489
+      ],
+      "op": "CALLER",
+      "path": "0"
+    },
+    "198": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        479,
+        489
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "199": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        479,
+        507
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "201": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        479,
+        507
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "202": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        499,
+        506
+      ],
+      "op": "PUSH8",
+      "path": "0",
+      "value": "0x1BC16D674EC80000"
+    },
+    "211": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        499,
+        506
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "212": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        479,
+        507
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "213": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        479,
+        507
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "214": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        479,
+        507
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "215": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        479,
+        507
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "216": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        499,
+        506
+      ],
+      "op": "DUP6",
+      "path": "0"
+    },
+    "217": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        479,
+        489
+      ],
+      "op": "DUP9",
+      "path": "0"
+    },
+    "218": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        479,
+        507
+      ],
+      "op": "DUP4",
+      "path": "0"
+    },
+    "219": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        479,
+        507
+      ],
+      "op": "CALL",
+      "path": "0"
+    },
+    "220": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        479,
+        507
+      ],
+      "op": "SWAP4",
+      "path": "0"
+    },
+    "221": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        479,
+        507
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "222": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        479,
+        507
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "223": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        479,
+        507
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "224": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        479,
+        507
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "225": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        479,
+        507
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "226": {
+      "op": "DUP1"
+    },
+    "227": {
+      "op": "ISZERO"
+    },
+    "228": {
+      "op": "PUSH1",
+      "value": "0xF0"
+    },
+    "230": {
+      "op": "JUMPI"
+    },
+    "231": {
+      "op": "RETURNDATASIZE"
+    },
+    "232": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "234": {
+      "op": "DUP1"
+    },
+    "235": {
+      "op": "RETURNDATACOPY"
+    },
+    "236": {
+      "op": "RETURNDATASIZE"
+    },
+    "237": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "239": {
+      "op": "REVERT"
+    },
+    "240": {
+      "op": "JUMPDEST"
+    },
+    "241": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        479,
+        507
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "242": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        448,
+        518
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "243": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        278,
+        524
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "244": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "offset": [
+        278,
+        524
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "245": {
+      "fn": "GuessTheNewNumberChallenge.guess",
+      "jump": "o",
+      "offset": [
+        278,
+        524
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "246": {
+      "fn": "GuessTheNewNumberChallenge.isComplete",
+      "offset": [
+        173,
+        272
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "247": {
+      "fn": "GuessTheNewNumberChallenge.isComplete",
+      "offset": [
+        247,
+        251
+      ],
+      "op": "ADDRESS",
+      "path": "0",
+      "statement": 2
+    },
+    "248": {
+      "fn": "GuessTheNewNumberChallenge.isComplete",
+      "offset": [
+        239,
+        260
+      ],
+      "op": "BALANCE",
+      "path": "0"
+    },
+    "249": {
+      "fn": "GuessTheNewNumberChallenge.isComplete",
+      "offset": [
+        239,
+        265
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "250": {
+      "fn": "GuessTheNewNumberChallenge.isComplete",
+      "offset": [
+        173,
+        272
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "251": {
+      "fn": "GuessTheNewNumberChallenge.isComplete",
+      "jump": "o",
+      "offset": [
+        173,
+        272
+      ],
+      "op": "JUMP",
+      "path": "0"
+    }
+  },
+  "sha1": "69e533932e4cc491b2b54cc0a82e3e3fd030e7a8",
+  "source": "pragma solidity ^0.4.21;\n\ncontract GuessTheNewNumberChallenge {\n    function GuessTheNewNumberChallenge() public payable {\n        require(msg.value == 1 ether);\n    }\n\n    function isComplete() public view returns (bool) {\n        return address(this).balance == 0;\n    }\n\n    function guess(uint8 n) public payable {\n        require(msg.value == 1 ether);\n        uint8 answer = uint8(keccak256(block.blockhash(block.number - 1), now));\n\n        if (n == answer) {\n            msg.sender.transfer(2 ether);\n        }\n    }\n}\n",
+  "sourceMap": "26:500:0:-;;;152:7;139:9;:20;131:29;;;;;;26:500;;;;;;",
+  "sourcePath": "contracts/Guess-the-new-number.sol",
+  "type": "contract"
+}

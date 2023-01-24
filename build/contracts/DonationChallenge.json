@@ -1,0 +1,4291 @@
+{
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "withdraw",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "isComplete",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "etherAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "donate",
+      "outputs": [],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "donations",
+      "outputs": [
+        {
+          "name": "timestamp",
+          "type": "uint256"
+        },
+        {
+          "name": "etherAmount",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "constructor"
+    }
+  ],
+  "allSourcePaths": {
+    "0": "contracts/Donation.sol"
+  },
+  "ast": {
+    "absolutePath": "contracts/Donation.sol",
+    "exportedSymbols": {
+      "DonationChallenge": [
+        107
+      ]
+    },
+    "id": 108,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".21"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 107,
+        "linearizedBaseContracts": [
+          107
+        ],
+        "name": "DonationChallenge",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "DonationChallenge.Donation",
+            "id": 6,
+            "members": [
+              {
+                "constant": false,
+                "id": 3,
+                "name": "timestamp",
+                "nodeType": "VariableDeclaration",
+                "scope": 6,
+                "src": "85:17:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 2,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "85:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 5,
+                "name": "etherAmount",
+                "nodeType": "VariableDeclaration",
+                "scope": 6,
+                "src": "112:19:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 4,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "112:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Donation",
+            "nodeType": "StructDefinition",
+            "scope": 107,
+            "src": "59:79:0",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 9,
+            "name": "donations",
+            "nodeType": "VariableDeclaration",
+            "scope": 107,
+            "src": "143:27:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_Donation_$6_storage_$dyn_storage",
+              "typeString": "struct DonationChallenge.Donation[]"
+            },
+            "typeName": {
+              "baseType": {
+                "contractScope": null,
+                "id": 7,
+                "name": "Donation",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 6,
+                "src": "143:8:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Donation_$6_storage_ptr",
+                  "typeString": "struct DonationChallenge.Donation"
+                }
+              },
+              "id": 8,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "143:10:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_Donation_$6_storage_$dyn_storage_ptr",
+                "typeString": "struct DonationChallenge.Donation[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 11,
+            "name": "owner",
+            "nodeType": "VariableDeclaration",
+            "scope": 107,
+            "src": "177:20:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 10,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "177:7:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 26,
+              "nodeType": "Block",
+              "src": "248:75:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 18,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 15,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 122,
+                            "src": "266:3:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 16,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "value",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "266:9:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "hexValue": "31",
+                          "id": 17,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "279:7:0",
+                          "subdenomination": "ether",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_1000000000000000000_by_1",
+                            "typeString": "int_const 1000000000000000000"
+                          },
+                          "value": "1"
+                        },
+                        "src": "266:20:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 14,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        125,
+                        126
+                      ],
+                      "referencedDeclaration": 125,
+                      "src": "258:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 19,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "258:29:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 20,
+                  "nodeType": "ExpressionStatement",
+                  "src": "258:29:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 24,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 21,
+                      "name": "owner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 11,
+                      "src": "298:5:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 22,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 122,
+                        "src": "306:3:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 23,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "306:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "298:18:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 25,
+                  "nodeType": "ExpressionStatement",
+                  "src": "298:18:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 27,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "DonationChallenge",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 12,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "230:2:0"
+            },
+            "payable": true,
+            "returnParameters": {
+              "id": 13,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "248:0:0"
+            },
+            "scope": 107,
+            "src": "204:119:0",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 39,
+              "nodeType": "Block",
+              "src": "378:50:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 37,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 33,
+                            "name": "this",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 135,
+                            "src": "403:4:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_DonationChallenge_$107",
+                              "typeString": "contract DonationChallenge"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_contract$_DonationChallenge_$107",
+                              "typeString": "contract DonationChallenge"
+                            }
+                          ],
+                          "id": 32,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "395:7:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_address_$",
+                            "typeString": "type(address)"
+                          },
+                          "typeName": "address"
+                        },
+                        "id": 34,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "395:13:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "id": 35,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "balance",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "395:21:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 36,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "420:1:0",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "395:26:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 31,
+                  "id": 38,
+                  "nodeType": "Return",
+                  "src": "388:33:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 40,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "isComplete",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 28,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "348:2:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 31,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 30,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40,
+                  "src": "372:4:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 29,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "372:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "371:6:0"
+            },
+            "scope": 107,
+            "src": "329:99:0",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 83,
+              "nodeType": "Block",
+              "src": "486:296:0",
+              "statements": [
+                {
+                  "assignments": [
+                    46
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 46,
+                      "name": "scale",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 84,
+                      "src": "551:13:0",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 45,
+                        "name": "uint256",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "551:7:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 52,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_rational_1000000000000000000000000000000000000_by_1",
+                      "typeString": "int_const 1000...(29 digits omitted)...0000"
+                    },
+                    "id": 51,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "commonType": {
+                        "typeIdentifier": "t_rational_1000000000000000000_by_1",
+                        "typeString": "int_const 1000000000000000000"
+                      },
+                      "id": 49,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "argumentTypes": null,
+                        "hexValue": "3130",
+                        "id": 47,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "567:2:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_10_by_1",
+                          "typeString": "int_const 10"
+                        },
+                        "value": "10"
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": "**",
+                      "rightExpression": {
+                        "argumentTypes": null,
+                        "hexValue": "3138",
+                        "id": 48,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "571:2:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_18_by_1",
+                          "typeString": "int_const 18"
+                        },
+                        "value": "18"
+                      },
+                      "src": "567:6:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_1000000000000000000_by_1",
+                        "typeString": "int_const 1000000000000000000"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "*",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "31",
+                      "id": 50,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "576:7:0",
+                      "subdenomination": "ether",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_1000000000000000000_by_1",
+                        "typeString": "int_const 1000000000000000000"
+                      },
+                      "value": "1"
+                    },
+                    "src": "567:16:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_rational_1000000000000000000000000000000000000_by_1",
+                      "typeString": "int_const 1000...(29 digits omitted)...0000"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "551:32:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 59,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 54,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 122,
+                            "src": "601:3:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 55,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "value",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "601:9:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          "id": 58,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftExpression": {
+                            "argumentTypes": null,
+                            "id": 56,
+                            "name": "etherAmount",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 42,
+                            "src": "614:11:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": "/",
+                          "rightExpression": {
+                            "argumentTypes": null,
+                            "id": 57,
+                            "name": "scale",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 46,
+                            "src": "628:5:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "src": "614:19:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "src": "601:32:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 53,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        125,
+                        126
+                      ],
+                      "referencedDeclaration": 125,
+                      "src": "593:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 60,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "593:41:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 61,
+                  "nodeType": "ExpressionStatement",
+                  "src": "593:41:0"
+                },
+                {
+                  "assignments": [],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 63,
+                      "name": "donation",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 84,
+                      "src": "645:17:0",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Donation_$6_storage_ptr",
+                        "typeString": "struct DonationChallenge.Donation"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 62,
+                        "name": "Donation",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 6,
+                        "src": "645:8:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Donation_$6_storage_ptr",
+                          "typeString": "struct DonationChallenge.Donation"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 64,
+                  "initialValue": null,
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "645:17:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 69,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 65,
+                        "name": "donation",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 63,
+                        "src": "672:8:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Donation_$6_storage_ptr",
+                          "typeString": "struct DonationChallenge.Donation storage pointer"
+                        }
+                      },
+                      "id": 67,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "timestamp",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 3,
+                      "src": "672:18:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 68,
+                      "name": "now",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 124,
+                      "src": "693:3:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "672:24:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 70,
+                  "nodeType": "ExpressionStatement",
+                  "src": "672:24:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 75,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 71,
+                        "name": "donation",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 63,
+                        "src": "706:8:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Donation_$6_storage_ptr",
+                          "typeString": "struct DonationChallenge.Donation storage pointer"
+                        }
+                      },
+                      "id": 73,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "etherAmount",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 5,
+                      "src": "706:20:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 74,
+                      "name": "etherAmount",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 42,
+                      "src": "729:11:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "706:34:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 76,
+                  "nodeType": "ExpressionStatement",
+                  "src": "706:34:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 80,
+                        "name": "donation",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 63,
+                        "src": "766:8:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Donation_$6_storage_ptr",
+                          "typeString": "struct DonationChallenge.Donation storage pointer"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_Donation_$6_storage_ptr",
+                          "typeString": "struct DonationChallenge.Donation storage pointer"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 77,
+                        "name": "donations",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 9,
+                        "src": "751:9:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_Donation_$6_storage_$dyn_storage",
+                          "typeString": "struct DonationChallenge.Donation storage ref[] storage ref"
+                        }
+                      },
+                      "id": 79,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "751:14:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_Donation_$6_storage_$returns$_t_uint256_$",
+                        "typeString": "function (struct DonationChallenge.Donation storage ref) returns (uint256)"
+                      }
+                    },
+                    "id": 81,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "751:24:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 82,
+                  "nodeType": "ExpressionStatement",
+                  "src": "751:24:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 84,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "donate",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 43,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 42,
+                  "name": "etherAmount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 84,
+                  "src": "450:19:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 41,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "450:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "449:21:0"
+            },
+            "payable": true,
+            "returnParameters": {
+              "id": 44,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "486:0:0"
+            },
+            "scope": 107,
+            "src": "434:348:0",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 105,
+              "nodeType": "Block",
+              "src": "815:98:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 91,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 88,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 122,
+                            "src": "833:3:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 89,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "833:10:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "id": 90,
+                          "name": "owner",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 11,
+                          "src": "847:5:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "src": "833:19:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 87,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        125,
+                        126
+                      ],
+                      "referencedDeclaration": 125,
+                      "src": "825:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 92,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "825:28:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 93,
+                  "nodeType": "ExpressionStatement",
+                  "src": "825:28:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 100,
+                              "name": "this",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 135,
+                              "src": "892:4:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_DonationChallenge_$107",
+                                "typeString": "contract DonationChallenge"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_contract$_DonationChallenge_$107",
+                                "typeString": "contract DonationChallenge"
+                              }
+                            ],
+                            "id": 99,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "884:7:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_address_$",
+                              "typeString": "type(address)"
+                            },
+                            "typeName": "address"
+                          },
+                          "id": 101,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "884:13:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "id": 102,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "balance",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "884:21:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 94,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 122,
+                          "src": "864:3:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 97,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "864:10:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "id": 98,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "transfer",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "864:19:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_transfer_nonpayable$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256)"
+                      }
+                    },
+                    "id": 103,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "864:42:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 104,
+                  "nodeType": "ExpressionStatement",
+                  "src": "864:42:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 106,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "withdraw",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 85,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "805:2:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 86,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "815:0:0"
+            },
+            "scope": 107,
+            "src": "788:125:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 108,
+        "src": "26:889:0"
+      }
+    ],
+    "src": "0:916:0"
+  },
+  "bytecode": "6080604052670de0b6b3a7640000341461001857600080fd5b60018054600160a060020a03191633179055610288806100396000396000f30060806040526004361061006c5763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416633ccfd60b81146100715780638da5cb5b14610088578063b2fa1c9e146100c6578063f14faf6f146100ef578063f8626af8146100fa575b600080fd5b34801561007d57600080fd5b5061008661012b565b005b34801561009457600080fd5b5061009d61017f565b6040805173ffffffffffffffffffffffffffffffffffffffff9092168252519081900360200190f35b3480156100d257600080fd5b506100db61019b565b604080519115158252519081900360200190f35b6100866004356101a1565b34801561010657600080fd5b50610112600435610230565b6040805192835260208301919091528051918290030190f35b60015473ffffffffffffffffffffffffffffffffffffffff16331461014f57600080fd5b6040513390303180156108fc02916000818181858888f1935050505015801561017c573d6000803e3d6000fd5b50565b60015473ffffffffffffffffffffffffffffffffffffffff1681565b30311590565b6ec097ce7bc90715b34b9f1000000000600034828404146101c157600080fd5b4281556001808201938455600080549182018155805290547f290decd9548b62a8d60345a988386fc84ba6bc95484008f6362f93160ef3e56360029092029182015591547f290decd9548b62a8d60345a988386fc84ba6bc95484008f6362f93160ef3e5649092019190915550565b600080548290811061023e57fe5b600091825260209091206002909102018054600190910154909150825600a165627a7a72305820838d1201d72a5dbf7dab280a46001015ce3194c78d1b15315f57eb06d1d022f50029",
+  "bytecodeSha1": "1f2be65a7f5b245271c488cddb1bcdfcee0a6f30",
+  "compiler": {
+    "evm_version": "byzantium",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "version": "0.4.26+commit.4563c3fc"
+  },
+  "contractName": "DonationChallenge",
+  "coverageMap": {
+    "branches": {
+      "0": {
+        "DonationChallenge.donate": {
+          "8": [
+            601,
+            633,
+            true
+          ]
+        },
+        "DonationChallenge.withdraw": {
+          "7": [
+            833,
+            852,
+            true
+          ]
+        }
+      }
+    },
+    "statements": {
+      "0": {
+        "DonationChallenge.donate": {
+          "3": [
+            593,
+            634
+          ],
+          "4": [
+            672,
+            696
+          ],
+          "5": [
+            706,
+            740
+          ],
+          "6": [
+            751,
+            775
+          ]
+        },
+        "DonationChallenge.isComplete": {
+          "2": [
+            388,
+            421
+          ]
+        },
+        "DonationChallenge.withdraw": {
+          "0": [
+            825,
+            853
+          ],
+          "1": [
+            864,
+            906
+          ]
+        }
+      }
+    }
+  },
+  "dependencies": [],
+  "deployedBytecode": "60806040526004361061006c5763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416633ccfd60b81146100715780638da5cb5b14610088578063b2fa1c9e146100c6578063f14faf6f146100ef578063f8626af8146100fa575b600080fd5b34801561007d57600080fd5b5061008661012b565b005b34801561009457600080fd5b5061009d61017f565b6040805173ffffffffffffffffffffffffffffffffffffffff9092168252519081900360200190f35b3480156100d257600080fd5b506100db61019b565b604080519115158252519081900360200190f35b6100866004356101a1565b34801561010657600080fd5b50610112600435610230565b6040805192835260208301919091528051918290030190f35b60015473ffffffffffffffffffffffffffffffffffffffff16331461014f57600080fd5b6040513390303180156108fc02916000818181858888f1935050505015801561017c573d6000803e3d6000fd5b50565b60015473ffffffffffffffffffffffffffffffffffffffff1681565b30311590565b6ec097ce7bc90715b34b9f1000000000600034828404146101c157600080fd5b4281556001808201938455600080549182018155805290547f290decd9548b62a8d60345a988386fc84ba6bc95484008f6362f93160ef3e56360029092029182015591547f290decd9548b62a8d60345a988386fc84ba6bc95484008f6362f93160ef3e5649092019190915550565b600080548290811061023e57fe5b600091825260209091206002909102018054600190910154909150825600a165627a7a72305820838d1201d72a5dbf7dab280a46001015ce3194c78d1b15315f57eb06d1d022f50029",
+  "deployedSourceMap": "26:889:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;788:125;;8:9:-1;5:2;;;30:1;27;20:12;5:2;788:125:0;;;;;;177:20;;8:9:-1;5:2;;;30:1;27;20:12;5:2;177:20:0;;;;;;;;;;;;;;;;;;;;;;;329:99;;8:9:-1;5:2;;;30:1;27;20:12;5:2;329:99:0;;;;;;;;;;;;;;;;;;;;;;434:348;;;;;;143:27;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;143:27:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;788:125;847:5;;;;833:10;:19;825:28;;;;;;864:42;;:10;;892:4;884:21;864:42;;;;;;;;;884:21;864:10;:42;;;;;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;864:42:0;788:125::o;177:20::-;;;;;;:::o;329:99::-;403:4;395:21;:26;329:99;:::o;434:348::-;567:16;551:13;601:9;614:19;;;601:32;593:41;;;;;;693:3;672:24;;706:20;;;;:34;;;-1:-1:-1;27:10;;23:18;;;45:23;;751:24:0;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;434:348:0:o;143:27::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;143:27:0;:::o",
+  "language": "Solidity",
+  "natspec": {
+    "methods": {}
+  },
+  "offset": [
+    26,
+    915
+  ],
+  "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x4 CALLDATASIZE LT PUSH2 0x6C JUMPI PUSH4 0xFFFFFFFF PUSH29 0x100000000000000000000000000000000000000000000000000000000 PUSH1 0x0 CALLDATALOAD DIV AND PUSH4 0x3CCFD60B DUP2 EQ PUSH2 0x71 JUMPI DUP1 PUSH4 0x8DA5CB5B EQ PUSH2 0x88 JUMPI DUP1 PUSH4 0xB2FA1C9E EQ PUSH2 0xC6 JUMPI DUP1 PUSH4 0xF14FAF6F EQ PUSH2 0xEF JUMPI DUP1 PUSH4 0xF8626AF8 EQ PUSH2 0xFA JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST CALLVALUE DUP1 ISZERO PUSH2 0x7D JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH2 0x86 PUSH2 0x12B JUMP JUMPDEST STOP JUMPDEST CALLVALUE DUP1 ISZERO PUSH2 0x94 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH2 0x9D PUSH2 0x17F JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD PUSH20 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF SWAP1 SWAP3 AND DUP3 MSTORE MLOAD SWAP1 DUP2 SWAP1 SUB PUSH1 0x20 ADD SWAP1 RETURN JUMPDEST CALLVALUE DUP1 ISZERO PUSH2 0xD2 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH2 0xDB PUSH2 0x19B JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD SWAP2 ISZERO ISZERO DUP3 MSTORE MLOAD SWAP1 DUP2 SWAP1 SUB PUSH1 0x20 ADD SWAP1 RETURN JUMPDEST PUSH2 0x86 PUSH1 0x4 CALLDATALOAD PUSH2 0x1A1 JUMP JUMPDEST CALLVALUE DUP1 ISZERO PUSH2 0x106 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH2 0x112 PUSH1 0x4 CALLDATALOAD PUSH2 0x230 JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD SWAP3 DUP4 MSTORE PUSH1 0x20 DUP4 ADD SWAP2 SWAP1 SWAP2 MSTORE DUP1 MLOAD SWAP2 DUP3 SWAP1 SUB ADD SWAP1 RETURN JUMPDEST PUSH1 0x1 SLOAD PUSH20 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF AND CALLER EQ PUSH2 0x14F JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x40 MLOAD CALLER SWAP1 ADDRESS BALANCE DUP1 ISZERO PUSH2 0x8FC MUL SWAP2 PUSH1 0x0 DUP2 DUP2 DUP2 DUP6 DUP9 DUP9 CALL SWAP4 POP POP POP POP ISZERO DUP1 ISZERO PUSH2 0x17C JUMPI RETURNDATASIZE PUSH1 0x0 DUP1 RETURNDATACOPY RETURNDATASIZE PUSH1 0x0 REVERT JUMPDEST POP JUMP JUMPDEST PUSH1 0x1 SLOAD PUSH20 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF AND DUP2 JUMP JUMPDEST ADDRESS BALANCE ISZERO SWAP1 JUMP JUMPDEST PUSH15 0xC097CE7BC90715B34B9F1000000000 PUSH1 0x0 CALLVALUE DUP3 DUP5 DIV EQ PUSH2 0x1C1 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST TIMESTAMP DUP2 SSTORE PUSH1 0x1 DUP1 DUP3 ADD SWAP4 DUP5 SSTORE PUSH1 0x0 DUP1 SLOAD SWAP2 DUP3 ADD DUP2 SSTORE DUP1 MSTORE SWAP1 SLOAD PUSH32 0x290DECD9548B62A8D60345A988386FC84BA6BC95484008F6362F93160EF3E563 PUSH1 0x2 SWAP1 SWAP3 MUL SWAP2 DUP3 ADD SSTORE SWAP2 SLOAD PUSH32 0x290DECD9548B62A8D60345A988386FC84BA6BC95484008F6362F93160EF3E564 SWAP1 SWAP3 ADD SWAP2 SWAP1 SWAP2 SSTORE POP JUMP JUMPDEST PUSH1 0x0 DUP1 SLOAD DUP3 SWAP1 DUP2 LT PUSH2 0x23E JUMPI INVALID JUMPDEST PUSH1 0x0 SWAP2 DUP3 MSTORE PUSH1 0x20 SWAP1 SWAP2 KECCAK256 PUSH1 0x2 SWAP1 SWAP2 MUL ADD DUP1 SLOAD PUSH1 0x1 SWAP1 SWAP2 ADD SLOAD SWAP1 SWAP2 POP DUP3 JUMP STOP LOG1 PUSH6 0x627A7A723058 KECCAK256 DUP4 DUP14 SLT ADD 0xd7 0x2a 0x5d 0xbf PUSH30 0xAB280A46001015CE3194C78D1B15315F57EB06D1D022F500290000000000 ",
+  "pcMap": {
+    "0": {
+      "offset": [
+        26,
+        915
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x80"
+    },
+    "2": {
+      "fn": null,
+      "offset": [
+        26,
+        915
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "4": {
+      "fn": null,
+      "offset": [
+        26,
+        915
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "5": {
+      "fn": null,
+      "offset": [
+        26,
+        915
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "7": {
+      "fn": null,
+      "offset": [
+        26,
+        915
+      ],
+      "op": "CALLDATASIZE",
+      "path": "0"
+    },
+    "8": {
+      "fn": null,
+      "offset": [
+        26,
+        915
+      ],
+      "op": "LT",
+      "path": "0"
+    },
+    "9": {
+      "fn": null,
+      "offset": [
+        26,
+        915
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x6C"
+    },
+    "12": {
+      "fn": null,
+      "offset": [
+        26,
+        915
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "13": {
+      "fn": null,
+      "offset": [
+        26,
+        915
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0xFFFFFFFF"
+    },
+    "18": {
+      "fn": null,
+      "offset": [
+        26,
+        915
+      ],
+      "op": "PUSH29",
+      "path": "0",
+      "value": "0x100000000000000000000000000000000000000000000000000000000"
+    },
+    "48": {
+      "fn": null,
+      "offset": [
+        26,
+        915
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "50": {
+      "fn": null,
+      "offset": [
+        26,
+        915
+      ],
+      "op": "CALLDATALOAD",
+      "path": "0"
+    },
+    "51": {
+      "fn": null,
+      "offset": [
+        26,
+        915
+      ],
+      "op": "DIV",
+      "path": "0"
+    },
+    "52": {
+      "fn": null,
+      "offset": [
+        26,
+        915
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "53": {
+      "fn": null,
+      "offset": [
+        26,
+        915
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x3CCFD60B"
+    },
+    "58": {
+      "fn": null,
+      "offset": [
+        26,
+        915
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "59": {
+      "fn": null,
+      "offset": [
+        26,
+        915
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "60": {
+      "fn": null,
+      "offset": [
+        26,
+        915
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x71"
+    },
+    "63": {
+      "fn": null,
+      "offset": [
+        26,
+        915
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "64": {
+      "fn": null,
+      "offset": [
+        26,
+        915
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "65": {
+      "fn": null,
+      "offset": [
+        26,
+        915
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x8DA5CB5B"
+    },
+    "70": {
+      "fn": null,
+      "offset": [
+        26,
+        915
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "71": {
+      "fn": null,
+      "offset": [
+        26,
+        915
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x88"
+    },
+    "74": {
+      "fn": null,
+      "offset": [
+        26,
+        915
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "75": {
+      "fn": null,
+      "offset": [
+        26,
+        915
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "76": {
+      "fn": null,
+      "offset": [
+        26,
+        915
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0xB2FA1C9E"
+    },
+    "81": {
+      "fn": null,
+      "offset": [
+        26,
+        915
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "82": {
+      "fn": null,
+      "offset": [
+        26,
+        915
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xC6"
+    },
+    "85": {
+      "fn": null,
+      "offset": [
+        26,
+        915
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "86": {
+      "fn": null,
+      "offset": [
+        26,
+        915
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "87": {
+      "fn": null,
+      "offset": [
+        26,
+        915
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0xF14FAF6F"
+    },
+    "92": {
+      "fn": null,
+      "offset": [
+        26,
+        915
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "93": {
+      "fn": null,
+      "offset": [
+        26,
+        915
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xEF"
+    },
+    "96": {
+      "fn": null,
+      "offset": [
+        26,
+        915
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "97": {
+      "fn": null,
+      "offset": [
+        26,
+        915
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "98": {
+      "fn": null,
+      "offset": [
+        26,
+        915
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0xF8626AF8"
+    },
+    "103": {
+      "fn": null,
+      "offset": [
+        26,
+        915
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "104": {
+      "fn": null,
+      "offset": [
+        26,
+        915
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xFA"
+    },
+    "107": {
+      "fn": null,
+      "offset": [
+        26,
+        915
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "108": {
+      "fn": null,
+      "offset": [
+        26,
+        915
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "109": {
+      "fn": null,
+      "offset": [
+        26,
+        915
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "111": {
+      "fn": null,
+      "offset": [
+        26,
+        915
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "112": {
+      "first_revert": true,
+      "fn": null,
+      "offset": [
+        26,
+        915
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "113": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        788,
+        913
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "114": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        788,
+        913
+      ],
+      "op": "CALLVALUE",
+      "path": "0"
+    },
+    "115": {
+      "op": "DUP1"
+    },
+    "116": {
+      "op": "ISZERO"
+    },
+    "117": {
+      "op": "PUSH2",
+      "value": "0x7D"
+    },
+    "120": {
+      "op": "JUMPI"
+    },
+    "121": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "123": {
+      "op": "DUP1"
+    },
+    "124": {
+      "dev": "Cannot send ether to nonpayable function",
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        788,
+        913
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "125": {
+      "op": "JUMPDEST"
+    },
+    "126": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        788,
+        913
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "127": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        788,
+        913
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x86"
+    },
+    "130": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        788,
+        913
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x12B"
+    },
+    "133": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        788,
+        913
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "134": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        788,
+        913
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "135": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        788,
+        913
+      ],
+      "op": "STOP",
+      "path": "0"
+    },
+    "136": {
+      "offset": [
+        177,
+        197
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "137": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        177,
+        197
+      ],
+      "op": "CALLVALUE",
+      "path": "0"
+    },
+    "138": {
+      "op": "DUP1"
+    },
+    "139": {
+      "op": "ISZERO"
+    },
+    "140": {
+      "op": "PUSH2",
+      "value": "0x94"
+    },
+    "143": {
+      "op": "JUMPI"
+    },
+    "144": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "146": {
+      "op": "DUP1"
+    },
+    "147": {
+      "dev": "Cannot send ether to nonpayable function",
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        177,
+        197
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "148": {
+      "op": "JUMPDEST"
+    },
+    "149": {
+      "offset": [
+        177,
+        197
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "150": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        177,
+        197
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x9D"
+    },
+    "153": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        177,
+        197
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x17F"
+    },
+    "156": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        177,
+        197
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "157": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        177,
+        197
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "158": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        177,
+        197
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "160": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        177,
+        197
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "161": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        177,
+        197
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "162": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        177,
+        197
+      ],
+      "op": "PUSH20",
+      "path": "0",
+      "value": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+    },
+    "183": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        177,
+        197
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "184": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        177,
+        197
+      ],
+      "op": "SWAP3",
+      "path": "0"
+    },
+    "185": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        177,
+        197
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "186": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        177,
+        197
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "187": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        177,
+        197
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "188": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        177,
+        197
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "189": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        177,
+        197
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "190": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        177,
+        197
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "191": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        177,
+        197
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "192": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        177,
+        197
+      ],
+      "op": "SUB",
+      "path": "0"
+    },
+    "193": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        177,
+        197
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "195": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        177,
+        197
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "196": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        177,
+        197
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "197": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        177,
+        197
+      ],
+      "op": "RETURN",
+      "path": "0"
+    },
+    "198": {
+      "fn": "DonationChallenge.isComplete",
+      "offset": [
+        329,
+        428
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "199": {
+      "fn": "DonationChallenge.isComplete",
+      "offset": [
+        329,
+        428
+      ],
+      "op": "CALLVALUE",
+      "path": "0"
+    },
+    "200": {
+      "op": "DUP1"
+    },
+    "201": {
+      "op": "ISZERO"
+    },
+    "202": {
+      "op": "PUSH2",
+      "value": "0xD2"
+    },
+    "205": {
+      "op": "JUMPI"
+    },
+    "206": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "208": {
+      "op": "DUP1"
+    },
+    "209": {
+      "dev": "Cannot send ether to nonpayable function",
+      "fn": "DonationChallenge.isComplete",
+      "offset": [
+        329,
+        428
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "210": {
+      "op": "JUMPDEST"
+    },
+    "211": {
+      "fn": "DonationChallenge.isComplete",
+      "offset": [
+        329,
+        428
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "212": {
+      "fn": "DonationChallenge.isComplete",
+      "offset": [
+        329,
+        428
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xDB"
+    },
+    "215": {
+      "fn": "DonationChallenge.isComplete",
+      "offset": [
+        329,
+        428
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x19B"
+    },
+    "218": {
+      "fn": "DonationChallenge.isComplete",
+      "offset": [
+        329,
+        428
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "219": {
+      "fn": "DonationChallenge.isComplete",
+      "offset": [
+        329,
+        428
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "220": {
+      "fn": "DonationChallenge.isComplete",
+      "offset": [
+        329,
+        428
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "222": {
+      "fn": "DonationChallenge.isComplete",
+      "offset": [
+        329,
+        428
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "223": {
+      "fn": "DonationChallenge.isComplete",
+      "offset": [
+        329,
+        428
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "224": {
+      "fn": "DonationChallenge.isComplete",
+      "offset": [
+        329,
+        428
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "225": {
+      "fn": "DonationChallenge.isComplete",
+      "offset": [
+        329,
+        428
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "226": {
+      "fn": "DonationChallenge.isComplete",
+      "offset": [
+        329,
+        428
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "227": {
+      "fn": "DonationChallenge.isComplete",
+      "offset": [
+        329,
+        428
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "228": {
+      "fn": "DonationChallenge.isComplete",
+      "offset": [
+        329,
+        428
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "229": {
+      "fn": "DonationChallenge.isComplete",
+      "offset": [
+        329,
+        428
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "230": {
+      "fn": "DonationChallenge.isComplete",
+      "offset": [
+        329,
+        428
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "231": {
+      "fn": "DonationChallenge.isComplete",
+      "offset": [
+        329,
+        428
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "232": {
+      "fn": "DonationChallenge.isComplete",
+      "offset": [
+        329,
+        428
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "233": {
+      "fn": "DonationChallenge.isComplete",
+      "offset": [
+        329,
+        428
+      ],
+      "op": "SUB",
+      "path": "0"
+    },
+    "234": {
+      "fn": "DonationChallenge.isComplete",
+      "offset": [
+        329,
+        428
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "236": {
+      "fn": "DonationChallenge.isComplete",
+      "offset": [
+        329,
+        428
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "237": {
+      "fn": "DonationChallenge.isComplete",
+      "offset": [
+        329,
+        428
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "238": {
+      "fn": "DonationChallenge.isComplete",
+      "offset": [
+        329,
+        428
+      ],
+      "op": "RETURN",
+      "path": "0"
+    },
+    "239": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        434,
+        782
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "240": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        434,
+        782
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x86"
+    },
+    "243": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        434,
+        782
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "245": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        434,
+        782
+      ],
+      "op": "CALLDATALOAD",
+      "path": "0"
+    },
+    "246": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        434,
+        782
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x1A1"
+    },
+    "249": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        434,
+        782
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "250": {
+      "offset": [
+        143,
+        170
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "251": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "CALLVALUE",
+      "path": "0"
+    },
+    "252": {
+      "op": "DUP1"
+    },
+    "253": {
+      "op": "ISZERO"
+    },
+    "254": {
+      "op": "PUSH2",
+      "value": "0x106"
+    },
+    "257": {
+      "op": "JUMPI"
+    },
+    "258": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "260": {
+      "op": "DUP1"
+    },
+    "261": {
+      "dev": "Cannot send ether to nonpayable function",
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "262": {
+      "op": "JUMPDEST"
+    },
+    "263": {
+      "op": "POP"
+    },
+    "264": {
+      "offset": [
+        143,
+        170
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x112"
+    },
+    "267": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "269": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "CALLDATALOAD",
+      "path": "0"
+    },
+    "270": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x230"
+    },
+    "273": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "274": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "275": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "277": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "278": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "279": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "SWAP3",
+      "path": "0"
+    },
+    "280": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "DUP4",
+      "path": "0"
+    },
+    "281": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "282": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "284": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "DUP4",
+      "path": "0"
+    },
+    "285": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "286": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "287": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "288": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "289": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "290": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "291": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "292": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "293": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "294": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "295": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "SUB",
+      "path": "0"
+    },
+    "296": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "297": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "298": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "RETURN",
+      "path": "0"
+    },
+    "299": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        788,
+        913
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "300": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        847,
+        852
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 0,
+      "value": "0x1"
+    },
+    "302": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        847,
+        852
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "303": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        847,
+        852
+      ],
+      "op": "PUSH20",
+      "path": "0",
+      "value": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+    },
+    "324": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        847,
+        852
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "325": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        833,
+        843
+      ],
+      "op": "CALLER",
+      "path": "0"
+    },
+    "326": {
+      "branch": 7,
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        833,
+        852
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "327": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        825,
+        853
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x14F"
+    },
+    "330": {
+      "branch": 7,
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        825,
+        853
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "331": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        825,
+        853
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "333": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        825,
+        853
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "334": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        825,
+        853
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "335": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        825,
+        853
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "336": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        864,
+        906
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 1,
+      "value": "0x40"
+    },
+    "338": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        864,
+        906
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "339": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        864,
+        874
+      ],
+      "op": "CALLER",
+      "path": "0"
+    },
+    "340": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        864,
+        874
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "341": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        892,
+        896
+      ],
+      "op": "ADDRESS",
+      "path": "0"
+    },
+    "342": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        884,
+        905
+      ],
+      "op": "BALANCE",
+      "path": "0"
+    },
+    "343": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        864,
+        906
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "344": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        864,
+        906
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "345": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        864,
+        906
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x8FC"
+    },
+    "348": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        864,
+        906
+      ],
+      "op": "MUL",
+      "path": "0"
+    },
+    "349": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        864,
+        906
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "350": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        864,
+        906
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "352": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        864,
+        906
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "353": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        864,
+        906
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "354": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        864,
+        906
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "355": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        884,
+        905
+      ],
+      "op": "DUP6",
+      "path": "0"
+    },
+    "356": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        864,
+        874
+      ],
+      "op": "DUP9",
+      "path": "0"
+    },
+    "357": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        864,
+        906
+      ],
+      "op": "DUP9",
+      "path": "0"
+    },
+    "358": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        864,
+        906
+      ],
+      "op": "CALL",
+      "path": "0"
+    },
+    "359": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        864,
+        906
+      ],
+      "op": "SWAP4",
+      "path": "0"
+    },
+    "360": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        864,
+        906
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "361": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        864,
+        906
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "362": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        864,
+        906
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "363": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        864,
+        906
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "364": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        864,
+        906
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "365": {
+      "op": "DUP1"
+    },
+    "366": {
+      "op": "ISZERO"
+    },
+    "367": {
+      "op": "PUSH2",
+      "value": "0x17C"
+    },
+    "370": {
+      "op": "JUMPI"
+    },
+    "371": {
+      "op": "RETURNDATASIZE"
+    },
+    "372": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "374": {
+      "op": "DUP1"
+    },
+    "375": {
+      "op": "RETURNDATACOPY"
+    },
+    "376": {
+      "op": "RETURNDATASIZE"
+    },
+    "377": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "379": {
+      "op": "REVERT"
+    },
+    "380": {
+      "op": "JUMPDEST"
+    },
+    "381": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        864,
+        906
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "382": {
+      "fn": "DonationChallenge.withdraw",
+      "jump": "o",
+      "offset": [
+        788,
+        913
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "383": {
+      "offset": [
+        177,
+        197
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "384": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        177,
+        197
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x1"
+    },
+    "386": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        177,
+        197
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "387": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        177,
+        197
+      ],
+      "op": "PUSH20",
+      "path": "0",
+      "value": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+    },
+    "408": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        177,
+        197
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "409": {
+      "fn": "DonationChallenge.withdraw",
+      "offset": [
+        177,
+        197
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "410": {
+      "fn": "DonationChallenge.withdraw",
+      "jump": "o",
+      "offset": [
+        177,
+        197
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "411": {
+      "fn": "DonationChallenge.isComplete",
+      "offset": [
+        329,
+        428
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "412": {
+      "fn": "DonationChallenge.isComplete",
+      "offset": [
+        403,
+        407
+      ],
+      "op": "ADDRESS",
+      "path": "0",
+      "statement": 2
+    },
+    "413": {
+      "fn": "DonationChallenge.isComplete",
+      "offset": [
+        395,
+        416
+      ],
+      "op": "BALANCE",
+      "path": "0"
+    },
+    "414": {
+      "fn": "DonationChallenge.isComplete",
+      "offset": [
+        395,
+        421
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "415": {
+      "fn": "DonationChallenge.isComplete",
+      "offset": [
+        329,
+        428
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "416": {
+      "fn": "DonationChallenge.isComplete",
+      "jump": "o",
+      "offset": [
+        329,
+        428
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "417": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        434,
+        782
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "418": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        567,
+        583
+      ],
+      "op": "PUSH15",
+      "path": "0",
+      "value": "0xC097CE7BC90715B34B9F1000000000"
+    },
+    "434": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        551,
+        564
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "436": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        601,
+        610
+      ],
+      "op": "CALLVALUE",
+      "path": "0",
+      "statement": 3
+    },
+    "437": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        614,
+        633
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "438": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        614,
+        633
+      ],
+      "op": "DUP5",
+      "path": "0"
+    },
+    "439": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        614,
+        633
+      ],
+      "op": "DIV",
+      "path": "0"
+    },
+    "440": {
+      "branch": 8,
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        601,
+        633
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "441": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        593,
+        634
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x1C1"
+    },
+    "444": {
+      "branch": 8,
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        593,
+        634
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "445": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        593,
+        634
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "447": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        593,
+        634
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "448": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        593,
+        634
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "449": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        593,
+        634
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "450": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        693,
+        696
+      ],
+      "op": "TIMESTAMP",
+      "path": "0",
+      "statement": 4
+    },
+    "451": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        672,
+        696
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "452": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        672,
+        696
+      ],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "453": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        706,
+        726
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 5,
+      "value": "0x1"
+    },
+    "455": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        706,
+        726
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "456": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        706,
+        726
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "457": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        706,
+        726
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "458": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        706,
+        740
+      ],
+      "op": "SWAP4",
+      "path": "0"
+    },
+    "459": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        706,
+        740
+      ],
+      "op": "DUP5",
+      "path": "0"
+    },
+    "460": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        706,
+        740
+      ],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "461": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "463": {
+      "op": "DUP1"
+    },
+    "464": {
+      "op": "SLOAD"
+    },
+    "465": {
+      "op": "SWAP2"
+    },
+    "466": {
+      "op": "DUP3"
+    },
+    "467": {
+      "op": "ADD"
+    },
+    "468": {
+      "op": "DUP2"
+    },
+    "469": {
+      "op": "SSTORE"
+    },
+    "470": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        751,
+        775
+      ],
+      "op": "DUP1",
+      "path": "0",
+      "statement": 6
+    },
+    "471": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        751,
+        775
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "472": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        751,
+        775
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "473": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        751,
+        775
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "474": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        751,
+        775
+      ],
+      "op": "PUSH32",
+      "path": "0",
+      "value": "0x290DECD9548B62A8D60345A988386FC84BA6BC95484008F6362F93160EF3E563"
+    },
+    "507": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        751,
+        775
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x2"
+    },
+    "509": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        751,
+        775
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "510": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        751,
+        775
+      ],
+      "op": "SWAP3",
+      "path": "0"
+    },
+    "511": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        751,
+        775
+      ],
+      "op": "MUL",
+      "path": "0"
+    },
+    "512": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        751,
+        775
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "513": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        751,
+        775
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "514": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        751,
+        775
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "515": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        751,
+        775
+      ],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "516": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        751,
+        775
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "517": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        751,
+        775
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "518": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        751,
+        775
+      ],
+      "op": "PUSH32",
+      "path": "0",
+      "value": "0x290DECD9548B62A8D60345A988386FC84BA6BC95484008F6362F93160EF3E564"
+    },
+    "551": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        751,
+        775
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "552": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        751,
+        775
+      ],
+      "op": "SWAP3",
+      "path": "0"
+    },
+    "553": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        751,
+        775
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "554": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        751,
+        775
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "555": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        751,
+        775
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "556": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        751,
+        775
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "557": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        751,
+        775
+      ],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "558": {
+      "op": "POP"
+    },
+    "559": {
+      "fn": "DonationChallenge.donate",
+      "jump": "o",
+      "offset": [
+        434,
+        782
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "560": {
+      "offset": [
+        143,
+        170
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "561": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "563": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "564": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "565": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "566": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "567": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "568": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "LT",
+      "path": "0"
+    },
+    "569": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x23E"
+    },
+    "572": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "573": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "INVALID",
+      "path": "0"
+    },
+    "574": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "575": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "577": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "578": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "579": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "580": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "582": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "583": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "584": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "KECCAK256",
+      "path": "0"
+    },
+    "585": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x2"
+    },
+    "587": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "588": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "589": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "MUL",
+      "path": "0"
+    },
+    "590": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "591": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "592": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "593": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x1"
+    },
+    "595": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "596": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "597": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "598": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "599": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "600": {
+      "fn": "DonationChallenge.donate",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "601": {
+      "op": "POP"
+    },
+    "602": {
+      "offset": [
+        143,
+        170
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "603": {
+      "fn": "DonationChallenge.donate",
+      "jump": "o",
+      "offset": [
+        143,
+        170
+      ],
+      "op": "JUMP",
+      "path": "0"
+    }
+  },
+  "sha1": "7b026d8be1512aa939131acfc43502bd38dd50d5",
+  "source": "pragma solidity ^0.4.21;\n\ncontract DonationChallenge {\n    struct Donation {\n        uint256 timestamp;\n        uint256 etherAmount;\n    }\n    Donation[] public donations;\n\n    address public owner;\n\n    function DonationChallenge() public payable {\n        require(msg.value == 1 ether);\n\n        owner = msg.sender;\n    }\n\n    function isComplete() public view returns (bool) {\n        return address(this).balance == 0;\n    }\n\n    function donate(uint256 etherAmount) public payable {\n        // amount is in ether, but msg.value is in wei\n        uint256 scale = 10**18 * 1 ether;\n        require(msg.value == etherAmount / scale);\n\n        Donation donation;\n        donation.timestamp = now;\n        donation.etherAmount = etherAmount;\n\n        donations.push(donation);\n    }\n\n    function withdraw() public {\n        require(msg.sender == owner);\n\n        msg.sender.transfer(address(this).balance);\n    }\n}\n",
+  "sourceMap": "26:889:0:-;;;279:7;266:9;:20;258:29;;;;;;298:5;:18;;-1:-1:-1;;;;;;298:18:0;306:10;298:18;;;26:889;;;;;;",
+  "sourcePath": "contracts/Donation.sol",
+  "type": "contract"
+}
